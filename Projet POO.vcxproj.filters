@@ -25,6 +25,9 @@
     <ClInclude Include="include\Resource.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\MyForm.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AssemblyInfo.cpp">
