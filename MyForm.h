@@ -12,6 +12,7 @@ namespace ProjetPOO {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Configuration;
 
 	/// <summary>
 	/// Description résumée de MyForm
@@ -136,6 +137,7 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			int color_theme = Convert::ToInt32(System::Configuration::ConfigurationManager::AppSettings["color_theme"]);
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
@@ -758,8 +760,7 @@ namespace ProjetPOO {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(80)));
+			Form_color_change::Change_color_of_Form_hex(this, color_list_theme[color_theme][0]);
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(1626, 520);
 			this->Controls->Add(this->panel9);
@@ -850,5 +851,6 @@ private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void panel1_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
+
 };
 }
