@@ -35,13 +35,19 @@ namespace ProjetPOO {
 			}
 		}
 	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Button^ Setting_button;
+	private: System::Windows::Forms::Button^ commande_button;
+	private: System::Windows::Forms::Button^ stats_button;
+	private: System::Windows::Forms::Button^ client_button;
 	protected:
-	private: System::Windows::Forms::Button^ button5;
 
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button4;
+
+
+
+
+	private: System::Windows::Forms::Button^ Personnel_button;
+
+	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
 
 
 
@@ -70,11 +76,12 @@ namespace ProjetPOO {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->Setting_button = (gcnew System::Windows::Forms::Button());
+			this->Personnel_button = (gcnew System::Windows::Forms::Button());
+			this->commande_button = (gcnew System::Windows::Forms::Button());
+			this->stats_button = (gcnew System::Windows::Forms::Button());
+			this->client_button = (gcnew System::Windows::Forms::Button());
+			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -82,84 +89,98 @@ namespace ProjetPOO {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(113)));
-			this->panel1->Controls->Add(this->button5);
-			this->panel1->Controls->Add(this->button4);
-			this->panel1->Controls->Add(this->button3);
-			this->panel1->Controls->Add(this->button2);
-			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->Setting_button);
+			this->panel1->Controls->Add(this->Personnel_button);
+			this->panel1->Controls->Add(this->commande_button);
+			this->panel1->Controls->Add(this->stats_button);
+			this->panel1->Controls->Add(this->client_button);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->MinimumSize = System::Drawing::Size(96, 386);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(96, 416);
+			this->panel1->Size = System::Drawing::Size(96, 441);
 			this->panel1->TabIndex = 0;
 			// 
-			// button1
+			// Setting_button
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(0, 0);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(96, 66);
-			this->button1->TabIndex = 0;
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_3);
+			this->Setting_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Setting_button.BackgroundImage")));
+			this->Setting_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Setting_button->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->Setting_button->FlatAppearance->BorderSize = 0;
+			this->Setting_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Setting_button->Location = System::Drawing::Point(0, 375);
+			this->Setting_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Setting_button->Name = L"Setting_button";
+			this->Setting_button->Size = System::Drawing::Size(96, 66);
+			this->Setting_button->TabIndex = 1;
+			this->Setting_button->UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// Personnel_button
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(0, 66);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(96, 66);
-			this->button2->TabIndex = 1;
-			this->button2->UseVisualStyleBackColor = true;
+			this->Personnel_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Personnel_button.BackgroundImage")));
+			this->Personnel_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Personnel_button->Dock = System::Windows::Forms::DockStyle::Top;
+			this->Personnel_button->FlatAppearance->BorderSize = 0;
+			this->Personnel_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Personnel_button->Location = System::Drawing::Point(0, 198);
+			this->Personnel_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Personnel_button->Name = L"Personnel_button";
+			this->Personnel_button->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->Personnel_button->Size = System::Drawing::Size(96, 66);
+			this->Personnel_button->TabIndex = 1;
+			this->Personnel_button->UseVisualStyleBackColor = true;
 			// 
-			// button3
+			// commande_button
 			// 
-			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(0, 132);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(96, 66);
-			this->button3->TabIndex = 1;
-			this->button3->UseVisualStyleBackColor = true;
+			this->commande_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"commande_button.BackgroundImage")));
+			this->commande_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->commande_button->Dock = System::Windows::Forms::DockStyle::Top;
+			this->commande_button->FlatAppearance->BorderSize = 0;
+			this->commande_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->commande_button->Location = System::Drawing::Point(0, 132);
+			this->commande_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->commande_button->Name = L"commande_button";
+			this->commande_button->Size = System::Drawing::Size(96, 66);
+			this->commande_button->TabIndex = 1;
+			this->commande_button->UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// stats_button
 			// 
-			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
-			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button4->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(0, 198);
-			this->button4->Name = L"button4";
-			this->button4->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->button4->Size = System::Drawing::Size(96, 66);
-			this->button4->TabIndex = 1;
-			this->button4->UseVisualStyleBackColor = true;
+			this->stats_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"stats_button.BackgroundImage")));
+			this->stats_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->stats_button->Dock = System::Windows::Forms::DockStyle::Top;
+			this->stats_button->FlatAppearance->BorderSize = 0;
+			this->stats_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->stats_button->Location = System::Drawing::Point(0, 66);
+			this->stats_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->stats_button->Name = L"stats_button";
+			this->stats_button->Size = System::Drawing::Size(96, 66);
+			this->stats_button->TabIndex = 1;
+			this->stats_button->UseVisualStyleBackColor = true;
 			// 
-			// button5
+			// client_button
 			// 
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button5->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->button5->FlatAppearance->BorderSize = 0;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Location = System::Drawing::Point(0, 350);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(96, 66);
-			this->button5->TabIndex = 1;
-			this->button5->UseVisualStyleBackColor = true;
+			this->client_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"client_button.BackgroundImage")));
+			this->client_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->client_button->Dock = System::Windows::Forms::DockStyle::Top;
+			this->client_button->FlatAppearance->BorderSize = 0;
+			this->client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->client_button->Location = System::Drawing::Point(0, 0);
+			this->client_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->client_button->Name = L"client_button";
+			this->client_button->Size = System::Drawing::Size(96, 66);
+			this->client_button->TabIndex = 0;
+			this->client_button->UseVisualStyleBackColor = true;
+			this->client_button->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_3);
+			// 
+			// flowLayoutPanel1
+			// 
+			this->flowLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->flowLayoutPanel1->Location = System::Drawing::Point(96, 0);
+			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
+			this->flowLayoutPanel1->Size = System::Drawing::Size(879, 441);
+			this->flowLayoutPanel1->TabIndex = 1;
 			// 
 			// MyForm
 			// 
@@ -168,10 +189,12 @@ namespace ProjetPOO {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->ClientSize = System::Drawing::Size(1241, 416);
+			this->ClientSize = System::Drawing::Size(975, 441);
+			this->Controls->Add(this->flowLayoutPanel1);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MinimumSize = System::Drawing::Size(0, 463);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->MinimumSize = System::Drawing::Size(18, 461);
 			this->Name = L"MyForm";
 			this->Text = L"Client Manager 2022";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
