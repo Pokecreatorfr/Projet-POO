@@ -67,13 +67,17 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ IDclient_tb;
 
 	private: System::Windows::Forms::Panel^ panel8;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ Clear_Client_button;
+
+	private: System::Windows::Forms::Button^ Chercher_Client_button;
+
 	private: System::Windows::Forms::Panel^ panel9;
 	private: System::Windows::Forms::Panel^ panel10;
 	private: System::Windows::Forms::Panel^ panel11;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ Clear_Personnel_button;
+	private: System::Windows::Forms::Button^ Chercher_Personnel_button;
+
+
 	private: System::Windows::Forms::Panel^ panel12;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ DATE_NAISSANCE_personnel_tb;
@@ -96,6 +100,10 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Panel^ panel17;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::Panel^ panel18;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ DATE_EMBAUCHE_tb;
+
 
 
 
@@ -136,8 +144,8 @@ namespace ProjetPOO {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->Clear_Client_button = (gcnew System::Windows::Forms::Button());
+			this->Chercher_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->DATE_NAISSANCE_client_tb = (gcnew System::Windows::Forms::TextBox());
@@ -153,8 +161,8 @@ namespace ProjetPOO {
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->Clear_Personnel_button = (gcnew System::Windows::Forms::Button());
+			this->Chercher_Personnel_button = (gcnew System::Windows::Forms::Button());
 			this->panel12 = (gcnew System::Windows::Forms::Panel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->DATE_NAISSANCE_personnel_tb = (gcnew System::Windows::Forms::TextBox());
@@ -172,6 +180,9 @@ namespace ProjetPOO {
 			this->panel17 = (gcnew System::Windows::Forms::Panel());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->panel18 = (gcnew System::Windows::Forms::Panel());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->DATE_EMBAUCHE_tb = (gcnew System::Windows::Forms::TextBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -189,6 +200,7 @@ namespace ProjetPOO {
 			this->panel15->SuspendLayout();
 			this->panel16->SuspendLayout();
 			this->panel17->SuspendLayout();
+			this->panel18->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -308,40 +320,40 @@ namespace ProjetPOO {
 			// 
 			// panel8
 			// 
-			this->panel8->Controls->Add(this->button2);
-			this->panel8->Controls->Add(this->button1);
+			this->panel8->Controls->Add(this->Clear_Client_button);
+			this->panel8->Controls->Add(this->Chercher_Client_button);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->panel8->Location = System::Drawing::Point(0, 444);
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(314, 76);
 			this->panel8->TabIndex = 4;
 			// 
-			// button2
+			// Clear_Client_button
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->Dock = System::Windows::Forms::DockStyle::Left;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(102, 0);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(105, 76);
-			this->button2->TabIndex = 1;
-			this->button2->UseVisualStyleBackColor = true;
+			this->Clear_Client_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Clear_Client_button.BackgroundImage")));
+			this->Clear_Client_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Clear_Client_button->Dock = System::Windows::Forms::DockStyle::Left;
+			this->Clear_Client_button->FlatAppearance->BorderSize = 0;
+			this->Clear_Client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Clear_Client_button->Location = System::Drawing::Point(102, 0);
+			this->Clear_Client_button->Name = L"Clear_Client_button";
+			this->Clear_Client_button->Size = System::Drawing::Size(105, 76);
+			this->Clear_Client_button->TabIndex = 1;
+			this->Clear_Client_button->UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// Chercher_Client_button
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(0, 0);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(102, 76);
-			this->button1->TabIndex = 0;
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_4);
+			this->Chercher_Client_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Chercher_Client_button.BackgroundImage")));
+			this->Chercher_Client_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Chercher_Client_button->Dock = System::Windows::Forms::DockStyle::Left;
+			this->Chercher_Client_button->FlatAppearance->BorderSize = 0;
+			this->Chercher_Client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Chercher_Client_button->Location = System::Drawing::Point(0, 0);
+			this->Chercher_Client_button->Name = L"Chercher_Client_button";
+			this->Chercher_Client_button->Size = System::Drawing::Size(102, 76);
+			this->Chercher_Client_button->TabIndex = 0;
+			this->Chercher_Client_button->UseVisualStyleBackColor = true;
+			this->Chercher_Client_button->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_4);
 			// 
 			// panel7
 			// 
@@ -479,6 +491,7 @@ namespace ProjetPOO {
 			// 
 			// panel10
 			// 
+			this->panel10->Controls->Add(this->panel18);
 			this->panel10->Controls->Add(this->panel11);
 			this->panel10->Controls->Add(this->panel12);
 			this->panel10->Controls->Add(this->panel13);
@@ -492,39 +505,39 @@ namespace ProjetPOO {
 			// 
 			// panel11
 			// 
-			this->panel11->Controls->Add(this->button3);
-			this->panel11->Controls->Add(this->button4);
+			this->panel11->Controls->Add(this->Clear_Personnel_button);
+			this->panel11->Controls->Add(this->Chercher_Personnel_button);
 			this->panel11->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->panel11->Location = System::Drawing::Point(0, 444);
 			this->panel11->Name = L"panel11";
 			this->panel11->Size = System::Drawing::Size(314, 76);
 			this->panel11->TabIndex = 4;
 			// 
-			// button3
+			// Clear_Personnel_button
 			// 
-			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->Dock = System::Windows::Forms::DockStyle::Left;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(102, 0);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(105, 76);
-			this->button3->TabIndex = 1;
-			this->button3->UseVisualStyleBackColor = true;
+			this->Clear_Personnel_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Clear_Personnel_button.BackgroundImage")));
+			this->Clear_Personnel_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Clear_Personnel_button->Dock = System::Windows::Forms::DockStyle::Left;
+			this->Clear_Personnel_button->FlatAppearance->BorderSize = 0;
+			this->Clear_Personnel_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Clear_Personnel_button->Location = System::Drawing::Point(102, 0);
+			this->Clear_Personnel_button->Name = L"Clear_Personnel_button";
+			this->Clear_Personnel_button->Size = System::Drawing::Size(105, 76);
+			this->Clear_Personnel_button->TabIndex = 1;
+			this->Clear_Personnel_button->UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// Chercher_Personnel_button
 			// 
-			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
-			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button4->Dock = System::Windows::Forms::DockStyle::Left;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(0, 0);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(102, 76);
-			this->button4->TabIndex = 0;
-			this->button4->UseVisualStyleBackColor = true;
+			this->Chercher_Personnel_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Chercher_Personnel_button.BackgroundImage")));
+			this->Chercher_Personnel_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Chercher_Personnel_button->Dock = System::Windows::Forms::DockStyle::Left;
+			this->Chercher_Personnel_button->FlatAppearance->BorderSize = 0;
+			this->Chercher_Personnel_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Chercher_Personnel_button->Location = System::Drawing::Point(0, 0);
+			this->Chercher_Personnel_button->Name = L"Chercher_Personnel_button";
+			this->Chercher_Personnel_button->Size = System::Drawing::Size(102, 76);
+			this->Chercher_Personnel_button->TabIndex = 0;
+			this->Chercher_Personnel_button->UseVisualStyleBackColor = true;
 			// 
 			// panel12
 			// 
@@ -706,6 +719,38 @@ namespace ProjetPOO {
 			this->textBox9->Size = System::Drawing::Size(407, 22);
 			this->textBox9->TabIndex = 0;
 			// 
+			// panel18
+			// 
+			this->panel18->Controls->Add(this->label10);
+			this->panel18->Controls->Add(this->DATE_EMBAUCHE_tb);
+			this->panel18->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel18->Location = System::Drawing::Point(0, 228);
+			this->panel18->Name = L"panel18";
+			this->panel18->Size = System::Drawing::Size(314, 54);
+			this->panel18->TabIndex = 5;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label10->Location = System::Drawing::Point(0, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(197, 28);
+			this->label10->TabIndex = 1;
+			this->label10->Text = L"Date Embauche";
+			this->label10->Click += gcnew System::EventHandler(this, &MyForm::label10_Click);
+			// 
+			// DATE_EMBAUCHE_tb
+			// 
+			this->DATE_EMBAUCHE_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->DATE_EMBAUCHE_tb->Location = System::Drawing::Point(0, 32);
+			this->DATE_EMBAUCHE_tb->Name = L"DATE_EMBAUCHE_tb";
+			this->DATE_EMBAUCHE_tb->Size = System::Drawing::Size(314, 22);
+			this->DATE_EMBAUCHE_tb->TabIndex = 0;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -750,6 +795,8 @@ namespace ProjetPOO {
 			this->panel16->PerformLayout();
 			this->panel17->ResumeLayout(false);
 			this->panel17->PerformLayout();
+			this->panel18->ResumeLayout(false);
+			this->panel18->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -794,6 +841,8 @@ private: System::Void Personnel_button_Click(System::Object^ sender, System::Eve
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
