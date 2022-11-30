@@ -80,6 +80,10 @@
     <ClInclude Include="MyForm1.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Form_color_change.h" />
+    <ClInclude Include="Hex_color.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -140,6 +144,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MyForm1.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Form_color_change.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

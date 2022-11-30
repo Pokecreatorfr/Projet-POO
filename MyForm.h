@@ -1,5 +1,7 @@
 #pragma once
 #include "MyForm1.h"
+#include "Form_color_change.h"
+#include "Hex_color.h"
 
 
 namespace ProjetPOO {
@@ -219,6 +221,7 @@ namespace ProjetPOO {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(96, 520);
 			this->panel1->TabIndex = 0;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint_1);
 			// 
 			// Setting_button
 			// 
@@ -837,12 +840,15 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel9->Visible = true;
 	this->panel2->Visible = false;
+	Form_color_change::Change_color_of_pannel_hex(this->panel1, color_list[0]);
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel1_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }
