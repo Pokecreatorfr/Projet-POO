@@ -3,10 +3,14 @@
 #include "Personne.h"
 ref class Personnel : public Personne 
 {private:
-	int ID_Ps;
+	int ID_ps;
+	DateTime Date_Embauche;
+	String^ poste;
+	int ID_supp;
+
 public:
 	Personnel();
-	Personnel(int ID_Cli, int ID_ps, string Nom, DateTime Date_Embauche);
+	Personnel(String^ Nom, String^ Prenom, DateTime DateNaissance, String^ poste, int ID_ps, DateTime Date_Embauche);
 	int get_ID_cl();
 	void set_ID_cl();
 };

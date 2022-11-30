@@ -5,14 +5,14 @@ Client::Client()
     throw gcnew System::NotImplementedException();
 }
 
-Client::Client(int ID_cl, int ID_ps, string Nom, string Prenom, DateTime Date)
+Client::Client(int ID_cl, String^ Nom, String^ Prenom, DateTime DateNaissance, DateTime Date)
 {
     throw gcnew System::NotImplementedException();
-   ID_cl = ID_cl;
-   ID_ps = ID_ps;
-   Nom = Nom;
-   Prenom = Prenom;
-   Date = Date;
+    ID_cl = ID_cl;
+    Nom = Nom;
+    Prenom = Prenom;
+    DateNaissance = DateNaissance;
+    
 }
 
 
@@ -27,3 +27,15 @@ void Client::set_ID_cl()
     throw gcnew System::NotImplementedException();
     ID_cl = ID_cl;
 }
+
+void Client::set_Date()
+{
+    throw gcnew System::NotImplementedException();
+    this->Date=Date;
+}
+
+DateTime Client::get_Date()
+{
+    return DateTime();
+}
+
