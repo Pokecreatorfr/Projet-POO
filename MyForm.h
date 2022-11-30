@@ -1,4 +1,6 @@
 #pragma once
+#include "MyForm1.h"
+
 
 namespace ProjetPOO {
 
@@ -48,6 +50,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Button^ Personnel_button;
 
 	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
+	private: System::Windows::Forms::Panel^ panel2;
+
 
 
 
@@ -82,7 +86,9 @@ namespace ProjetPOO {
 			this->stats_button = (gcnew System::Windows::Forms::Button());
 			this->client_button = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
+			this->flowLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -115,6 +121,7 @@ namespace ProjetPOO {
 			this->Setting_button->Size = System::Drawing::Size(96, 66);
 			this->Setting_button->TabIndex = 1;
 			this->Setting_button->UseVisualStyleBackColor = true;
+			this->Setting_button->Click += gcnew System::EventHandler(this, &MyForm::Setting_click);
 			// 
 			// Personnel_button
 			// 
@@ -176,11 +183,23 @@ namespace ProjetPOO {
 			// 
 			// flowLayoutPanel1
 			// 
+			this->flowLayoutPanel1->Controls->Add(this->panel2);
 			this->flowLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->flowLayoutPanel1->Location = System::Drawing::Point(96, 0);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
 			this->flowLayoutPanel1->Size = System::Drawing::Size(879, 441);
 			this->flowLayoutPanel1->TabIndex = 1;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->panel2->Location = System::Drawing::Point(3, 3);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(877, 437);
+			this->panel2->TabIndex = 0;
+			this->panel2->Visible = false;
+			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel2_Paint_1);
 			// 
 			// MyForm
 			// 
@@ -199,6 +218,7 @@ namespace ProjetPOO {
 			this->Text = L"Client Manager 2022";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panel1->ResumeLayout(false);
+			this->flowLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -223,6 +243,13 @@ private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void button1_Click_2(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^ e) {
+	this->panel2->Visible=true;
+}
+private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void Setting_click(System::Object^ sender, System::EventArgs^ e) {
+	MyForm1^ setting = gcnew MyForm1;
+	setting->Show();
 }
 };
 }
