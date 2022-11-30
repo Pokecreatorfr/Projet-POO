@@ -1,7 +1,6 @@
 #include "Connection.h"
 
-
-Connection::DAOPersonne::DAOPersonne(void)
+BDD::Connection::Connection(void)
 {
 	this->sCnx = "Data Source = DESKTOP-N3PF2FH\\TANG_SQL;Initial Catalog = user5 ;User ID = user5 ; Password=bonjour";
 
@@ -15,7 +14,7 @@ Connection::DAOPersonne::DAOPersonne(void)
 	this->oCmd->CommandType = System::Data::CommandType::Text;
 
 }
-System::Data::DataSet^ Connection::DAOPersonne::getRows(System::String^ sSql, System::String^ sDataTableName)
+System::Data::DataSet^ BDD::Connection::getRows(System::String^ sSql, System::String^ sDataTableName)
 {
 	this->oDs->Clear();
 	this->sSql = sSql;
@@ -25,7 +24,7 @@ System::Data::DataSet^ Connection::DAOPersonne::getRows(System::String^ sSql, Sy
 
 	return this->oDs;
 }
-void Connection::DAOPersonne::actionRows(System::String^ sSql)
+void BDD::Connection::actionRows(System::String^ sSql)
 {
 	this->sSql = sSql;
 	this->oCmd->CommandText = this->sSql;

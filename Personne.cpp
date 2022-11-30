@@ -8,9 +8,9 @@ Personne::Personne()
 Personne::Personne(String^ Nom, String^ Prenom, DateTime DateNaissance)
 {
     throw gcnew System::NotImplementedException();
-    Nom = Nom;
-    Prenom = Prenom;
-    DateNaissance = DateNaissance;
+    this-> Nom = Nom;
+    this-> Prenom = Prenom;
+    this-> DateNaissance = DateNaissance;
 }
 
 String^ Personne::getNom()
