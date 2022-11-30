@@ -226,6 +226,7 @@ namespace ProjetPOO {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(860, 484);
 			this->panel2->TabIndex = 1;
+			this->panel2->Visible = false;
 			// 
 			// panel3
 			// 
