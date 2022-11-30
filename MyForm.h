@@ -142,6 +142,11 @@ namespace ProjetPOO {
 			this->stats_button = (gcnew System::Windows::Forms::Button());
 			this->client_button = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panel16 = (gcnew System::Windows::Forms::Panel());
+			this->panel17 = (gcnew System::Windows::Forms::Panel());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->Adresse_label = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
 			this->Clear_Client_button = (gcnew System::Windows::Forms::Button());
@@ -160,6 +165,9 @@ namespace ProjetPOO {
 			this->IDclient_tb = (gcnew System::Windows::Forms::TextBox());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
+			this->panel18 = (gcnew System::Windows::Forms::Panel());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->DATE_EMBAUCHE_tb = (gcnew System::Windows::Forms::TextBox());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
 			this->Clear_Personnel_button = (gcnew System::Windows::Forms::Button());
 			this->Chercher_Personnel_button = (gcnew System::Windows::Forms::Button());
@@ -175,16 +183,10 @@ namespace ProjetPOO {
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->IDperson_tb = (gcnew System::Windows::Forms::TextBox());
-			this->panel16 = (gcnew System::Windows::Forms::Panel());
-			this->Adresse_label = (gcnew System::Windows::Forms::Label());
-			this->panel17 = (gcnew System::Windows::Forms::Panel());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->panel18 = (gcnew System::Windows::Forms::Panel());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->DATE_EMBAUCHE_tb = (gcnew System::Windows::Forms::TextBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
+			this->panel16->SuspendLayout();
+			this->panel17->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel8->SuspendLayout();
 			this->panel7->SuspendLayout();
@@ -193,14 +195,12 @@ namespace ProjetPOO {
 			this->panel4->SuspendLayout();
 			this->panel9->SuspendLayout();
 			this->panel10->SuspendLayout();
+			this->panel18->SuspendLayout();
 			this->panel11->SuspendLayout();
 			this->panel12->SuspendLayout();
 			this->panel13->SuspendLayout();
 			this->panel14->SuspendLayout();
 			this->panel15->SuspendLayout();
-			this->panel16->SuspendLayout();
-			this->panel17->SuspendLayout();
-			this->panel18->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -304,6 +304,61 @@ namespace ProjetPOO {
 			this->panel2->Size = System::Drawing::Size(783, 520);
 			this->panel2->TabIndex = 1;
 			this->panel2->Visible = false;
+			// 
+			// panel16
+			// 
+			this->panel16->Controls->Add(this->panel17);
+			this->panel16->Controls->Add(this->Adresse_label);
+			this->panel16->Dock = System::Windows::Forms::DockStyle::Right;
+			this->panel16->Location = System::Drawing::Point(376, 0);
+			this->panel16->Name = L"panel16";
+			this->panel16->Size = System::Drawing::Size(407, 520);
+			this->panel16->TabIndex = 1;
+			// 
+			// panel17
+			// 
+			this->panel17->Controls->Add(this->label9);
+			this->panel17->Controls->Add(this->textBox9);
+			this->panel17->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel17->Location = System::Drawing::Point(0, 26);
+			this->panel17->Name = L"panel17";
+			this->panel17->Size = System::Drawing::Size(407, 54);
+			this->panel17->TabIndex = 4;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label9->Location = System::Drawing::Point(0, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(66, 28);
+			this->label9->TabIndex = 1;
+			this->label9->Text = L"Ville";
+			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
+			// 
+			// textBox9
+			// 
+			this->textBox9->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->textBox9->Location = System::Drawing::Point(0, 32);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(407, 22);
+			this->textBox9->TabIndex = 0;
+			// 
+			// Adresse_label
+			// 
+			this->Adresse_label->AutoSize = true;
+			this->Adresse_label->Dock = System::Windows::Forms::DockStyle::Top;
+			this->Adresse_label->Font = (gcnew System::Drawing::Font(L"MV Boli", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Adresse_label->ForeColor = System::Drawing::SystemColors::Control;
+			this->Adresse_label->Location = System::Drawing::Point(0, 0);
+			this->Adresse_label->Name = L"Adresse_label";
+			this->Adresse_label->Size = System::Drawing::Size(89, 26);
+			this->Adresse_label->TabIndex = 0;
+			this->Adresse_label->Text = L"Adresse";
 			// 
 			// panel3
 			// 
@@ -503,6 +558,38 @@ namespace ProjetPOO {
 			this->panel10->Size = System::Drawing::Size(314, 520);
 			this->panel10->TabIndex = 0;
 			// 
+			// panel18
+			// 
+			this->panel18->Controls->Add(this->label10);
+			this->panel18->Controls->Add(this->DATE_EMBAUCHE_tb);
+			this->panel18->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel18->Location = System::Drawing::Point(0, 228);
+			this->panel18->Name = L"panel18";
+			this->panel18->Size = System::Drawing::Size(314, 54);
+			this->panel18->TabIndex = 5;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label10->Location = System::Drawing::Point(0, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(197, 28);
+			this->label10->TabIndex = 1;
+			this->label10->Text = L"Date Embauche";
+			this->label10->Click += gcnew System::EventHandler(this, &MyForm::label10_Click);
+			// 
+			// DATE_EMBAUCHE_tb
+			// 
+			this->DATE_EMBAUCHE_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->DATE_EMBAUCHE_tb->Location = System::Drawing::Point(0, 32);
+			this->DATE_EMBAUCHE_tb->Name = L"DATE_EMBAUCHE_tb";
+			this->DATE_EMBAUCHE_tb->Size = System::Drawing::Size(314, 22);
+			this->DATE_EMBAUCHE_tb->TabIndex = 0;
+			// 
 			// panel11
 			// 
 			this->panel11->Controls->Add(this->Clear_Personnel_button);
@@ -664,93 +751,6 @@ namespace ProjetPOO {
 			this->IDperson_tb->Size = System::Drawing::Size(314, 22);
 			this->IDperson_tb->TabIndex = 0;
 			// 
-			// panel16
-			// 
-			this->panel16->Controls->Add(this->panel17);
-			this->panel16->Controls->Add(this->Adresse_label);
-			this->panel16->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel16->Location = System::Drawing::Point(376, 0);
-			this->panel16->Name = L"panel16";
-			this->panel16->Size = System::Drawing::Size(407, 520);
-			this->panel16->TabIndex = 1;
-			// 
-			// Adresse_label
-			// 
-			this->Adresse_label->AutoSize = true;
-			this->Adresse_label->Dock = System::Windows::Forms::DockStyle::Top;
-			this->Adresse_label->Font = (gcnew System::Drawing::Font(L"MV Boli", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->Adresse_label->ForeColor = System::Drawing::SystemColors::Control;
-			this->Adresse_label->Location = System::Drawing::Point(0, 0);
-			this->Adresse_label->Name = L"Adresse_label";
-			this->Adresse_label->Size = System::Drawing::Size(89, 26);
-			this->Adresse_label->TabIndex = 0;
-			this->Adresse_label->Text = L"Adresse";
-			// 
-			// panel17
-			// 
-			this->panel17->Controls->Add(this->label9);
-			this->panel17->Controls->Add(this->textBox9);
-			this->panel17->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel17->Location = System::Drawing::Point(0, 26);
-			this->panel17->Name = L"panel17";
-			this->panel17->Size = System::Drawing::Size(407, 54);
-			this->panel17->TabIndex = 4;
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Dock = System::Windows::Forms::DockStyle::Left;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label9->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label9->Location = System::Drawing::Point(0, 0);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(66, 28);
-			this->label9->TabIndex = 1;
-			this->label9->Text = L"Ville";
-			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
-			// 
-			// textBox9
-			// 
-			this->textBox9->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->textBox9->Location = System::Drawing::Point(0, 32);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(407, 22);
-			this->textBox9->TabIndex = 0;
-			// 
-			// panel18
-			// 
-			this->panel18->Controls->Add(this->label10);
-			this->panel18->Controls->Add(this->DATE_EMBAUCHE_tb);
-			this->panel18->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel18->Location = System::Drawing::Point(0, 228);
-			this->panel18->Name = L"panel18";
-			this->panel18->Size = System::Drawing::Size(314, 54);
-			this->panel18->TabIndex = 5;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label10->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label10->Location = System::Drawing::Point(0, 0);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(197, 28);
-			this->label10->TabIndex = 1;
-			this->label10->Text = L"Date Embauche";
-			this->label10->Click += gcnew System::EventHandler(this, &MyForm::label10_Click);
-			// 
-			// DATE_EMBAUCHE_tb
-			// 
-			this->DATE_EMBAUCHE_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->DATE_EMBAUCHE_tb->Location = System::Drawing::Point(0, 32);
-			this->DATE_EMBAUCHE_tb->Name = L"DATE_EMBAUCHE_tb";
-			this->DATE_EMBAUCHE_tb->Size = System::Drawing::Size(314, 22);
-			this->DATE_EMBAUCHE_tb->TabIndex = 0;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -770,6 +770,10 @@ namespace ProjetPOO {
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
+			this->panel16->ResumeLayout(false);
+			this->panel16->PerformLayout();
+			this->panel17->ResumeLayout(false);
+			this->panel17->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel8->ResumeLayout(false);
 			this->panel7->ResumeLayout(false);
@@ -782,6 +786,8 @@ namespace ProjetPOO {
 			this->panel4->PerformLayout();
 			this->panel9->ResumeLayout(false);
 			this->panel10->ResumeLayout(false);
+			this->panel18->ResumeLayout(false);
+			this->panel18->PerformLayout();
 			this->panel11->ResumeLayout(false);
 			this->panel12->ResumeLayout(false);
 			this->panel12->PerformLayout();
@@ -791,12 +797,6 @@ namespace ProjetPOO {
 			this->panel14->PerformLayout();
 			this->panel15->ResumeLayout(false);
 			this->panel15->PerformLayout();
-			this->panel16->ResumeLayout(false);
-			this->panel16->PerformLayout();
-			this->panel17->ResumeLayout(false);
-			this->panel17->PerformLayout();
-			this->panel18->ResumeLayout(false);
-			this->panel18->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
