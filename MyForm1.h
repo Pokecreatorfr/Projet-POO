@@ -76,11 +76,7 @@ namespace ProjetPOO {
 			this->BDD_Tbox->Size = System::Drawing::Size(100, 22);
 			this->BDD_Tbox->TabIndex = 0;
 			this->BDD_Tbox->Text = L"asda";
-<<<<<<< Updated upstream
-			this->BDD_Tbox->TextChanged += gcnew System::EventHandler(this, &MyForm1::textBox1_TextChanged);
-=======
 			this->BDD_Tbox->TextChanged += gcnew System::EventHandler(this, &MyForm1::BDDtBox_TextChanged);
->>>>>>> Stashed changes
 			// 
 			// label1
 			// 
@@ -122,11 +118,7 @@ namespace ProjetPOO {
 			this->ID_Tbox->Name = L"ID_Tbox";
 			this->ID_Tbox->Size = System::Drawing::Size(100, 22);
 			this->ID_Tbox->TabIndex = 3;
-<<<<<<< Updated upstream
 			this->ID_Tbox->Text = L"ze";
-=======
-			this->ID_Tbox->Text = L"a";
->>>>>>> Stashed changes
 			// 
 			// label4
 			// 
@@ -145,11 +137,7 @@ namespace ProjetPOO {
 			this->MDP_Tbox->Name = L"MDP_Tbox";
 			this->MDP_Tbox->Size = System::Drawing::Size(100, 22);
 			this->MDP_Tbox->TabIndex = 5;
-<<<<<<< Updated upstream
-			this->MDP_Tbox->Text = L"aaa";
-=======
 			this->MDP_Tbox->Text = L"a";
->>>>>>> Stashed changes
 			// 
 			// MyForm1
 			// 
