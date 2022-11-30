@@ -45,6 +45,7 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ MDP_Tbox;
+	private: System::Windows::Forms::Button^ Save_btn;
 
 
 	private:
@@ -67,6 +68,7 @@ namespace ProjetPOO {
 			this->ID_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->MDP_Tbox = (gcnew System::Windows::Forms::TextBox());
+			this->Save_btn = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// BDD_Tbox
@@ -139,12 +141,23 @@ namespace ProjetPOO {
 			this->MDP_Tbox->TabIndex = 5;
 			this->MDP_Tbox->Text = L"a";
 			// 
+			// Save_btn
+			// 
+			this->Save_btn->Location = System::Drawing::Point(265, 385);
+			this->Save_btn->Name = L"Save_btn";
+			this->Save_btn->Size = System::Drawing::Size(75, 23);
+			this->Save_btn->TabIndex = 7;
+			this->Save_btn->Text = L"Save";
+			this->Save_btn->UseVisualStyleBackColor = true;
+			this->Save_btn->Click += gcnew System::EventHandler(this, &MyForm1::Save_btn_Click);
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->ClientSize = System::Drawing::Size(437, 462);
+			this->Controls->Add(this->Save_btn);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->MDP_Tbox);
 			this->Controls->Add(this->label3);
@@ -166,5 +179,7 @@ namespace ProjetPOO {
 	}
 	private: System::Void BDDtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void Save_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
