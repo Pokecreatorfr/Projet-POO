@@ -34,14 +34,18 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ BDD_Tbox;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ ID_Tbox;
+
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ MDP_Tbox;
+
 
 	private:
 		/// <summary>
@@ -56,23 +60,23 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->BDD_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->ID_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->MDP_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
-			// textBox1
+			// BDD_Tbox
 			// 
-			this->textBox1->Location = System::Drawing::Point(52, 129);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 22);
-			this->textBox1->TabIndex = 0;
-			this->textBox1->Text = L"asda";
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm1::textBox1_TextChanged);
+			this->BDD_Tbox->Location = System::Drawing::Point(52, 129);
+			this->BDD_Tbox->Name = L"BDD_Tbox";
+			this->BDD_Tbox->Size = System::Drawing::Size(100, 22);
+			this->BDD_Tbox->TabIndex = 0;
+			this->BDD_Tbox->Text = L"asda";
+			this->BDD_Tbox->TextChanged += gcnew System::EventHandler(this, &MyForm1::textBox1_TextChanged);
 			// 
 			// label1
 			// 
@@ -81,7 +85,7 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(12, 19);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(173, 39);
+			this->label1->Size = System::Drawing::Size(166, 38);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"SETTING";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm1::label1_Click);
@@ -108,12 +112,13 @@ namespace ProjetPOO {
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"ID";
 			// 
-			// textBox2
+			// ID_Tbox
 			// 
-			this->textBox2->Location = System::Drawing::Point(52, 224);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 22);
-			this->textBox2->TabIndex = 3;
+			this->ID_Tbox->Location = System::Drawing::Point(52, 224);
+			this->ID_Tbox->Name = L"ID_Tbox";
+			this->ID_Tbox->Size = System::Drawing::Size(100, 22);
+			this->ID_Tbox->TabIndex = 3;
+			this->ID_Tbox->Text = L"ze";
 			// 
 			// label4
 			// 
@@ -126,12 +131,13 @@ namespace ProjetPOO {
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"MDP";
 			// 
-			// textBox3
+			// MDP_Tbox
 			// 
-			this->textBox3->Location = System::Drawing::Point(52, 334);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 22);
-			this->textBox3->TabIndex = 5;
+			this->MDP_Tbox->Location = System::Drawing::Point(52, 334);
+			this->MDP_Tbox->Name = L"MDP_Tbox";
+			this->MDP_Tbox->Size = System::Drawing::Size(100, 22);
+			this->MDP_Tbox->TabIndex = 5;
+			this->MDP_Tbox->Text = L"aaa";
 			// 
 			// MyForm1
 			// 
@@ -140,12 +146,12 @@ namespace ProjetPOO {
 			this->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->ClientSize = System::Drawing::Size(437, 462);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->MDP_Tbox);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->ID_Tbox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->BDD_Tbox);
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
 			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
