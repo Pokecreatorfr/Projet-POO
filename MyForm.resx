@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Setting_button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAASxZJREFUeF7t
         nU+otlW5/xs0cNCggYMGQcIRCn5CwhEKjpCQUJDQgYKEhISEhAQFBQUdCAoKCgUGCgoFCQYFBgYGHvCA
@@ -444,7 +444,7 @@
         ERERERERERGRUD71qf8PicScJQ1NdoMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Personnel_button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAS40lEQVR4Xu2dB4w1VRmGsSsWRMUOil2s
@@ -531,10 +531,10 @@
         hBBCCCGEsD077PA/4B+jk4I4z4MAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="commande_button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAP
-        WwAAD1sBKHdd2wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACPRSURBVHhe7d13
+        WgAAD1oB+jC/PwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACPRSURBVHhe7d13
         vHRVfe9xerehiMFe0AhXuSqSiC3BkogtYgsqGE1ssZAYRaOxg7232IhiiRUDiRobirk2LLkCouIFu2BD
         BATp936XvF7xEn7Pc86ZMzN7r5n3+/X6/P+ctfesPc/svdfaBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -690,10 +690,10 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIzaJpv8P+JqWA4UFmbzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stats_button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACNFSURBVHhe7d19
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACNFSURBVHhe7d19
         sPd5Xddx9haQRVkXSIJAUIk78S7HaIgci3BMLQkzSRlQpzTQxqnGUUulMcUZp2yGm5YyCSQtMyzvkiQT
         MRI1ZEAXQVdMlI0VXG7kZpel3p+BM3vttZ/rus77c36/7/v7+X4fj5nnPzt6Xb89v8O+X+ec3znnbgCQ
         dHX0pOgF0a9EN0cfiv7fBvpAdFP0qui7o8+JLo8AYLeujb4nelfUO55b7a3Rs6KrIgDYlXYA3xH1DuRe
@@ -847,10 +847,10 @@
         SWer3dJ2U9ttbTf2QC/0u9vd/j8xWV8eQEmIAwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="client_button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAEKhJREFUeF7t3SHY1Ubax2HcyspKJBKJRCKRlUgkEolDIpGVSCQSWYlEViKRtbvP
+        wAAADsABataJCQAAEKhJREFUeF7t3SHY1Ubax2HcyspKJBKJRCKRlUgkEolDIpGVSCQSWYlEViKRtbvP
         f7tnl20f4H1DkjOT3Pd1/eTX7tcrbyZnMpm5AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
