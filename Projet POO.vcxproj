@@ -121,22 +121,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adresse.h" />
+    <ClInclude Include="AdresseService.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="ClientDAO.h" />
+    <ClInclude Include="ClientService.h" />
+    <ClInclude Include="Commande.h" />
+    <ClInclude Include="CommandeDAO.h" />
+    <ClInclude Include="CommandeService.h" />
+    <ClInclude Include="Connection.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm1.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
+    <ClInclude Include="Paiement.h" />
+    <ClInclude Include="PaiementDAO.h" />
+    <ClInclude Include="PaiementService.h" />
     <ClInclude Include="Personne.h" />
+    <ClInclude Include="PersonneDAO.h" />
     <ClInclude Include="Personnel.h" />
+    <ClInclude Include="PersonnelDAO.h" />
+    <ClInclude Include="PersonnelService.h" />
+    <ClInclude Include="Produit.h" />
+    <ClInclude Include="ProduitDAO.h" />
+    <ClInclude Include="ProduitService.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Adresse.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="ClientDAO.cpp" />
+    <ClCompile Include="ClientService.cpp" />
+    <ClCompile Include="Commande.cpp" />
+    <ClCompile Include="CommandeDAO.cpp" />
+    <ClCompile Include="CommandeService.cpp" />
+    <ClCompile Include="Connection.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="Paiement.cpp" />
+    <ClCompile Include="PaiementDAO.cpp" />
+    <ClCompile Include="PaiementService.cpp" />
     <ClCompile Include="Personne.cpp" />
+    <ClCompile Include="PersonneDAO.cpp" />
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="PersonnelDAO.cpp" />
+    <ClCompile Include="Produit.cpp" />
+    <ClCompile Include="ProduitDAO.cpp" />
+    <ClCompile Include="ProduitService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
