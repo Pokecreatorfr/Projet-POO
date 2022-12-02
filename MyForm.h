@@ -156,6 +156,7 @@ namespace ProjetPOO {
 			this->Clear_Client_button = (gcnew System::Windows::Forms::Button());
 			this->Chercher_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -186,7 +187,6 @@ namespace ProjetPOO {
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->IDperson_tb = (gcnew System::Windows::Forms::TextBox());
-			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel16->SuspendLayout();
@@ -218,10 +218,10 @@ namespace ProjetPOO {
 			this->panel1->Controls->Add(this->client_button);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->panel1->MinimumSize = System::Drawing::Size(96, 386);
+			this->panel1->Margin = System::Windows::Forms::Padding(2);
+			this->panel1->MinimumSize = System::Drawing::Size(72, 314);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(96, 520);
+			this->panel1->Size = System::Drawing::Size(72, 422);
 			this->panel1->TabIndex = 0;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint_1);
 			// 
@@ -232,10 +232,10 @@ namespace ProjetPOO {
 			this->Setting_button->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->Setting_button->FlatAppearance->BorderSize = 0;
 			this->Setting_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Setting_button->Location = System::Drawing::Point(0, 454);
-			this->Setting_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Setting_button->Location = System::Drawing::Point(0, 368);
+			this->Setting_button->Margin = System::Windows::Forms::Padding(2);
 			this->Setting_button->Name = L"Setting_button";
-			this->Setting_button->Size = System::Drawing::Size(96, 66);
+			this->Setting_button->Size = System::Drawing::Size(72, 54);
 			this->Setting_button->TabIndex = 1;
 			this->Setting_button->UseVisualStyleBackColor = true;
 			this->Setting_button->Click += gcnew System::EventHandler(this, &MyForm::Setting_click);
@@ -247,11 +247,11 @@ namespace ProjetPOO {
 			this->Personnel_button->Dock = System::Windows::Forms::DockStyle::Top;
 			this->Personnel_button->FlatAppearance->BorderSize = 0;
 			this->Personnel_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Personnel_button->Location = System::Drawing::Point(0, 198);
-			this->Personnel_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Personnel_button->Location = System::Drawing::Point(0, 162);
+			this->Personnel_button->Margin = System::Windows::Forms::Padding(2);
 			this->Personnel_button->Name = L"Personnel_button";
 			this->Personnel_button->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->Personnel_button->Size = System::Drawing::Size(96, 66);
+			this->Personnel_button->Size = System::Drawing::Size(72, 54);
 			this->Personnel_button->TabIndex = 1;
 			this->Personnel_button->UseVisualStyleBackColor = true;
 			this->Personnel_button->Click += gcnew System::EventHandler(this, &MyForm::Personnel_button_Click);
@@ -263,10 +263,10 @@ namespace ProjetPOO {
 			this->commande_button->Dock = System::Windows::Forms::DockStyle::Top;
 			this->commande_button->FlatAppearance->BorderSize = 0;
 			this->commande_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->commande_button->Location = System::Drawing::Point(0, 132);
-			this->commande_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->commande_button->Location = System::Drawing::Point(0, 108);
+			this->commande_button->Margin = System::Windows::Forms::Padding(2);
 			this->commande_button->Name = L"commande_button";
-			this->commande_button->Size = System::Drawing::Size(96, 66);
+			this->commande_button->Size = System::Drawing::Size(72, 54);
 			this->commande_button->TabIndex = 1;
 			this->commande_button->UseVisualStyleBackColor = true;
 			// 
@@ -277,10 +277,10 @@ namespace ProjetPOO {
 			this->stats_button->Dock = System::Windows::Forms::DockStyle::Top;
 			this->stats_button->FlatAppearance->BorderSize = 0;
 			this->stats_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->stats_button->Location = System::Drawing::Point(0, 66);
-			this->stats_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->stats_button->Location = System::Drawing::Point(0, 54);
+			this->stats_button->Margin = System::Windows::Forms::Padding(2);
 			this->stats_button->Name = L"stats_button";
-			this->stats_button->Size = System::Drawing::Size(96, 66);
+			this->stats_button->Size = System::Drawing::Size(72, 54);
 			this->stats_button->TabIndex = 1;
 			this->stats_button->UseVisualStyleBackColor = true;
 			// 
@@ -292,9 +292,9 @@ namespace ProjetPOO {
 			this->client_button->FlatAppearance->BorderSize = 0;
 			this->client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->client_button->Location = System::Drawing::Point(0, 0);
-			this->client_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->client_button->Margin = System::Windows::Forms::Padding(2);
 			this->client_button->Name = L"client_button";
-			this->client_button->Size = System::Drawing::Size(96, 66);
+			this->client_button->Size = System::Drawing::Size(72, 54);
 			this->client_button->TabIndex = 0;
 			this->client_button->UseVisualStyleBackColor = true;
 			this->client_button->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_3);
@@ -304,9 +304,10 @@ namespace ProjetPOO {
 			this->panel2->Controls->Add(this->panel16);
 			this->panel2->Controls->Add(this->panel3);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel2->Location = System::Drawing::Point(96, 0);
+			this->panel2->Location = System::Drawing::Point(72, 0);
+			this->panel2->Margin = System::Windows::Forms::Padding(2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(783, 520);
+			this->panel2->Size = System::Drawing::Size(587, 422);
 			this->panel2->TabIndex = 1;
 			this->panel2->Visible = false;
 			// 
@@ -315,9 +316,10 @@ namespace ProjetPOO {
 			this->panel16->Controls->Add(this->panel17);
 			this->panel16->Controls->Add(this->Adresse_label);
 			this->panel16->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel16->Location = System::Drawing::Point(376, 0);
+			this->panel16->Location = System::Drawing::Point(282, 0);
+			this->panel16->Margin = System::Windows::Forms::Padding(2);
 			this->panel16->Name = L"panel16";
-			this->panel16->Size = System::Drawing::Size(407, 520);
+			this->panel16->Size = System::Drawing::Size(305, 422);
 			this->panel16->TabIndex = 1;
 			// 
 			// panel17
@@ -325,9 +327,10 @@ namespace ProjetPOO {
 			this->panel17->Controls->Add(this->label9);
 			this->panel17->Controls->Add(this->textBox9);
 			this->panel17->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel17->Location = System::Drawing::Point(0, 26);
+			this->panel17->Location = System::Drawing::Point(0, 21);
+			this->panel17->Margin = System::Windows::Forms::Padding(2);
 			this->panel17->Name = L"panel17";
-			this->panel17->Size = System::Drawing::Size(407, 54);
+			this->panel17->Size = System::Drawing::Size(305, 44);
 			this->panel17->TabIndex = 4;
 			// 
 			// label9
@@ -338,8 +341,9 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label9->Location = System::Drawing::Point(0, 0);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(66, 28);
+			this->label9->Size = System::Drawing::Size(56, 23);
 			this->label9->TabIndex = 1;
 			this->label9->Text = L"Ville";
 			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
@@ -347,9 +351,10 @@ namespace ProjetPOO {
 			// textBox9
 			// 
 			this->textBox9->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->textBox9->Location = System::Drawing::Point(0, 32);
+			this->textBox9->Location = System::Drawing::Point(0, 24);
+			this->textBox9->Margin = System::Windows::Forms::Padding(2);
 			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(407, 22);
+			this->textBox9->Size = System::Drawing::Size(305, 20);
 			this->textBox9->TabIndex = 0;
 			// 
 			// Adresse_label
@@ -360,8 +365,9 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->Adresse_label->ForeColor = System::Drawing::SystemColors::Control;
 			this->Adresse_label->Location = System::Drawing::Point(0, 0);
+			this->Adresse_label->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Adresse_label->Name = L"Adresse_label";
-			this->Adresse_label->Size = System::Drawing::Size(89, 26);
+			this->Adresse_label->Size = System::Drawing::Size(74, 21);
 			this->Adresse_label->TabIndex = 0;
 			this->Adresse_label->Text = L"Adresse";
 			// 
@@ -374,8 +380,9 @@ namespace ProjetPOO {
 			this->panel3->Controls->Add(this->panel4);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel3->Location = System::Drawing::Point(0, 0);
+			this->panel3->Margin = System::Windows::Forms::Padding(2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(314, 520);
+			this->panel3->Size = System::Drawing::Size(236, 422);
 			this->panel3->TabIndex = 0;
 			// 
 			// panel8
@@ -383,9 +390,10 @@ namespace ProjetPOO {
 			this->panel8->Controls->Add(this->Clear_Client_button);
 			this->panel8->Controls->Add(this->Chercher_Client_button);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel8->Location = System::Drawing::Point(0, 444);
+			this->panel8->Location = System::Drawing::Point(0, 360);
+			this->panel8->Margin = System::Windows::Forms::Padding(2);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(314, 76);
+			this->panel8->Size = System::Drawing::Size(236, 62);
 			this->panel8->TabIndex = 4;
 			// 
 			// Clear_Client_button
@@ -395,9 +403,10 @@ namespace ProjetPOO {
 			this->Clear_Client_button->Dock = System::Windows::Forms::DockStyle::Left;
 			this->Clear_Client_button->FlatAppearance->BorderSize = 0;
 			this->Clear_Client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Clear_Client_button->Location = System::Drawing::Point(102, 0);
+			this->Clear_Client_button->Location = System::Drawing::Point(76, 0);
+			this->Clear_Client_button->Margin = System::Windows::Forms::Padding(2);
 			this->Clear_Client_button->Name = L"Clear_Client_button";
-			this->Clear_Client_button->Size = System::Drawing::Size(105, 76);
+			this->Clear_Client_button->Size = System::Drawing::Size(79, 62);
 			this->Clear_Client_button->TabIndex = 1;
 			this->Clear_Client_button->UseVisualStyleBackColor = true;
 			// 
@@ -409,8 +418,9 @@ namespace ProjetPOO {
 			this->Chercher_Client_button->FlatAppearance->BorderSize = 0;
 			this->Chercher_Client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->Chercher_Client_button->Location = System::Drawing::Point(0, 0);
+			this->Chercher_Client_button->Margin = System::Windows::Forms::Padding(2);
 			this->Chercher_Client_button->Name = L"Chercher_Client_button";
-			this->Chercher_Client_button->Size = System::Drawing::Size(102, 76);
+			this->Chercher_Client_button->Size = System::Drawing::Size(76, 62);
 			this->Chercher_Client_button->TabIndex = 0;
 			this->Chercher_Client_button->UseVisualStyleBackColor = true;
 			this->Chercher_Client_button->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_4);
@@ -420,10 +430,21 @@ namespace ProjetPOO {
 			this->panel7->Controls->Add(this->Client_Date_mTB);
 			this->panel7->Controls->Add(this->label4);
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel7->Location = System::Drawing::Point(0, 174);
+			this->panel7->Location = System::Drawing::Point(0, 141);
+			this->panel7->Margin = System::Windows::Forms::Padding(2);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(314, 54);
+			this->panel7->Size = System::Drawing::Size(236, 44);
 			this->panel7->TabIndex = 3;
+			// 
+			// Client_Date_mTB
+			// 
+			this->Client_Date_mTB->Location = System::Drawing::Point(0, 24);
+			this->Client_Date_mTB->Margin = System::Windows::Forms::Padding(2);
+			this->Client_Date_mTB->Mask = L"00/00/0000";
+			this->Client_Date_mTB->Name = L"Client_Date_mTB";
+			this->Client_Date_mTB->Size = System::Drawing::Size(234, 20);
+			this->Client_Date_mTB->TabIndex = 2;
+			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
 			// label4
 			// 
@@ -433,8 +454,9 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label4->Location = System::Drawing::Point(0, 0);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(232, 28);
+			this->label4->Size = System::Drawing::Size(198, 23);
 			this->label4->TabIndex = 1;
 			this->label4->Text = L"Date de naissance";
 			// 
@@ -443,9 +465,10 @@ namespace ProjetPOO {
 			this->panel6->Controls->Add(this->label3);
 			this->panel6->Controls->Add(this->PRENOMclient_tb);
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel6->Location = System::Drawing::Point(0, 116);
+			this->panel6->Location = System::Drawing::Point(0, 94);
+			this->panel6->Margin = System::Windows::Forms::Padding(2);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(314, 58);
+			this->panel6->Size = System::Drawing::Size(236, 47);
 			this->panel6->TabIndex = 2;
 			// 
 			// label3
@@ -456,17 +479,19 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label3->Location = System::Drawing::Point(0, 0);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(102, 28);
+			this->label3->Size = System::Drawing::Size(88, 23);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Prénom";
 			// 
 			// PRENOMclient_tb
 			// 
 			this->PRENOMclient_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->PRENOMclient_tb->Location = System::Drawing::Point(0, 36);
+			this->PRENOMclient_tb->Location = System::Drawing::Point(0, 27);
+			this->PRENOMclient_tb->Margin = System::Windows::Forms::Padding(2);
 			this->PRENOMclient_tb->Name = L"PRENOMclient_tb";
-			this->PRENOMclient_tb->Size = System::Drawing::Size(314, 22);
+			this->PRENOMclient_tb->Size = System::Drawing::Size(236, 20);
 			this->PRENOMclient_tb->TabIndex = 0;
 			// 
 			// panel5
@@ -474,9 +499,10 @@ namespace ProjetPOO {
 			this->panel5->Controls->Add(this->label2);
 			this->panel5->Controls->Add(this->NOMclient_Tb);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel5->Location = System::Drawing::Point(0, 58);
+			this->panel5->Location = System::Drawing::Point(0, 47);
+			this->panel5->Margin = System::Windows::Forms::Padding(2);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(314, 58);
+			this->panel5->Size = System::Drawing::Size(236, 47);
 			this->panel5->TabIndex = 1;
 			// 
 			// label2
@@ -487,17 +513,19 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label2->Location = System::Drawing::Point(0, 0);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(67, 28);
+			this->label2->Size = System::Drawing::Size(57, 23);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Nom";
 			// 
 			// NOMclient_Tb
 			// 
 			this->NOMclient_Tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->NOMclient_Tb->Location = System::Drawing::Point(0, 36);
+			this->NOMclient_Tb->Location = System::Drawing::Point(0, 27);
+			this->NOMclient_Tb->Margin = System::Windows::Forms::Padding(2);
 			this->NOMclient_Tb->Name = L"NOMclient_Tb";
-			this->NOMclient_Tb->Size = System::Drawing::Size(314, 22);
+			this->NOMclient_Tb->Size = System::Drawing::Size(236, 20);
 			this->NOMclient_Tb->TabIndex = 0;
 			// 
 			// panel4
@@ -506,8 +534,9 @@ namespace ProjetPOO {
 			this->panel4->Controls->Add(this->IDclient_tb);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
+			this->panel4->Margin = System::Windows::Forms::Padding(2);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(314, 58);
+			this->panel4->Size = System::Drawing::Size(236, 47);
 			this->panel4->TabIndex = 0;
 			// 
 			// label1
@@ -518,26 +547,29 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label1->Location = System::Drawing::Point(0, 0);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(38, 28);
+			this->label1->Size = System::Drawing::Size(31, 23);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"ID";
 			// 
 			// IDclient_tb
 			// 
 			this->IDclient_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->IDclient_tb->Location = System::Drawing::Point(0, 36);
+			this->IDclient_tb->Location = System::Drawing::Point(0, 27);
+			this->IDclient_tb->Margin = System::Windows::Forms::Padding(2);
 			this->IDclient_tb->Name = L"IDclient_tb";
-			this->IDclient_tb->Size = System::Drawing::Size(314, 22);
+			this->IDclient_tb->Size = System::Drawing::Size(236, 20);
 			this->IDclient_tb->TabIndex = 0;
 			// 
 			// panel9
 			// 
 			this->panel9->Controls->Add(this->panel10);
 			this->panel9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel9->Location = System::Drawing::Point(879, 0);
+			this->panel9->Location = System::Drawing::Point(659, 0);
+			this->panel9->Margin = System::Windows::Forms::Padding(2);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(747, 520);
+			this->panel9->Size = System::Drawing::Size(561, 422);
 			this->panel9->TabIndex = 2;
 			this->panel9->Visible = false;
 			// 
@@ -551,8 +583,9 @@ namespace ProjetPOO {
 			this->panel10->Controls->Add(this->panel15);
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel10->Location = System::Drawing::Point(0, 0);
+			this->panel10->Margin = System::Windows::Forms::Padding(2);
 			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(314, 520);
+			this->panel10->Size = System::Drawing::Size(236, 422);
 			this->panel10->TabIndex = 0;
 			// 
 			// panel18
@@ -560,9 +593,10 @@ namespace ProjetPOO {
 			this->panel18->Controls->Add(this->label10);
 			this->panel18->Controls->Add(this->DATE_EMBAUCHE_tb);
 			this->panel18->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel18->Location = System::Drawing::Point(0, 228);
+			this->panel18->Location = System::Drawing::Point(0, 185);
+			this->panel18->Margin = System::Windows::Forms::Padding(2);
 			this->panel18->Name = L"panel18";
-			this->panel18->Size = System::Drawing::Size(314, 54);
+			this->panel18->Size = System::Drawing::Size(236, 44);
 			this->panel18->TabIndex = 5;
 			// 
 			// label10
@@ -573,8 +607,9 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label10->Location = System::Drawing::Point(0, 0);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(197, 28);
+			this->label10->Size = System::Drawing::Size(168, 23);
 			this->label10->TabIndex = 1;
 			this->label10->Text = L"Date Embauche";
 			this->label10->Click += gcnew System::EventHandler(this, &MyForm::label10_Click);
@@ -582,9 +617,10 @@ namespace ProjetPOO {
 			// DATE_EMBAUCHE_tb
 			// 
 			this->DATE_EMBAUCHE_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->DATE_EMBAUCHE_tb->Location = System::Drawing::Point(0, 32);
+			this->DATE_EMBAUCHE_tb->Location = System::Drawing::Point(0, 24);
+			this->DATE_EMBAUCHE_tb->Margin = System::Windows::Forms::Padding(2);
 			this->DATE_EMBAUCHE_tb->Name = L"DATE_EMBAUCHE_tb";
-			this->DATE_EMBAUCHE_tb->Size = System::Drawing::Size(314, 22);
+			this->DATE_EMBAUCHE_tb->Size = System::Drawing::Size(236, 20);
 			this->DATE_EMBAUCHE_tb->TabIndex = 0;
 			// 
 			// panel11
@@ -592,9 +628,10 @@ namespace ProjetPOO {
 			this->panel11->Controls->Add(this->Clear_Personnel_button);
 			this->panel11->Controls->Add(this->Chercher_Personnel_button);
 			this->panel11->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel11->Location = System::Drawing::Point(0, 444);
+			this->panel11->Location = System::Drawing::Point(0, 360);
+			this->panel11->Margin = System::Windows::Forms::Padding(2);
 			this->panel11->Name = L"panel11";
-			this->panel11->Size = System::Drawing::Size(314, 76);
+			this->panel11->Size = System::Drawing::Size(236, 62);
 			this->panel11->TabIndex = 4;
 			// 
 			// Clear_Personnel_button
@@ -604,9 +641,10 @@ namespace ProjetPOO {
 			this->Clear_Personnel_button->Dock = System::Windows::Forms::DockStyle::Left;
 			this->Clear_Personnel_button->FlatAppearance->BorderSize = 0;
 			this->Clear_Personnel_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Clear_Personnel_button->Location = System::Drawing::Point(102, 0);
+			this->Clear_Personnel_button->Location = System::Drawing::Point(76, 0);
+			this->Clear_Personnel_button->Margin = System::Windows::Forms::Padding(2);
 			this->Clear_Personnel_button->Name = L"Clear_Personnel_button";
-			this->Clear_Personnel_button->Size = System::Drawing::Size(105, 76);
+			this->Clear_Personnel_button->Size = System::Drawing::Size(79, 62);
 			this->Clear_Personnel_button->TabIndex = 1;
 			this->Clear_Personnel_button->UseVisualStyleBackColor = true;
 			// 
@@ -618,8 +656,9 @@ namespace ProjetPOO {
 			this->Chercher_Personnel_button->FlatAppearance->BorderSize = 0;
 			this->Chercher_Personnel_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->Chercher_Personnel_button->Location = System::Drawing::Point(0, 0);
+			this->Chercher_Personnel_button->Margin = System::Windows::Forms::Padding(2);
 			this->Chercher_Personnel_button->Name = L"Chercher_Personnel_button";
-			this->Chercher_Personnel_button->Size = System::Drawing::Size(102, 76);
+			this->Chercher_Personnel_button->Size = System::Drawing::Size(76, 62);
 			this->Chercher_Personnel_button->TabIndex = 0;
 			this->Chercher_Personnel_button->UseVisualStyleBackColor = true;
 			// 
@@ -628,9 +667,10 @@ namespace ProjetPOO {
 			this->panel12->Controls->Add(this->label5);
 			this->panel12->Controls->Add(this->DATE_NAISSANCE_personnel_tb);
 			this->panel12->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel12->Location = System::Drawing::Point(0, 174);
+			this->panel12->Location = System::Drawing::Point(0, 141);
+			this->panel12->Margin = System::Windows::Forms::Padding(2);
 			this->panel12->Name = L"panel12";
-			this->panel12->Size = System::Drawing::Size(314, 54);
+			this->panel12->Size = System::Drawing::Size(236, 44);
 			this->panel12->TabIndex = 3;
 			// 
 			// label5
@@ -641,17 +681,19 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label5->Location = System::Drawing::Point(0, 0);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(232, 28);
+			this->label5->Size = System::Drawing::Size(198, 23);
 			this->label5->TabIndex = 1;
 			this->label5->Text = L"Date de naissance";
 			// 
 			// DATE_NAISSANCE_personnel_tb
 			// 
 			this->DATE_NAISSANCE_personnel_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->DATE_NAISSANCE_personnel_tb->Location = System::Drawing::Point(0, 32);
+			this->DATE_NAISSANCE_personnel_tb->Location = System::Drawing::Point(0, 24);
+			this->DATE_NAISSANCE_personnel_tb->Margin = System::Windows::Forms::Padding(2);
 			this->DATE_NAISSANCE_personnel_tb->Name = L"DATE_NAISSANCE_personnel_tb";
-			this->DATE_NAISSANCE_personnel_tb->Size = System::Drawing::Size(314, 22);
+			this->DATE_NAISSANCE_personnel_tb->Size = System::Drawing::Size(236, 20);
 			this->DATE_NAISSANCE_personnel_tb->TabIndex = 0;
 			// 
 			// panel13
@@ -659,9 +701,10 @@ namespace ProjetPOO {
 			this->panel13->Controls->Add(this->label6);
 			this->panel13->Controls->Add(this->PRENOMpersonnel_tb);
 			this->panel13->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel13->Location = System::Drawing::Point(0, 116);
+			this->panel13->Location = System::Drawing::Point(0, 94);
+			this->panel13->Margin = System::Windows::Forms::Padding(2);
 			this->panel13->Name = L"panel13";
-			this->panel13->Size = System::Drawing::Size(314, 58);
+			this->panel13->Size = System::Drawing::Size(236, 47);
 			this->panel13->TabIndex = 2;
 			// 
 			// label6
@@ -672,17 +715,19 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label6->Location = System::Drawing::Point(0, 0);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(102, 28);
+			this->label6->Size = System::Drawing::Size(88, 23);
 			this->label6->TabIndex = 1;
 			this->label6->Text = L"Prénom";
 			// 
 			// PRENOMpersonnel_tb
 			// 
 			this->PRENOMpersonnel_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->PRENOMpersonnel_tb->Location = System::Drawing::Point(0, 36);
+			this->PRENOMpersonnel_tb->Location = System::Drawing::Point(0, 27);
+			this->PRENOMpersonnel_tb->Margin = System::Windows::Forms::Padding(2);
 			this->PRENOMpersonnel_tb->Name = L"PRENOMpersonnel_tb";
-			this->PRENOMpersonnel_tb->Size = System::Drawing::Size(314, 22);
+			this->PRENOMpersonnel_tb->Size = System::Drawing::Size(236, 20);
 			this->PRENOMpersonnel_tb->TabIndex = 0;
 			// 
 			// panel14
@@ -690,9 +735,10 @@ namespace ProjetPOO {
 			this->panel14->Controls->Add(this->label7);
 			this->panel14->Controls->Add(this->NOMpersonnel_tb);
 			this->panel14->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel14->Location = System::Drawing::Point(0, 58);
+			this->panel14->Location = System::Drawing::Point(0, 47);
+			this->panel14->Margin = System::Windows::Forms::Padding(2);
 			this->panel14->Name = L"panel14";
-			this->panel14->Size = System::Drawing::Size(314, 58);
+			this->panel14->Size = System::Drawing::Size(236, 47);
 			this->panel14->TabIndex = 1;
 			// 
 			// label7
@@ -703,17 +749,19 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label7->Location = System::Drawing::Point(0, 0);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(67, 28);
+			this->label7->Size = System::Drawing::Size(57, 23);
 			this->label7->TabIndex = 1;
 			this->label7->Text = L"Nom";
 			// 
 			// NOMpersonnel_tb
 			// 
 			this->NOMpersonnel_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->NOMpersonnel_tb->Location = System::Drawing::Point(0, 36);
+			this->NOMpersonnel_tb->Location = System::Drawing::Point(0, 27);
+			this->NOMpersonnel_tb->Margin = System::Windows::Forms::Padding(2);
 			this->NOMpersonnel_tb->Name = L"NOMpersonnel_tb";
-			this->NOMpersonnel_tb->Size = System::Drawing::Size(314, 22);
+			this->NOMpersonnel_tb->Size = System::Drawing::Size(236, 20);
 			this->NOMpersonnel_tb->TabIndex = 0;
 			// 
 			// panel15
@@ -722,8 +770,9 @@ namespace ProjetPOO {
 			this->panel15->Controls->Add(this->IDperson_tb);
 			this->panel15->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel15->Location = System::Drawing::Point(0, 0);
+			this->panel15->Margin = System::Windows::Forms::Padding(2);
 			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(314, 58);
+			this->panel15->Size = System::Drawing::Size(236, 47);
 			this->panel15->TabIndex = 0;
 			// 
 			// label8
@@ -734,8 +783,9 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label8->Location = System::Drawing::Point(0, 0);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(54, 28);
+			this->label8->Size = System::Drawing::Size(44, 23);
 			this->label8->TabIndex = 1;
 			this->label8->Text = L"ID2";
 			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
@@ -743,32 +793,24 @@ namespace ProjetPOO {
 			// IDperson_tb
 			// 
 			this->IDperson_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->IDperson_tb->Location = System::Drawing::Point(0, 36);
+			this->IDperson_tb->Location = System::Drawing::Point(0, 27);
+			this->IDperson_tb->Margin = System::Windows::Forms::Padding(2);
 			this->IDperson_tb->Name = L"IDperson_tb";
-			this->IDperson_tb->Size = System::Drawing::Size(314, 22);
+			this->IDperson_tb->Size = System::Drawing::Size(236, 20);
 			this->IDperson_tb->TabIndex = 0;
-			// 
-			// Client_Date_mTB
-			// 
-			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
-			this->Client_Date_mTB->Mask = L"00/00/0000";
-			this->Client_Date_mTB->Name = L"Client_Date_mTB";
-			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
-			this->Client_Date_mTB->TabIndex = 2;
-			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->ClientSize = System::Drawing::Size(1626, 520);
+			this->ClientSize = System::Drawing::Size(1220, 422);
 			this->Controls->Add(this->panel9);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->MinimumSize = System::Drawing::Size(18, 461);
+			this->Margin = System::Windows::Forms::Padding(2);
+			this->MinimumSize = System::Drawing::Size(18, 382);
 			this->Name = L"MyForm";
 			this->Text = L"Client Manager 2022";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);

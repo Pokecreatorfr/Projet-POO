@@ -1,5 +1,3 @@
 #pragma once
-ref class PersonnelService
-{
-};
 
+#include "Personne.h"

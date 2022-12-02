@@ -59,9 +59,3 @@ DateTime BDD::PersonneDAO::getDateNaissance_Ps(void)
 {
 	return this->dateNaissance; 
 }
-
-
-
-
-
-
