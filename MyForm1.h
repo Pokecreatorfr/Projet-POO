@@ -175,6 +175,9 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->BDD_Tbox->Text = System::Configuration::ConfigurationManager::AppSettings["nom_bdd"];
+		this->ID_tb->Text = System::Configuration::ConfigurationManager::AppSettings["id_bdd"];
+		this->MDP_Tbox->Text = System::Configuration::ConfigurationManager::AppSettings["mdp_bdd"];
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
