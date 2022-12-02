@@ -168,6 +168,7 @@
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="PersonnelDAO.h" />
     <ClInclude Include="PersonnelService.h" />
+    <ClInclude Include="PersonneService.h" />
     <ClInclude Include="Produit.h" />
     <ClInclude Include="ProduitDAO.h" />
     <ClInclude Include="ProduitService.h" />
@@ -191,6 +192,7 @@
     <ClCompile Include="PersonneDAO.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="PersonnelDAO.cpp" />
+    <ClCompile Include="PersonneService.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="ProduitDAO.cpp" />
     <ClCompile Include="ProduitService.cpp" />

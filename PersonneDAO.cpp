@@ -6,7 +6,6 @@ using namespace System;
  String^ BDD::PersonneDAO::Select(void)
 {
 	return "SELECT [ID_ps], [Nom_ps], [Prenom_ps], [DateNaissance_ps] FROM [Personnes].[dbo]";
-
 }
  String^ BDD::PersonneDAO::Create(void)
 {
@@ -60,8 +59,6 @@ DateTime BDD::PersonneDAO::getDateNaissance_Ps(void)
 {
 	return this->dateNaissance; 
 }
-
- //
 
 
 
