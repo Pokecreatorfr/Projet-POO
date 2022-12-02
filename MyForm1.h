@@ -34,18 +34,20 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ BDD_Tbox;
+
 	protected:
 
 	protected:
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ ID_Tbox;
+
 
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ MDP_Tbox;
 	private: System::Windows::Forms::Button^ Save_btn;
+	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox1;
+	private: System::Windows::Forms::TextBox^ BDD_Tbox;
 
 
 	private:
@@ -61,24 +63,15 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->BDD_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->ID_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->MDP_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->Save_btn = (gcnew System::Windows::Forms::Button());
+			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->BDD_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
-			// 
-			// BDD_Tbox
-			// 
-			this->BDD_Tbox->Location = System::Drawing::Point(52, 129);
-			this->BDD_Tbox->Name = L"BDD_Tbox";
-			this->BDD_Tbox->Size = System::Drawing::Size(100, 22);
-			this->BDD_Tbox->TabIndex = 0;
-			this->BDD_Tbox->Text = L"asda";
-			this->BDD_Tbox->TextChanged += gcnew System::EventHandler(this, &MyForm1::BDDtBox_TextChanged);
 			// 
 			// label1
 			// 
@@ -114,14 +107,6 @@ namespace ProjetPOO {
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"ID";
 			// 
-			// ID_Tbox
-			// 
-			this->ID_Tbox->Location = System::Drawing::Point(52, 224);
-			this->ID_Tbox->Name = L"ID_Tbox";
-			this->ID_Tbox->Size = System::Drawing::Size(100, 22);
-			this->ID_Tbox->TabIndex = 3;
-			this->ID_Tbox->Text = L"ze";
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
@@ -151,17 +136,33 @@ namespace ProjetPOO {
 			this->Save_btn->UseVisualStyleBackColor = true;
 			this->Save_btn->Click += gcnew System::EventHandler(this, &MyForm1::Save_btn_Click);
 			// 
+			// maskedTextBox1
+			// 
+			this->maskedTextBox1->Location = System::Drawing::Point(54, 220);
+			this->maskedTextBox1->Name = L"maskedTextBox1";
+			this->maskedTextBox1->Size = System::Drawing::Size(100, 22);
+			this->maskedTextBox1->TabIndex = 8;
+			// 
+			// BDD_Tbox
+			// 
+			this->BDD_Tbox->Location = System::Drawing::Point(52, 129);
+			this->BDD_Tbox->Name = L"BDD_Tbox";
+			this->BDD_Tbox->Size = System::Drawing::Size(100, 22);
+			this->BDD_Tbox->TabIndex = 0;
+			this->BDD_Tbox->Text = L"asda";
+			this->BDD_Tbox->TextChanged += gcnew System::EventHandler(this, &MyForm1::BDDtBox_TextChanged);
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->ClientSize = System::Drawing::Size(437, 462);
+			this->Controls->Add(this->maskedTextBox1);
 			this->Controls->Add(this->Save_btn);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->MDP_Tbox);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->ID_Tbox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->BDD_Tbox);
