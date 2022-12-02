@@ -1,18 +1,47 @@
-namespace BDD
+#pragma once
+#include <String>
 
+
+using namespace System::Data;
+using namespace System::Data::SqlClient;
+using namespace System::Xml;
+using namespace System;
+
+// On crée un namespace specifique pour les composants, ça permet de regrouper les classes
+// C'est purement cosmétique mais permet d'avoir un code plus elegant
+
+namespace BDD
 {
 	ref class Connection
 	{
 	private:
-		System::String^ sSql;
-		System::String^ sCnx;
-		System::Data::SqlClient::SqlConnection^ oCnx;
-		System::Data::SqlClient::SqlCommand^ oCmd;
-		System::Data::SqlClient::SqlDataAdapter^ oDA;
-		System::Data::DataSet^ oDs;
+		// Contient les informations de connexion
+		String^ connectionInformation;
+
+		// Le nom de la requete SQL en cours
+		String^ sqlRequest;
+
+		// La connexion SQL
+		SqlConnection^ sqlConnection;
+
+		// La commande SQL
+		SqlCommand^ sqlCommand;
+		SqlDataAdapter^ sqlAdapter;
+
+		// Les donnees renvoyees par les requetes
+		DataSet^ dataSet;
+
+		// Affecte la requete SQL
+		void setSQL(String^ request);
 	public:
 		Connection(void);
-		System::Data::DataSet^ getRows(System::String^, System::String^);
-		void actionRows(System::String^);
+		// Utiliser pour ajouter un element à la base en retournant l'id de l'element
+		int actionRowsID(String^ request);
+
+		// Utiliser pour modifier ou supprimer une element de la base
+		void actionRows(String^ request);
+
+		// Utiliser pour recuperer de la donnees de la base
+		DataSet^ getRows(String^ request, String^ dataTableName);
 	};
 }
