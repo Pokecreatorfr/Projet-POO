@@ -107,6 +107,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ DATE_EMBAUCHE_tb;
 	private: System::Windows::Forms::MaskedTextBox^ Client_Date_mTB;
+	private: System::Windows::Forms::Button^ Add_Client_button;
+
 
 
 
@@ -156,6 +158,7 @@ namespace ProjetPOO {
 			this->Clear_Client_button = (gcnew System::Windows::Forms::Button());
 			this->Chercher_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -186,7 +189,7 @@ namespace ProjetPOO {
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->IDperson_tb = (gcnew System::Windows::Forms::TextBox());
-			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->Add_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel16->SuspendLayout();
@@ -380,6 +383,7 @@ namespace ProjetPOO {
 			// 
 			// panel8
 			// 
+			this->panel8->Controls->Add(this->Add_Client_button);
 			this->panel8->Controls->Add(this->Clear_Client_button);
 			this->panel8->Controls->Add(this->Chercher_Client_button);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
@@ -424,6 +428,15 @@ namespace ProjetPOO {
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(314, 54);
 			this->panel7->TabIndex = 3;
+			// 
+			// Client_Date_mTB
+			// 
+			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
+			this->Client_Date_mTB->Mask = L"00/00/0000";
+			this->Client_Date_mTB->Name = L"Client_Date_mTB";
+			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
+			this->Client_Date_mTB->TabIndex = 2;
+			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
 			// label4
 			// 
@@ -748,14 +761,18 @@ namespace ProjetPOO {
 			this->IDperson_tb->Size = System::Drawing::Size(314, 22);
 			this->IDperson_tb->TabIndex = 0;
 			// 
-			// Client_Date_mTB
+			// Add_Client_button
 			// 
-			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
-			this->Client_Date_mTB->Mask = L"00/00/0000";
-			this->Client_Date_mTB->Name = L"Client_Date_mTB";
-			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
-			this->Client_Date_mTB->TabIndex = 2;
-			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
+			this->Add_Client_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Add_Client_button.BackgroundImage")));
+			this->Add_Client_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Add_Client_button->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->Add_Client_button->FlatAppearance->BorderSize = 0;
+			this->Add_Client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Add_Client_button->Location = System::Drawing::Point(207, 4);
+			this->Add_Client_button->Name = L"Add_Client_button";
+			this->Add_Client_button->Size = System::Drawing::Size(107, 72);
+			this->Add_Client_button->TabIndex = 2;
+			this->Add_Client_button->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
