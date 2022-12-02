@@ -751,9 +751,11 @@ namespace ProjetPOO {
 			// Client_Date_mTB
 			// 
 			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
+			this->Client_Date_mTB->Mask = L"00/00/0000";
 			this->Client_Date_mTB->Name = L"Client_Date_mTB";
 			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
 			this->Client_Date_mTB->TabIndex = 2;
+			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
 			// MyForm
 			// 
