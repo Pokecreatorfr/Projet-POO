@@ -42,7 +42,7 @@ float Paiement::get_Montant()
 
 int Paiement::get_ID_Adresse()
 {
-	return ID_adresse;
+	return ID_Adresse;
 }
 
 void Paiement::set_Moyen_Paiement()
