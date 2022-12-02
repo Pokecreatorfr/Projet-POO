@@ -156,6 +156,7 @@ namespace ProjetPOO {
 			this->Clear_Client_button = (gcnew System::Windows::Forms::Button());
 			this->Chercher_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -186,7 +187,6 @@ namespace ProjetPOO {
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->IDperson_tb = (gcnew System::Windows::Forms::TextBox());
-			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel16->SuspendLayout();
@@ -424,6 +424,15 @@ namespace ProjetPOO {
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(314, 54);
 			this->panel7->TabIndex = 3;
+			// 
+			// Client_Date_mTB
+			// 
+			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
+			this->Client_Date_mTB->Mask = L"00/00/0000";
+			this->Client_Date_mTB->Name = L"Client_Date_mTB";
+			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
+			this->Client_Date_mTB->TabIndex = 2;
+			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
 			// label4
 			// 
@@ -747,15 +756,6 @@ namespace ProjetPOO {
 			this->IDperson_tb->Name = L"IDperson_tb";
 			this->IDperson_tb->Size = System::Drawing::Size(314, 22);
 			this->IDperson_tb->TabIndex = 0;
-			// 
-			// Client_Date_mTB
-			// 
-			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
-			this->Client_Date_mTB->Mask = L"00/00/0000";
-			this->Client_Date_mTB->Name = L"Client_Date_mTB";
-			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
-			this->Client_Date_mTB->TabIndex = 2;
-			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
 			// MyForm
 			// 
