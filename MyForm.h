@@ -55,7 +55,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Panel^ panel7;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ DATE_NAISSANCE_client_tb;
+
 
 	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::Label^ label3;
@@ -106,6 +106,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Panel^ panel18;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ DATE_EMBAUCHE_tb;
+	private: System::Windows::Forms::MaskedTextBox^ Client_Date_mTB;
 
 
 
@@ -137,7 +138,6 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			int color_theme = Convert::ToInt32(System::Configuration::ConfigurationManager::AppSettings["color_theme"]);
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
@@ -157,7 +157,6 @@ namespace ProjetPOO {
 			this->Chercher_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->DATE_NAISSANCE_client_tb = (gcnew System::Windows::Forms::TextBox());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->PRENOMclient_tb = (gcnew System::Windows::Forms::TextBox());
@@ -187,6 +186,7 @@ namespace ProjetPOO {
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->IDperson_tb = (gcnew System::Windows::Forms::TextBox());
+			this->Client_Date_mTB = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel16->SuspendLayout();
@@ -417,8 +417,8 @@ namespace ProjetPOO {
 			// 
 			// panel7
 			// 
+			this->panel7->Controls->Add(this->Client_Date_mTB);
 			this->panel7->Controls->Add(this->label4);
-			this->panel7->Controls->Add(this->DATE_NAISSANCE_client_tb);
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel7->Location = System::Drawing::Point(0, 174);
 			this->panel7->Name = L"panel7";
@@ -437,14 +437,6 @@ namespace ProjetPOO {
 			this->label4->Size = System::Drawing::Size(232, 28);
 			this->label4->TabIndex = 1;
 			this->label4->Text = L"Date de naissance";
-			// 
-			// DATE_NAISSANCE_client_tb
-			// 
-			this->DATE_NAISSANCE_client_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->DATE_NAISSANCE_client_tb->Location = System::Drawing::Point(0, 32);
-			this->DATE_NAISSANCE_client_tb->Name = L"DATE_NAISSANCE_client_tb";
-			this->DATE_NAISSANCE_client_tb->Size = System::Drawing::Size(314, 22);
-			this->DATE_NAISSANCE_client_tb->TabIndex = 0;
 			// 
 			// panel6
 			// 
@@ -756,11 +748,17 @@ namespace ProjetPOO {
 			this->IDperson_tb->Size = System::Drawing::Size(314, 22);
 			this->IDperson_tb->TabIndex = 0;
 			// 
+			// Client_Date_mTB
+			// 
+			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
+			this->Client_Date_mTB->Name = L"Client_Date_mTB";
+			this->Client_Date_mTB->Size = System::Drawing::Size(311, 22);
+			this->Client_Date_mTB->TabIndex = 2;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			Form_color_change::Change_color_of_Form_hex(this, color_list_theme[color_theme][0]);
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(1626, 520);
 			this->Controls->Add(this->panel9);
@@ -808,6 +806,8 @@ namespace ProjetPOO {
 	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		int color_theme = Convert::ToInt32(System::Configuration::ConfigurationManager::AppSettings["color_theme"]);
+		Form_color_change::Change_color_of_Form_hex(this, color_list_theme[color_theme][0]);
 	}
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
