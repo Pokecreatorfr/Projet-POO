@@ -107,6 +107,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ DATE_EMBAUCHE_tb;
 	private: System::Windows::Forms::MaskedTextBox^ Client_Date_mTB;
+	private: System::Windows::Forms::Button^ Add_Client_button;
+
 
 
 
@@ -153,6 +155,7 @@ namespace ProjetPOO {
 			this->Adresse_label = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->Add_Client_button = (gcnew System::Windows::Forms::Button());
 			this->Clear_Client_button = (gcnew System::Windows::Forms::Button());
 			this->Chercher_Client_button = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
@@ -380,6 +383,7 @@ namespace ProjetPOO {
 			// 
 			// panel8
 			// 
+			this->panel8->Controls->Add(this->Add_Client_button);
 			this->panel8->Controls->Add(this->Clear_Client_button);
 			this->panel8->Controls->Add(this->Chercher_Client_button);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
@@ -387,6 +391,19 @@ namespace ProjetPOO {
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(314, 76);
 			this->panel8->TabIndex = 4;
+			// 
+			// Add_Client_button
+			// 
+			this->Add_Client_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Add_Client_button.BackgroundImage")));
+			this->Add_Client_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Add_Client_button->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->Add_Client_button->FlatAppearance->BorderSize = 0;
+			this->Add_Client_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Add_Client_button->Location = System::Drawing::Point(207, 4);
+			this->Add_Client_button->Name = L"Add_Client_button";
+			this->Add_Client_button->Size = System::Drawing::Size(107, 72);
+			this->Add_Client_button->TabIndex = 2;
+			this->Add_Client_button->UseVisualStyleBackColor = true;
 			// 
 			// Clear_Client_button
 			// 
