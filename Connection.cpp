@@ -6,6 +6,8 @@ BDD::Connection::Connection(void)
 
 	this->sSql = "Rien";
 
+
+	// a mettre dans le service
 	this->oCnx = gcnew System::Data::SqlClient::SqlConnection(this->sCnx);
 	this->oCmd = gcnew System::Data::SqlClient::SqlCommand(this->sSql, this->oCnx);
 	this->oDA = gcnew System::Data::SqlClient::SqlDataAdapter();
