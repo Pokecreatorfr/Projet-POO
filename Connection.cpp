@@ -1,37 +1,57 @@
 #include "Connection.h"
 
+using namespace BDD;
+
 BDD::Connection::Connection(void)
 {
-	this->sCnx = "Data Source = DESKTOP-N3PF2FH\\TANG_SQL;Initial Catalog = user5 ;User ID = user5 ; Password=bonjour";
+	this->sqlRequest = "RIEN";
 
-	this->sSql = "Rien";
+	this->connectionInformation = "Data Source = DESKTOP-N3PF2FH\\TANG_SQL;Initial Catalog = user5 ;User ID = user5 ; Password=bonjour";
 
 
-	// a mettre dans le service
-	this->oCnx = gcnew System::Data::SqlClient::SqlConnection(this->sCnx);
-	this->oCmd = gcnew System::Data::SqlClient::SqlCommand(this->sSql, this->oCnx);
-	this->oDA = gcnew System::Data::SqlClient::SqlDataAdapter();
-	this->oDs = gcnew System::Data::DataSet();
-
-	this->oCmd->CommandType = System::Data::CommandType::Text;
-
+	this->sqlConnection = gcnew SqlConnection(this->connectionInformation);
+	this->sqlCommand = gcnew SqlCommand(this->sqlRequest, this->sqlConnection);
+	this->sqlCommand->CommandType = CommandType::Text;
 }
-System::Data::DataSet^ BDD::Connection::getRows(System::String^ sSql, System::String^ sDataTableName)
-{
-	this->oDs->Clear();
-	this->sSql = sSql;
-	this->oCmd->CommandText = this->sSql;
-	this->oDA->SelectCommand = this->oCmd;
-	this->oDA->Fill(this->oDs, sDataTableName);
 
-	return this->oDs;
-}
-void BDD::Connection::actionRows(System::String^ sSql)
+int Connection::actionRowsID(String^ request)
 {
-	this->sSql = sSql;
-	this->oCmd->CommandText = this->sSql;
-	this->oDA->SelectCommand = this->oCmd;
-	this->oCnx->Open();
-	this->oCmd->ExecuteNonQuery();
-	this->oCnx->Close();
+    int id;
+    this->setSQL(request);
+    this->sqlCommand->CommandText = this->sqlRequest;
+    this->sqlConnection->Open();
+    id = Convert::ToInt32(this->sqlCommand->ExecuteScalar());
+    this->sqlConnection->Close();
+    return id;
+}
+
+void Connection::actionRows(String^ request)
+{
+    this->setSQL(request);
+    this->sqlCommand->CommandText = this->sqlRequest;
+    this->sqlConnection->Open();
+    this->sqlCommand->ExecuteNonQuery();
+    this->sqlConnection->Close();
+}
+
+DataSet^ Connection::getRows(String^ request, String^ dataTableName)
+{
+    this->setSQL(request);
+    this->sqlAdapter = gcnew SqlDataAdapter(this->sqlCommand);
+    this->sqlCommand->CommandText = this->sqlRequest;
+    this->dataSet = gcnew DataSet();
+    this->sqlAdapter->Fill(this->dataSet, dataTableName);
+    return this->dataSet;
+}
+
+void Connection::setSQL(String^ request)
+{
+    if (String::IsNullOrEmpty(request) || request == "RIEN")
+    {
+        this->sqlRequest = "RIEN";
+    }
+    else
+    {
+        this->sqlRequest = request;
+    }
 }
