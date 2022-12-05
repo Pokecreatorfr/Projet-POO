@@ -1,22 +1,43 @@
 #pragma once
-#include <string>
 using namespace System;
-using namespace std;
-ref class Personne
+
+// On crée un namespace specifique pour les composants, ça permet de regrouper les classes
+// C'est purement cosmétique mais permet d'avoir un code plus elegant
+namespace Composants
 {
- private:
-	int ID_Ps;
-	String^ Nom;
-	String^ Prenom;
-	DateTime DateNaissance;
+	// Cette classe permet de transiter les informations contenues dans la bdd dans une classe de donnée
+	ref class MappingPERSONNE
+	{
+	public:
+
+		MappingPERSONNE();
+
+		
+		// retourne le commande pour selectionner une personne dans la bdd
+		String^ SELECT();
+
+		// retourne le commande pour ajouter une personne dans la bdd
+		String^ INSERT();
+
+		// retourne le commande pour mettre à jour une personne dans la bdd
+		String^ UPDATE();
+
+		// retourne le commande pour suppprimer une personne dans la bdd
+		String^ DELETE();
+
+		
 	
- public:
-	Personne();
-	Personne(String^ Nom, String^ Prenom, DateTime DateNaissance);
-	String^ getNom();
-	String^ getPrenom();
-	int get_ID_Ps();
-	DateTime getDateNaissance();
+		void setPrenom(String^ Prenom);
+		void setNom(String^ Nom);
+		String^ getNom();
+		String^ getPrenom();
 
-};
 
+	private:
+
+		String^ Nom;
+		String^ Prenom;
+		DateTime DateNaissance;
+
+	};
+}
