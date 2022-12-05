@@ -1,5 +1,6 @@
 #pragma once
 
+
 namespace ProjetPOO {
 
 	using namespace System;
@@ -50,6 +51,8 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::TextBox^ BDD_Tbox;
 	private: System::Windows::Forms::TextBox^ ID_tb;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+
 
 
 	private:
@@ -73,6 +76,7 @@ namespace ProjetPOO {
 			this->Save_btn = (gcnew System::Windows::Forms::Button());
 			this->BDD_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->ID_tb = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -152,12 +156,25 @@ namespace ProjetPOO {
 			this->ID_tb->Size = System::Drawing::Size(100, 22);
 			this->ID_tb->TabIndex = 8;
 			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+				L"Violet Dark", L"Blue Lagon", L"Cream", L"Raimbow Pastel",
+					L"Blue Pastel"
+			});
+			this->comboBox1->Location = System::Drawing::Point(245, 332);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(147, 24);
+			this->comboBox1->TabIndex = 9;
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->ClientSize = System::Drawing::Size(437, 462);
+			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->ID_tb);
 			this->Controls->Add(this->Save_btn);
 			this->Controls->Add(this->label4);
@@ -192,6 +209,36 @@ private: System::Void Save_btn_Click(System::Object^ sender, System::EventArgs^ 
 	config->AppSettings->Settings->Remove("mdp_bdd");
 	config->AppSettings->Settings->Add("mdp_bdd", MDP_Tbox->Text);
 	config->Save(ConfigurationSaveMode::Modified);
+	if (comboBox1->Text == "Violet Dark")
+	{
+		config->AppSettings->Settings->Remove("theme");
+		config->AppSettings->Settings->Add("theme", "0");
+		config->Save(ConfigurationSaveMode::Modified);
+	}
+	else if (comboBox1->Text == "Blue Lagon")
+	{
+		config->AppSettings->Settings->Remove("theme");
+		config->AppSettings->Settings->Add("theme", "1");
+		config->Save(ConfigurationSaveMode::Modified);
+	}
+	else if (comboBox1->Text == "Cream")
+	{
+		config->AppSettings->Settings->Remove("theme");
+		config->AppSettings->Settings->Add("theme", "2");
+		config->Save(ConfigurationSaveMode::Modified);
+	}
+	else if (comboBox1->Text == "Raimbow Pastel")
+	{
+		config->AppSettings->Settings->Remove("theme");
+		config->AppSettings->Settings->Add("theme", "3");
+		config->Save(ConfigurationSaveMode::Modified);
+	}
+	else if (comboBox1->Text == "Blue Pastel")
+	{
+		config->AppSettings->Settings->Remove("theme");
+		config->AppSettings->Settings->Add("theme", "4");
+		config->Save(ConfigurationSaveMode::Modified);
+	}
 	ConfigurationManager::RefreshSection("appSettings");
 	this->Close();
 }

@@ -1,22 +1,35 @@
 #pragma once
 
-int color_list[3] = 
-{	
-	0x32a852, 
-	0x2351ad,
-	0x3449eb 
-};
-
-int color_list_theme[2][3] = // 0 = dark , 1 = light 
+int color_list_theme[5][4] =
 { 
 	{
 		0x150050,
-		0x2351ad,
-		0x3449eb
+		0x3F0071,
+		0x610094,
+		0x000000
 	},
 	{
+		0x0F4C75,
 		0x3282B8,
-		0x2351ad,
-		0x3449eb
+		0xBBE1FA,
+		0x1B262C
+	},
+	{
+		0xF5EBE0,
+		0xF0DBDB,
+		0xFEFCF3,
+		0xDBA39A
+	},
+	{
+		0xFCF9BE,
+		0xFFDCA9,
+		0xE8F3D6,
+		0xFAAB78
+	},
+	{
+		0xF2DEBA,
+		0x3A8891,
+		0xFFEFD6,
+		0x0E5E6F
 	}
 };

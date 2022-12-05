@@ -827,6 +827,7 @@ namespace ProjetPOO {
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		int color_theme = Convert::ToInt32(System::Configuration::ConfigurationManager::AppSettings["color_theme"]);
 		Form_color_change::Change_color_of_Form_hex(this, color_list_theme[color_theme][0]);
+		Form_color_change::Change_color_of_pannel_hex(this->panel1, color_list_theme[color_theme][1]);
 	}
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -860,7 +861,6 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel9->Visible = true;
 	this->panel2->Visible = false;
-	Form_color_change::Change_color_of_pannel_hex(this->panel1, color_list[0]);
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
