@@ -1,4 +1,3 @@
-#include "Personne.h"
 #include "PersonneDAO.h"
 #include <string>
 using namespace System;
@@ -26,15 +25,16 @@ void BDD::PersonneDAO::setId_Ps(int Id_ps)
 {
 this->id = Id_ps;
 }
-void BDD::PersonneDAO::setNom_Ps( String^ Nom_Ps)
+String^ BDD::PersonneDAO::setNom_Ps( String^ Nom_Ps)
 {
 	this->nom = Nom_Ps;
+	return nom;
 }
 void BDD::PersonneDAO::setPrenom_Ps( String^ Prenom_Ps)
 {
 	this->prenom = Prenom_Ps;
 }
-void BDD::PersonneDAO::setDateNaissance_Ps(DateTime DateNaissance_Ps)
+void BDD::PersonneDAO::setDateNaissance_Ps(DateTime^ DateNaissance_Ps)
 {
 	this->dateNaissance = DateNaissance_Ps;
 }
@@ -55,9 +55,9 @@ String^ BDD::PersonneDAO::getPrenom_Ps(void)
 	return this->prenom; 
 }
 
-DateTime BDD::PersonneDAO::getDateNaissance_Ps(void) 
+DateTime^ BDD::PersonneDAO::getDateNaissance_Ps(void) 
 {
-	return this->dateNaissance; 
+	return dateNaissance; 
 }
 
 

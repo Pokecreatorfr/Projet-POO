@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
+//#include <string>
 using namespace System;
-using namespace std;
+
 ref class Personne
 {
  private:

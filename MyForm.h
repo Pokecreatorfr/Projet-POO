@@ -2,6 +2,7 @@
 #include "MyForm1.h"
 #include "Form_color_change.h"
 #include "Hex_color.h"
+#include "PersonneService.h"
 
 
 
@@ -140,7 +141,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 private: System::Windows::Forms::Button^ Modifier_Bouton;
 private: System::Windows::Forms::Panel^ panel14;
 private: System::Windows::Forms::Panel^ panel15;
-
+	   private: NS_Comp_Svc::PersonneService^ oSvc;
 
 
 
@@ -546,6 +547,7 @@ private: System::Windows::Forms::Panel^ panel15;
 			this->Add_button->Size = System::Drawing::Size(110, 76);
 			this->Add_button->TabIndex = 2;
 			this->Add_button->UseVisualStyleBackColor = true;
+			this->Add_button->Click += gcnew System::EventHandler(this, &MyForm::Add_button_Click);
 			// 
 			// Clear_button
 			// 
@@ -900,6 +902,10 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	this->oSvc->CreatePersonne(this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text);// , this->Client_Date_mTB->Text);
 }
 };
 }
