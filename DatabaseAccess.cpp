@@ -6,11 +6,13 @@ DatabaseAccess::DatabaseAccess()
 {
     this->sqlRequest = "RIEN";
 
-    this->connectionInformation = "Data Source = DESKTOP - N3PF2FH\TANG_SQL; Initial Catalog = projet5; User ID = merci; Password = bonjour";
+    this->connectionInformation = "Data Source =DESKTOP-N3PF2FH\\TANG_SQL;Initial Catalog = projet5; User ID = merci; Password = bonjour";
 
     this->sqlConnection = gcnew SqlConnection(this->connectionInformation);
     this->sqlCommand = gcnew SqlCommand(this->sqlRequest, this->sqlConnection);
     this->sqlCommand->CommandType = CommandType::Text;
+    this->sqlConnection->Open();
+    this->sqlConnection->Close();
 }
 
 int DatabaseAccess::actionRowsID(String^ request)
