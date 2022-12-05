@@ -1,34 +1,59 @@
-#include "Personne.h"
+#include "Personne.h" 
 
-Personne::Personne()
+using namespace Composants;
+
+MappingPERSONNE::MappingPERSONNE()
 {
-    throw gcnew System::NotImplementedException();
+    this->Nom = "RIEN";
+    this->Prenom = "RIEN";
 }
 
-Personne::Personne(String^ Nom, String^ Prenom, DateTime DateNaissance)
+String^ MappingPERSONNE::SELECT()
 {
-    throw gcnew System::NotImplementedException();
-    this-> Nom = Nom;
-    this-> Prenom = Prenom;
-    this-> DateNaissance = DateNaissance;
+    return "SELECT Nom, Prenom, Date  " +
+        "FROM TB_PERSONNE;";
 }
 
-String^ Personne::getNom()
+String^ MappingPERSONNE::INSERT()
 {
-    return Nom;
+    return "INSERT INTO TB_PERSONNE " +
+        "(Nom, Prenom) " +
+        "VALUES('" + this->getNom() + "', '" + this->getPrenom() + "');SELECT @@IDENTITY;";
 }
 
-String^ Personne::getPrenom()
+String^ MappingPERSONNE::UPDATE()
 {
-    return Prenom;
+    return "UPDATE TB_PERSONNE " +
+        "SET Nom = '" + this->getNom() + "', Prenom = '" + this->getPrenom() + "' ";
 }
 
-int Personne::get_ID_Ps()
+String^ MappingPERSONNE::DELETE()
 {
-    return ID_Ps;
+    return "DELETE FROM TB_PERSONNE ";
 }
 
-DateTime Personne::getDateNaissance()
+void MappingPERSONNE::setPrenom(String^ prenom)
 {
-    return DateNaissance;
+    if (!String::IsNullOrEmpty(prenom))
+    {
+        this->Prenom = prenom;
+    }
+}
+
+void MappingPERSONNE::setNom(String^ nom)
+{
+    if (!String::IsNullOrEmpty(nom))
+    {
+        this->Nom = nom;
+    }
+}
+
+String^ MappingPERSONNE::getNom()
+{
+    return this->Nom;
+}
+
+String^ MappingPERSONNE::getPrenom()
+{
+    return this->Prenom;
 }
