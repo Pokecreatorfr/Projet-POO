@@ -1,35 +1,39 @@
-#include "PersonneDAO.h"
-#include "Connection.h"
+#pragma once
 
-
-
+#include "DatabaseAccess.h" 
+#include "Personne.h" 
 
 // On crée un namespace specifique pour la gestion de service, ça permet de regrouper les classes
 // C'est purement cosmétique mais permet d'avoir un code plus elegant
-
-namespace ServicesPersonnes
+namespace Services
 {
     ref class ServiceGestionPersonnes
     {
     public:
         // constructeur par defaut
-        //ServiceGestionPersonnes();
+        ServiceGestionPersonnes();
 
         // Permet de recuperer la liste des personnes presentes dans la bdd (identifiant de la liste)
-        // DataSet^ listeClients(String^ dataTableName);
+        DataSet^ listeClients(String^ dataTableName);
+
+        // Permet de recuperer la liste des adresses en fonction de la personne (identifiant de la liste)
+        DataSet^ adressesClient(int idPersonne, String^ dataTableName);
 
         // Permet d'ajouter une personne (nom, prenom, adresses)
-        //int ajouter(String^ nom, String^ prenom);
+        int ajouter(String^ nom, String^ prenom, array<String^>^ adresses);
 
         // Permet de modifier une personne (indentifiant de la personne à modifier, nouveau nom, nouveau prenom, nouvelles adresses)
-         //void modifier(int idPersonne, String^ nom, String^ prenom);
+        void modifier(int idPersonne, String^ nom, String^ prenom, array<String^>^ adresses);
+
+        // Permet de supprimer une personne (identifiant de la personne à supprimer)
+        void supprimer(int idPersonne);
 
     private:
         // Permet d'acceder à la donnee
-         //BDD::Connection^ databaseAccess;
+        Composants::DatabaseAccess^ databaseAccess;
 
         // Permet de mapper une donnee personne vers/depuis la bdd
-         //BDD::PersonneDAO^ personne;
+        Composants::MappingTBPERSONNE^ personne;
 
         // Cache de donnée en memoire de la bdd
         DataSet^ dataSet;
