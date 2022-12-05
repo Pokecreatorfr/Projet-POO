@@ -52,6 +52,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ BDD_Tbox;
 	private: System::Windows::Forms::TextBox^ ID_tb;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::Label^ label5;
 
 
 
@@ -77,6 +78,7 @@ namespace ProjetPOO {
 			this->BDD_Tbox = (gcnew System::Windows::Forms::TextBox());
 			this->ID_tb = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -168,12 +170,24 @@ namespace ProjetPOO {
 			this->comboBox1->Size = System::Drawing::Size(147, 24);
 			this->comboBox1->TabIndex = 9;
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(261, 304);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(60, 20);
+			this->label5->TabIndex = 10;
+			this->label5->Text = L"Theme";
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->ClientSize = System::Drawing::Size(437, 462);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->ID_tb);
 			this->Controls->Add(this->Save_btn);
