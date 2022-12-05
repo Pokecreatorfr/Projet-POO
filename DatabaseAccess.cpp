@@ -5,7 +5,7 @@ using namespace Composants;
 DatabaseAccess::DatabaseAccess(String ^ Data_Source , String^ Initial_Catalog , String^ User_ID , String^ Password)
 {
     this->sqlRequest = "RIEN";
-
+    
     this->connectionInformation = "Data Source =" + Data_Source + "; Initial Catalog ="+ Initial_Catalog +"; User ID ="+ User_ID +"; Password = " + Password;
 
     this->sqlConnection = gcnew SqlConnection(this->connectionInformation);

@@ -12,12 +12,11 @@ namespace Composants
 
 		MappingPERSONNE();
 
-		
 		// retourne le commande pour selectionner une personne dans la bdd
 		String^ SELECT();
 
 		// retourne le commande pour ajouter une personne dans la bdd
-		String^ INSERT();
+		String^ INSERT(String^ nom, String^ prenom);
 
 		// retourne le commande pour mettre à jour une personne dans la bdd
 		String^ UPDATE();
@@ -25,8 +24,6 @@ namespace Composants
 		// retourne le commande pour suppprimer une personne dans la bdd
 		String^ DELETE();
 
-		
-	
 		void setPrenom(String^ Prenom);
 		void setNom(String^ Nom);
 		String^ getNom();

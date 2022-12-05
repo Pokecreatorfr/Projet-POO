@@ -11,25 +11,25 @@ MappingPERSONNE::MappingPERSONNE()
 String^ MappingPERSONNE::SELECT()
 {
     return "SELECT Nom, Prenom, Date  " +
-        "FROM TB_PERSONNE;";
+        "FROM dbo.Personnes;";
 }
 
-String^ MappingPERSONNE::INSERT()
+String^ MappingPERSONNE::INSERT(String^ nom, String^ prenom)
 {
-    return "INSERT INTO TB_PERSONNE " +
-        "(Nom, Prenom) " +
+    return "INSERT INTO dbo.Personnes " +
+        "(Nom_Ps, Prenom_Ps) " +
         "VALUES('" + this->getNom() + "', '" + this->getPrenom() + "');SELECT @@IDENTITY;";
 }
 
 String^ MappingPERSONNE::UPDATE()
 {
-    return "UPDATE TB_PERSONNE " +
+    return "UPDATE dbo.Personnes " +
         "SET Nom = '" + this->getNom() + "', Prenom = '" + this->getPrenom() + "' ";
 }
 
 String^ MappingPERSONNE::DELETE()
 {
-    return "DELETE FROM TB_PERSONNE ";
+    return "DELETE FROM dbo.Personnes ";
 }
 
 void MappingPERSONNE::setPrenom(String^ prenom)
