@@ -2,7 +2,7 @@
 #include "MyForm1.h"
 #include "Form_color_change.h"
 #include "Hex_color.h"
-
+#include "Liste_Adresse.h"
 
 
 namespace ProjetPOO {
@@ -40,7 +40,7 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	private: int^ var_interface = 0;
+	private: int^ var_interface = nullptr;
 	public: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ Setting_button;
 	private: System::Windows::Forms::Button^ commande_button;
