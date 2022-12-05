@@ -1,8 +1,9 @@
 #pragma once
 #include<string>
 #include "Personne.h"
-ref class Personnel : public Personne 
-{private:
+ref class Personnel : public Composants::MappingPERSONNE
+{
+private:
 	int ID_ps;
 	DateTime Date_Embauche;
 	String^ poste;

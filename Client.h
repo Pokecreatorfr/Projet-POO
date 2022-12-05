@@ -2,7 +2,8 @@
 #include<string>
 #include"Personne.h"
 using namespace std;
-ref class Client : public Personne
+
+ref class Client : public Composants::MappingPERSONNE
 
 {private:
 	int ID_cl;

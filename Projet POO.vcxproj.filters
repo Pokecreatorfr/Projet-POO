@@ -47,9 +47,6 @@
     <ClInclude Include="CommandeService.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Connection.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Paiement.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -89,6 +86,9 @@
     <ClInclude Include="PersonneService.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="DatabaseAccess.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -119,9 +119,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CommandeService.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Connection.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Paiement.cpp">
@@ -155,6 +152,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="PersonneService.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseAccess.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,3 +1,4 @@
+#pragma once
 using namespace System;
 
 // On crée un namespace specifique pour les composants, ça permet de regrouper les classes
@@ -7,7 +8,6 @@ namespace Composants
 	// Cette classe permet de transiter les informations contenues dans la bdd dans une classe de donnée
 	ref class MappingPERSONNE
 	{
-
 	public:
 
 		MappingPERSONNE();
