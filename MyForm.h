@@ -533,6 +533,7 @@ private: System::Windows::Forms::Panel^ panel15;
 			this->Modifier_Bouton->Size = System::Drawing::Size(102, 76);
 			this->Modifier_Bouton->TabIndex = 5;
 			this->Modifier_Bouton->UseVisualStyleBackColor = true;
+			this->Modifier_Bouton->Click += gcnew System::EventHandler(this, &MyForm::Modifier_Bouton_Click);
 			// 
 			// Add_button
 			// 
@@ -546,6 +547,7 @@ private: System::Windows::Forms::Panel^ panel15;
 			this->Add_button->Size = System::Drawing::Size(110, 76);
 			this->Add_button->TabIndex = 2;
 			this->Add_button->UseVisualStyleBackColor = true;
+			this->Add_button->Click += gcnew System::EventHandler(this, &MyForm::Add_button_Click);
 			// 
 			// Clear_button
 			// 
@@ -559,6 +561,7 @@ private: System::Windows::Forms::Panel^ panel15;
 			this->Clear_button->Size = System::Drawing::Size(105, 76);
 			this->Clear_button->TabIndex = 1;
 			this->Clear_button->UseVisualStyleBackColor = true;
+			this->Clear_button->Click += gcnew System::EventHandler(this, &MyForm::Clear_button_Click);
 			// 
 			// Chercher_button
 			// 
@@ -857,6 +860,12 @@ private: System::Void Setting_click(System::Object^ sender, System::EventArgs^ e
 private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^ e) {
+	if (var_interface == 1) {
+		
+	}
+	else if (var_interface == 4) {
+		
+	}
 }
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = true;
@@ -900,6 +909,30 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Clear_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (var_interface == 1) {
+
+	}
+	else if (var_interface == 4) {
+
+	}
+}
+private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (var_interface == 1) {
+
+	}
+	else if (var_interface == 4) {
+
+	}
+}
+private: System::Void Modifier_Bouton_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (var_interface == 1) {
+
+	}
+	else if (var_interface == 4) {
+
+	}
 }
 };
 }
