@@ -137,6 +137,7 @@ private: System::Windows::Forms::TextBox^ textBox3;
 private: System::Windows::Forms::Panel^ panel12;
 private: System::Windows::Forms::Label^ label8;
 private: System::Windows::Forms::TextBox^ textBox2;
+private: System::Windows::Forms::Button^ Modifier_Bouton;
 
 
 
@@ -216,6 +217,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->Ville_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->CP_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Nom_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Modifier_Bouton = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel10->SuspendLayout();
@@ -344,7 +346,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel10->Controls->Add(this->panel11);
 			this->panel10->Controls->Add(this->label6);
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel10->Location = System::Drawing::Point(317, 0);
+			this->panel10->Location = System::Drawing::Point(413, 0);
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(336, 510);
 			this->panel10->TabIndex = 1;
@@ -467,7 +469,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel3->Location = System::Drawing::Point(0, 0);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(317, 510);
+			this->panel3->Size = System::Drawing::Size(413, 510);
 			this->panel3->TabIndex = 0;
 			// 
 			// panel9
@@ -477,7 +479,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel9->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel9->Location = System::Drawing::Point(0, 228);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(317, 54);
+			this->panel9->Size = System::Drawing::Size(413, 54);
 			this->panel9->TabIndex = 4;
 			// 
 			// maskedTextBox1
@@ -505,25 +507,26 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			// 
 			// panel8
 			// 
+			this->panel8->Controls->Add(this->Modifier_Bouton);
 			this->panel8->Controls->Add(this->Add_button);
 			this->panel8->Controls->Add(this->Clear_button);
 			this->panel8->Controls->Add(this->Chercher_button);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->panel8->Location = System::Drawing::Point(0, 434);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(317, 76);
+			this->panel8->Size = System::Drawing::Size(413, 76);
 			this->panel8->TabIndex = 4;
 			// 
 			// Add_button
 			// 
 			this->Add_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Add_button.BackgroundImage")));
 			this->Add_button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->Add_button->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->Add_button->Dock = System::Windows::Forms::DockStyle::Left;
 			this->Add_button->FlatAppearance->BorderSize = 0;
 			this->Add_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Add_button->Location = System::Drawing::Point(207, 4);
+			this->Add_button->Location = System::Drawing::Point(207, 0);
 			this->Add_button->Name = L"Add_button";
-			this->Add_button->Size = System::Drawing::Size(110, 72);
+			this->Add_button->Size = System::Drawing::Size(110, 76);
 			this->Add_button->TabIndex = 2;
 			this->Add_button->UseVisualStyleBackColor = true;
 			// 
@@ -561,7 +564,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel7->Location = System::Drawing::Point(0, 174);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(317, 54);
+			this->panel7->Size = System::Drawing::Size(413, 54);
 			this->panel7->TabIndex = 3;
 			// 
 			// Client_Date_mTB
@@ -593,7 +596,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel6->Location = System::Drawing::Point(0, 116);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(317, 58);
+			this->panel6->Size = System::Drawing::Size(413, 58);
 			this->panel6->TabIndex = 2;
 			// 
 			// label3
@@ -614,7 +617,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->PRENOMclient_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->PRENOMclient_tb->Location = System::Drawing::Point(0, 36);
 			this->PRENOMclient_tb->Name = L"PRENOMclient_tb";
-			this->PRENOMclient_tb->Size = System::Drawing::Size(317, 22);
+			this->PRENOMclient_tb->Size = System::Drawing::Size(413, 22);
 			this->PRENOMclient_tb->TabIndex = 0;
 			// 
 			// panel5
@@ -624,7 +627,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel5->Location = System::Drawing::Point(0, 58);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(317, 58);
+			this->panel5->Size = System::Drawing::Size(413, 58);
 			this->panel5->TabIndex = 1;
 			// 
 			// label2
@@ -645,7 +648,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->NOMclient_Tb->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->NOMclient_Tb->Location = System::Drawing::Point(0, 36);
 			this->NOMclient_Tb->Name = L"NOMclient_Tb";
-			this->NOMclient_Tb->Size = System::Drawing::Size(317, 22);
+			this->NOMclient_Tb->Size = System::Drawing::Size(413, 22);
 			this->NOMclient_Tb->TabIndex = 0;
 			// 
 			// panel4
@@ -655,7 +658,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(317, 58);
+			this->panel4->Size = System::Drawing::Size(413, 58);
 			this->panel4->TabIndex = 0;
 			// 
 			// label1
@@ -676,7 +679,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->IDclient_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->IDclient_tb->Location = System::Drawing::Point(0, 36);
 			this->IDclient_tb->Name = L"IDclient_tb";
-			this->IDclient_tb->Size = System::Drawing::Size(317, 22);
+			this->IDclient_tb->Size = System::Drawing::Size(413, 22);
 			this->IDclient_tb->TabIndex = 0;
 			// 
 			// dataGridView1
@@ -736,6 +739,19 @@ private: System::Windows::Forms::TextBox^ textBox2;
 			this->Nom_c->MinimumWidth = 6;
 			this->Nom_c->Name = L"Nom_c";
 			this->Nom_c->Width = 125;
+			// 
+			// Modifier_Bouton
+			// 
+			this->Modifier_Bouton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Modifier_Bouton.BackgroundImage")));
+			this->Modifier_Bouton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Modifier_Bouton->Dock = System::Windows::Forms::DockStyle::Left;
+			this->Modifier_Bouton->FlatAppearance->BorderSize = 0;
+			this->Modifier_Bouton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Modifier_Bouton->Location = System::Drawing::Point(317, 0);
+			this->Modifier_Bouton->Name = L"Modifier_Bouton";
+			this->Modifier_Bouton->Size = System::Drawing::Size(102, 76);
+			this->Modifier_Bouton->TabIndex = 5;
+			this->Modifier_Bouton->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
