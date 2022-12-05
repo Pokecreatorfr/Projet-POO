@@ -138,6 +138,8 @@ private: System::Windows::Forms::Panel^ panel12;
 private: System::Windows::Forms::Label^ label8;
 private: System::Windows::Forms::TextBox^ textBox2;
 private: System::Windows::Forms::Button^ Modifier_Bouton;
+private: System::Windows::Forms::Panel^ panel14;
+private: System::Windows::Forms::Panel^ panel15;
 
 
 
@@ -195,6 +197,7 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->Modifier_Bouton = (gcnew System::Windows::Forms::Button());
 			this->Add_button = (gcnew System::Windows::Forms::Button());
 			this->Clear_button = (gcnew System::Windows::Forms::Button());
 			this->Chercher_button = (gcnew System::Windows::Forms::Button());
@@ -217,7 +220,8 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 			this->Ville_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->CP_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Nom_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Modifier_Bouton = (gcnew System::Windows::Forms::Button());
+			this->panel14 = (gcnew System::Windows::Forms::Panel());
+			this->panel15 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel10->SuspendLayout();
@@ -335,7 +339,7 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel2->Location = System::Drawing::Point(96, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(960, 510);
+			this->panel2->Size = System::Drawing::Size(752, 510);
 			this->panel2->TabIndex = 1;
 			this->panel2->Visible = false;
 			// 
@@ -517,6 +521,19 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 			this->panel8->Size = System::Drawing::Size(413, 76);
 			this->panel8->TabIndex = 4;
 			// 
+			// Modifier_Bouton
+			// 
+			this->Modifier_Bouton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Modifier_Bouton.BackgroundImage")));
+			this->Modifier_Bouton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->Modifier_Bouton->Dock = System::Windows::Forms::DockStyle::Left;
+			this->Modifier_Bouton->FlatAppearance->BorderSize = 0;
+			this->Modifier_Bouton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Modifier_Bouton->Location = System::Drawing::Point(317, 0);
+			this->Modifier_Bouton->Name = L"Modifier_Bouton";
+			this->Modifier_Bouton->Size = System::Drawing::Size(102, 76);
+			this->Modifier_Bouton->TabIndex = 5;
+			this->Modifier_Bouton->UseVisualStyleBackColor = true;
+			// 
 			// Add_button
 			// 
 			this->Add_button->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Add_button.BackgroundImage")));
@@ -684,17 +701,18 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
 				this->ID_c, this->Prenom_c,
 					this->Date_n_c, this->Ville_c, this->CP_c, this->Nom_c
 			});
-			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->dataGridView1->Location = System::Drawing::Point(1056, 0);
+			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Right;
+			this->dataGridView1->Location = System::Drawing::Point(1314, 0);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(868, 510);
+			this->dataGridView1->Size = System::Drawing::Size(610, 510);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
@@ -703,55 +721,58 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 			this->ID_c->HeaderText = L"ID";
 			this->ID_c->MinimumWidth = 6;
 			this->ID_c->Name = L"ID_c";
-			this->ID_c->Width = 125;
+			this->ID_c->Width = 49;
 			// 
 			// Prenom_c
 			// 
 			this->Prenom_c->HeaderText = L"Prenom";
 			this->Prenom_c->MinimumWidth = 6;
 			this->Prenom_c->Name = L"Prenom_c";
-			this->Prenom_c->Width = 125;
+			this->Prenom_c->Width = 83;
 			// 
 			// Date_n_c
 			// 
 			this->Date_n_c->HeaderText = L"Date Naissance";
 			this->Date_n_c->MinimumWidth = 6;
 			this->Date_n_c->Name = L"Date_n_c";
-			this->Date_n_c->Width = 125;
+			this->Date_n_c->Width = 122;
 			// 
 			// Ville_c
 			// 
 			this->Ville_c->HeaderText = L"Ville";
 			this->Ville_c->MinimumWidth = 6;
 			this->Ville_c->Name = L"Ville_c";
-			this->Ville_c->Width = 125;
+			this->Ville_c->Width = 62;
 			// 
 			// CP_c
 			// 
 			this->CP_c->HeaderText = L"Code Postal";
 			this->CP_c->MinimumWidth = 6;
 			this->CP_c->Name = L"CP_c";
-			this->CP_c->Width = 125;
+			this->CP_c->Width = 101;
 			// 
 			// Nom_c
 			// 
 			this->Nom_c->HeaderText = L"Nom";
 			this->Nom_c->MinimumWidth = 6;
 			this->Nom_c->Name = L"Nom_c";
-			this->Nom_c->Width = 125;
+			this->Nom_c->Width = 65;
 			// 
-			// Modifier_Bouton
+			// panel14
 			// 
-			this->Modifier_Bouton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Modifier_Bouton.BackgroundImage")));
-			this->Modifier_Bouton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->Modifier_Bouton->Dock = System::Windows::Forms::DockStyle::Left;
-			this->Modifier_Bouton->FlatAppearance->BorderSize = 0;
-			this->Modifier_Bouton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Modifier_Bouton->Location = System::Drawing::Point(317, 0);
-			this->Modifier_Bouton->Name = L"Modifier_Bouton";
-			this->Modifier_Bouton->Size = System::Drawing::Size(102, 76);
-			this->Modifier_Bouton->TabIndex = 5;
-			this->Modifier_Bouton->UseVisualStyleBackColor = true;
+			this->panel14->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel14->Location = System::Drawing::Point(848, 0);
+			this->panel14->Name = L"panel14";
+			this->panel14->Size = System::Drawing::Size(164, 510);
+			this->panel14->TabIndex = 6;
+			// 
+			// panel15
+			// 
+			this->panel15->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel15->Location = System::Drawing::Point(1012, 0);
+			this->panel15->Name = L"panel15";
+			this->panel15->Size = System::Drawing::Size(296, 510);
+			this->panel15->TabIndex = 7;
 			// 
 			// MyForm
 			// 
@@ -761,6 +782,8 @@ private: System::Windows::Forms::Button^ Modifier_Bouton;
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(1924, 510);
+			this->Controls->Add(this->panel15);
+			this->Controls->Add(this->panel14);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -839,6 +862,8 @@ private: System::Void Personnel_button_Click(System::Object^ sender, System::Eve
 	this->panel2->Visible = true;
 	this->panel9->Visible = true;
 	this->panel10->Visible = true;
+	this->panel14->Visible = false;
+	this->panel15->Visible = false;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -856,12 +881,16 @@ private: System::Void stats_button_Click(System::Object^ sender, System::EventAr
 	this->panel2->Visible = false;
 	this->panel9->Visible = false;
 	this->panel10->Visible = false;
+	this->panel14->Visible = true;
+	this->panel15->Visible = false;
 	var_interface = 2;
 }
 private: System::Void commande_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = false;
 	this->panel9->Visible = false;
 	this->panel10->Visible = false;
+	this->panel14->Visible = false;
+	this->panel15->Visible = true;
 	var_interface = 3;
 }
 private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
