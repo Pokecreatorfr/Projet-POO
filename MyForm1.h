@@ -211,32 +211,32 @@ private: System::Void Save_btn_Click(System::Object^ sender, System::EventArgs^ 
 	config->Save(ConfigurationSaveMode::Modified);
 	if (comboBox1->Text == "Violet Dark")
 	{
-		config->AppSettings->Settings->Remove("theme");
-		config->AppSettings->Settings->Add("theme", "0");
+		config->AppSettings->Settings->Remove("color_theme");
+		config->AppSettings->Settings->Add("color_theme", "0");
 		config->Save(ConfigurationSaveMode::Modified);
 	}
 	else if (comboBox1->Text == "Blue Lagon")
 	{
-		config->AppSettings->Settings->Remove("theme");
-		config->AppSettings->Settings->Add("theme", "1");
+		config->AppSettings->Settings->Remove("color_theme");
+		config->AppSettings->Settings->Add("color_theme", "1");
 		config->Save(ConfigurationSaveMode::Modified);
 	}
 	else if (comboBox1->Text == "Cream")
 	{
-		config->AppSettings->Settings->Remove("theme");
-		config->AppSettings->Settings->Add("theme", "2");
+		config->AppSettings->Settings->Remove("color_theme");
+		config->AppSettings->Settings->Add("color_theme", "2");
 		config->Save(ConfigurationSaveMode::Modified);
 	}
 	else if (comboBox1->Text == "Raimbow Pastel")
 	{
-		config->AppSettings->Settings->Remove("theme");
-		config->AppSettings->Settings->Add("theme", "3");
+		config->AppSettings->Settings->Remove("color_theme");
+		config->AppSettings->Settings->Add("color_theme", "3");
 		config->Save(ConfigurationSaveMode::Modified);
 	}
 	else if (comboBox1->Text == "Blue Pastel")
 	{
-		config->AppSettings->Settings->Remove("theme");
-		config->AppSettings->Settings->Add("theme", "4");
+		config->AppSettings->Settings->Remove("color_theme");
+		config->AppSettings->Settings->Add("color_theme", "4");
 		config->Save(ConfigurationSaveMode::Modified);
 	}
 	ConfigurationManager::RefreshSection("appSettings");
