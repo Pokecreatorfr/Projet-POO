@@ -16,7 +16,7 @@ namespace Composants
     {
     public:
         // Constructeur par defaut
-        DatabaseAccess();
+        DatabaseAccess(String^ Data_Source, String^ Initial_Catalog, String^ User_ID, String^ Password);
 
         // Utiliser pour ajouter un element à la base en retournant l'id de l'element
         int actionRowsID(String^ request);

@@ -4,7 +4,7 @@ using namespace Services;
 
 ServiceGestionPersonnes::ServiceGestionPersonnes()
 {
-    this->databaseAccess = gcnew Composants::DatabaseAccess();
+    this->databaseAccess = gcnew Composants::DatabaseAccess(System::Configuration::ConfigurationManager::AppSettings["Data Source"], System::Configuration::ConfigurationManager::AppSettings["Initial Catalog"], System::Configuration::ConfigurationManager::AppSettings["User ID"], System::Configuration::ConfigurationManager::AppSettings["Password"]);
     this->personne = gcnew Composants::MappingPERSONNE();
     this->dataSet = gcnew Data::DataSet();
 }

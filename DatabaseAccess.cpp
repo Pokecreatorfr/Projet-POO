@@ -2,11 +2,11 @@
 
 using namespace Composants;
 
-DatabaseAccess::DatabaseAccess()
+DatabaseAccess::DatabaseAccess(String ^ Data_Source , String^ Initial_Catalog , String^ User_ID , String^ Password)
 {
     this->sqlRequest = "RIEN";
-
-    this->connectionInformation = "Data Source =DESKTOP-N3PF2FH\\TANG_SQL;Initial Catalog = projet5; User ID = merci; Password = bonjour";
+    
+    this->connectionInformation = "Data Source =" + Data_Source + "; Initial Catalog ="+ Initial_Catalog +"; User ID ="+ User_ID +"; Password = " + Password;
 
     this->sqlConnection = gcnew SqlConnection(this->connectionInformation);
     this->sqlCommand = gcnew SqlCommand(this->sqlRequest, this->sqlConnection);
