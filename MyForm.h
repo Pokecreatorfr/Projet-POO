@@ -158,6 +158,7 @@ private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
 private: System::Windows::Forms::Panel^ panel16;
 private: System::Windows::Forms::Label^ label11;
 private: System::Windows::Forms::TextBox^ textBox4;
+private: System::Windows::Forms::CheckBox^ checkBox1;
 
 
 
@@ -220,6 +221,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
@@ -383,7 +385,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel10->Controls->Add(this->panel11);
 			this->panel10->Controls->Add(this->label6);
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel10->Location = System::Drawing::Point(273, 0);
+			this->panel10->Location = System::Drawing::Point(349, 0);
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(262, 510);
 			this->panel10->TabIndex = 1;
@@ -512,7 +514,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel3->Location = System::Drawing::Point(0, 0);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(273, 510);
+			this->panel3->Size = System::Drawing::Size(349, 510);
 			this->panel3->TabIndex = 0;
 			// 
 			// panel16
@@ -522,7 +524,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel16->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel16->Location = System::Drawing::Point(0, 336);
 			this->panel16->Name = L"panel16";
-			this->panel16->Size = System::Drawing::Size(273, 58);
+			this->panel16->Size = System::Drawing::Size(349, 58);
 			this->panel16->TabIndex = 6;
 			// 
 			// label11
@@ -543,18 +545,31 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox4->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->textBox4->Location = System::Drawing::Point(0, 36);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(273, 22);
+			this->textBox4->Size = System::Drawing::Size(349, 22);
 			this->textBox4->TabIndex = 0;
 			// 
 			// panel15
 			// 
+			this->panel15->Controls->Add(this->checkBox1);
 			this->panel15->Controls->Add(this->numericUpDown1);
 			this->panel15->Controls->Add(this->label10);
 			this->panel15->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel15->Location = System::Drawing::Point(0, 282);
 			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(273, 54);
+			this->panel15->Size = System::Drawing::Size(349, 54);
 			this->panel15->TabIndex = 5;
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->checkBox1->Location = System::Drawing::Point(280, 8);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(63, 20);
+			this->checkBox1->TabIndex = 3;
+			this->checkBox1->Text = L"NULL";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
 			// 
 			// numericUpDown1
 			// 
@@ -562,7 +577,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->numericUpDown1->Location = System::Drawing::Point(0, 31);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(273, 22);
+			this->numericUpDown1->Size = System::Drawing::Size(349, 22);
 			this->numericUpDown1->TabIndex = 2;
 			// 
 			// label10
@@ -576,7 +591,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(229, 28);
 			this->label10->TabIndex = 1;
-			this->label10->Text = L"Supp hiérarchique";
+			this->label10->Text = L"Supp hierarchique";
 			// 
 			// panel9
 			// 
@@ -585,7 +600,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel9->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel9->Location = System::Drawing::Point(0, 228);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(273, 54);
+			this->panel9->Size = System::Drawing::Size(349, 54);
 			this->panel9->TabIndex = 4;
 			// 
 			// maskedTextBox1
@@ -593,7 +608,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->maskedTextBox1->Location = System::Drawing::Point(0, 29);
 			this->maskedTextBox1->Mask = L"00/00/0000";
 			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(273, 22);
+			this->maskedTextBox1->Size = System::Drawing::Size(346, 22);
 			this->maskedTextBox1->TabIndex = 2;
 			this->maskedTextBox1->ValidatingType = System::DateTime::typeid;
 			// 
@@ -620,7 +635,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->panel8->Location = System::Drawing::Point(0, 434);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(273, 76);
+			this->panel8->Size = System::Drawing::Size(349, 76);
 			this->panel8->TabIndex = 4;
 			// 
 			// Modifier_Bouton
@@ -685,7 +700,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel7->Location = System::Drawing::Point(0, 174);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(273, 54);
+			this->panel7->Size = System::Drawing::Size(349, 54);
 			this->panel7->TabIndex = 3;
 			// 
 			// Client_Date_mTB
@@ -693,7 +708,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
 			this->Client_Date_mTB->Mask = L"00/00/0000";
 			this->Client_Date_mTB->Name = L"Client_Date_mTB";
-			this->Client_Date_mTB->Size = System::Drawing::Size(273, 22);
+			this->Client_Date_mTB->Size = System::Drawing::Size(349, 22);
 			this->Client_Date_mTB->TabIndex = 2;
 			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
@@ -717,7 +732,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel6->Location = System::Drawing::Point(0, 116);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(273, 58);
+			this->panel6->Size = System::Drawing::Size(349, 58);
 			this->panel6->TabIndex = 2;
 			// 
 			// label3
@@ -738,7 +753,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->PRENOMclient_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->PRENOMclient_tb->Location = System::Drawing::Point(0, 36);
 			this->PRENOMclient_tb->Name = L"PRENOMclient_tb";
-			this->PRENOMclient_tb->Size = System::Drawing::Size(273, 22);
+			this->PRENOMclient_tb->Size = System::Drawing::Size(349, 22);
 			this->PRENOMclient_tb->TabIndex = 0;
 			// 
 			// panel5
@@ -748,7 +763,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel5->Location = System::Drawing::Point(0, 58);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(273, 58);
+			this->panel5->Size = System::Drawing::Size(349, 58);
 			this->panel5->TabIndex = 1;
 			// 
 			// label2
@@ -769,7 +784,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->NOMclient_Tb->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->NOMclient_Tb->Location = System::Drawing::Point(0, 36);
 			this->NOMclient_Tb->Name = L"NOMclient_Tb";
-			this->NOMclient_Tb->Size = System::Drawing::Size(273, 22);
+			this->NOMclient_Tb->Size = System::Drawing::Size(349, 22);
 			this->NOMclient_Tb->TabIndex = 0;
 			// 
 			// panel4
@@ -779,7 +794,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(273, 58);
+			this->panel4->Size = System::Drawing::Size(349, 58);
 			this->panel4->TabIndex = 0;
 			// 
 			// label1
@@ -800,7 +815,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->IDclient_tb->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->IDclient_tb->Location = System::Drawing::Point(0, 36);
 			this->IDclient_tb->Name = L"IDclient_tb";
-			this->IDclient_tb->Size = System::Drawing::Size(273, 22);
+			this->IDclient_tb->Size = System::Drawing::Size(349, 22);
 			this->IDclient_tb->TabIndex = 0;
 			// 
 			// dataGridView1
@@ -1025,7 +1040,14 @@ private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs
 
 	}
 	else if (var_interface == 4) {
-		Personnel::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString() , textBox4->Text);
+		if (this->checkBox1->Checked)
+		{
+			Personnel::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), "NULL", textBox4->Text);
+		}
+		else
+		{
+			Personnel::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString(), textBox4->Text);
+		}
 	}
 }
 private: System::Void Modifier_Bouton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1045,5 +1067,15 @@ private: System::Void textBox2_TextChanged(System::Object^ sender, System::Event
 	}
 }
 
+private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (this->checkBox1->Checked)
+	{
+		this->numericUpDown1->Enabled = false;
+	}
+	else
+	{
+		this->numericUpDown1->Enabled = true;
+	}
+}
 };
 }
