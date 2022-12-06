@@ -153,6 +153,7 @@
     <ClInclude Include="CommandeDAO.h" />
     <ClInclude Include="CommandeService.h" />
     <ClInclude Include="DatabaseAccess.h" />
+    <ClInclude Include="Dateformat.h" />
     <ClInclude Include="Form_color_change.h" />
     <ClInclude Include="Hex_color.h" />
     <ClInclude Include="Liste_Adresse.h" />
@@ -184,6 +185,7 @@
     <ClCompile Include="CommandeDAO.cpp" />
     <ClCompile Include="CommandeService.cpp" />
     <ClCompile Include="DatabaseAccess.cpp" />
+    <ClCompile Include="Dateformat.cpp" />
     <ClCompile Include="Form_color_change.cpp" />
     <ClCompile Include="Liste_Adresse.cpp" />
     <ClCompile Include="Main.cpp" />

@@ -2,8 +2,8 @@
 
 String^ PersonnelDAO::Delete(String^ id)
 {
-    String^ query = "DELETE FROM 'Personnel'";
-    query += "WHERE 'ID_pl' = " + id;
+    String^ query = "DELETE FROM dbo.Personnel";
+    query += "WHERE ID_pl = '" + id+ "'";
     return query;
 }
 
@@ -53,7 +53,7 @@ String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ da
 		{
 			query += " AND ";
 		}
-		query += "Date_embauche_pl = " + date_embauche;
+		query += "DateEmbauche_pl = " + date_embauche;
 		i++;
 	}
 	return query;
@@ -62,5 +62,11 @@ String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ da
 String^ PersonnelDAO::Update(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche)
 {
 	String^ query = "UPDATE Personnel SET ";
+	return query;
+}
+
+String^ PersonnelDAO::Insert(String^ date_embauche , String ^ id_ps, String^ id_pl_1 , String ^poste )
+{
+	String^ query = "INSERT INTO dbo.Personnel (DateEmbauche_pl, ID_ps , ID_pl_1 , Role_pl) VALUES ('" + date_embauche + "', " + id_ps + ", " + id_pl_1 + " , '" + poste +"')";
 	return query;
 }

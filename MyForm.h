@@ -5,6 +5,7 @@
 #include "Liste_Adresse.h"
 #include "Personnel.h"
 #include "DatabaseAccess.h"
+#include "Dateformat.h"
 
 
 namespace ProjetPOO {
@@ -150,6 +151,16 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CP_c;
 private: System::Windows::Forms::Panel^ panel14;
 private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
 private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::Panel^ panel15;
+
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
+private: System::Windows::Forms::Panel^ panel16;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::TextBox^ textBox4;
+
+
+
 private: System::ComponentModel::IContainer^ components;
 
 
@@ -205,6 +216,12 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->panel16 = (gcnew System::Windows::Forms::Panel());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->panel15 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -241,6 +258,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel12->SuspendLayout();
 			this->panel11->SuspendLayout();
 			this->panel3->SuspendLayout();
+			this->panel16->SuspendLayout();
+			this->panel15->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->panel9->SuspendLayout();
 			this->panel8->SuspendLayout();
 			this->panel7->SuspendLayout();
@@ -481,6 +501,8 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel3
 			// 
+			this->panel3->Controls->Add(this->panel16);
+			this->panel3->Controls->Add(this->panel15);
 			this->panel3->Controls->Add(this->panel9);
 			this->panel3->Controls->Add(this->panel8);
 			this->panel3->Controls->Add(this->panel7);
@@ -492,6 +514,68 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(273, 510);
 			this->panel3->TabIndex = 0;
+			// 
+			// panel16
+			// 
+			this->panel16->Controls->Add(this->label11);
+			this->panel16->Controls->Add(this->textBox4);
+			this->panel16->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel16->Location = System::Drawing::Point(0, 336);
+			this->panel16->Name = L"panel16";
+			this->panel16->Size = System::Drawing::Size(273, 58);
+			this->panel16->TabIndex = 6;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label11->Location = System::Drawing::Point(0, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(78, 28);
+			this->label11->TabIndex = 1;
+			this->label11->Text = L"Poste";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->textBox4->Location = System::Drawing::Point(0, 36);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(273, 22);
+			this->textBox4->TabIndex = 0;
+			// 
+			// panel15
+			// 
+			this->panel15->Controls->Add(this->numericUpDown1);
+			this->panel15->Controls->Add(this->label10);
+			this->panel15->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel15->Location = System::Drawing::Point(0, 282);
+			this->panel15->Name = L"panel15";
+			this->panel15->Size = System::Drawing::Size(273, 54);
+			this->panel15->TabIndex = 5;
+			// 
+			// numericUpDown1
+			// 
+			this->numericUpDown1->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->numericUpDown1->Location = System::Drawing::Point(0, 31);
+			this->numericUpDown1->Name = L"numericUpDown1";
+			this->numericUpDown1->Size = System::Drawing::Size(273, 22);
+			this->numericUpDown1->TabIndex = 2;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label10->Location = System::Drawing::Point(0, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(229, 28);
+			this->label10->TabIndex = 1;
+			this->label10->Text = L"Supp hiérarchique";
 			// 
 			// panel9
 			// 
@@ -815,6 +899,11 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel11->ResumeLayout(false);
 			this->panel11->PerformLayout();
 			this->panel3->ResumeLayout(false);
+			this->panel16->ResumeLayout(false);
+			this->panel16->PerformLayout();
+			this->panel15->ResumeLayout(false);
+			this->panel15->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			this->panel9->ResumeLayout(false);
 			this->panel9->PerformLayout();
 			this->panel8->ResumeLayout(false);
@@ -935,7 +1024,7 @@ private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs
 
 	}
 	else if (var_interface == 4) {
-
+		Personnel::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString() , textBox4->Text);
 	}
 }
 private: System::Void Modifier_Bouton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -954,5 +1043,6 @@ private: System::Void textBox2_TextChanged(System::Object^ sender, System::Event
 		this->textBox1->AutoCompleteCustomSource = source_adresse;
 	}
 }
+
 };
 }
