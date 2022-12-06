@@ -560,6 +560,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->numericUpDown1->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->numericUpDown1->Location = System::Drawing::Point(0, 31);
+			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(273, 22);
 			this->numericUpDown1->TabIndex = 2;
