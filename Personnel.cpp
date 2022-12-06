@@ -20,3 +20,9 @@ void Personnel::Insert(Composants::DatabaseAccess^ bdd, String^ id, String^ nom,
 	String^ query = PersonnelDAO::Insert(DateEmbauche, ds->Tables["tab"]->Rows[0]["ID_ps"]->ToString(), id_pl_1 , poste);
 	bdd->actionRows(query);
 }
+
+void Personnel::Delete(Composants::DatabaseAccess^ bdd, String^ id)
+{
+	String^ query = PersonnelDAO::Delete(id);
+	bdd->actionRows(query);
+}

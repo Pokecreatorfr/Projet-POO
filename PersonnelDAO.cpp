@@ -3,7 +3,7 @@
 String^ PersonnelDAO::Delete(String^ id)
 {
     String^ query = "DELETE FROM dbo.Personnel";
-    query += "WHERE ID_pl = '" + id+ "'";
+    query += " WHERE ID_pl = " + id+ "";
     return query;
 }
 

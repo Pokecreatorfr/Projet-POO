@@ -1032,7 +1032,7 @@ private: System::Void Clear_button_Click(System::Object^ sender, System::EventAr
 
 	}
 	else if (var_interface == 4) {
-
+		Personnel::Delete(base_dd, this->IDclient_tb->Text);
 	}
 }
 private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs^ e) {
