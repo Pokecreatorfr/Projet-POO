@@ -1,6 +1,4 @@
 #pragma once
-#include "Personne.h"
-#include<string>
 
 using namespace System;
 

@@ -6,7 +6,7 @@ String^ BDD::PersonneDAO::Delete(String^ id)
 	return query;
 }
 
-String^ BDD::PersonneDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche)
+String^ BDD::PersonneDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance)
 {
 	int a = 0;
 	String^ query = "SELECT * FROM dbo.Personnes WHERE ";
