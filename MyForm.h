@@ -650,6 +650,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Modifier_Bouton->Size = System::Drawing::Size(68, 76);
 			this->Modifier_Bouton->TabIndex = 5;
 			this->Modifier_Bouton->UseVisualStyleBackColor = true;
+			this->Modifier_Bouton->Click += gcnew System::EventHandler(this, &MyForm::Modifier_Bouton_Click_1);
 			// 
 			// Add_button
 			// 
@@ -1075,6 +1076,21 @@ private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::E
 	else
 	{
 		this->numericUpDown1->Enabled = true;
+	}
+}
+private: System::Void Modifier_Bouton_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	if (var_interface == 1) {
+
+	}
+	else if (var_interface == 4) {
+		if (this->checkBox1->Checked)
+		{
+			Personnel::Update(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), "NULL", textBox4->Text);
+		}
+		else
+		{
+			Personnel::Update(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString(), textBox4->Text);
+		}
 	}
 }
 };

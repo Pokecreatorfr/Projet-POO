@@ -59,14 +59,14 @@ String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ da
 	return query;
 }
 
-String^ PersonnelDAO::Update(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche)
-{
-	String^ query = "UPDATE Personnel SET ";
-	return query;
-}
-
 String^ PersonnelDAO::Insert(String^ date_embauche , String ^ id_ps, String^ id_pl_1 , String ^poste )
 {
 	String^ query = "INSERT INTO dbo.Personnel (DateEmbauche_pl, ID_ps , ID_pl_1 , Role_pl) VALUES ('" + date_embauche + "', " + id_ps + ", " + id_pl_1 + " , '" + poste +"')";
+	return query;
+}
+
+String^ PersonnelDAO::Update(String^ date_embauche, String^ id_ps, String^ id_pl_1, String^ poste, String^ id)
+{
+	String^ query = "UPDATE dbo.Personnel SET DateEmbauche_pl = '" + date_embauche + "', ID_ps = " + id_ps + ", ID_pl_1 = " + id_pl_1 + ", Role_pl = '" + poste + "' WHERE ID_pl = " + id + "";
 	return query;
 }
