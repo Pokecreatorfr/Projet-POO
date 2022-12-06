@@ -32,7 +32,29 @@ array<String^>^ Liste_Adresse::return_city(String^ postal_code)
 			b++;
 		}
 	}
-	a = 1;
+	return city;
+}
+
+array<String^>^ Liste_Adresse::city_start_by(String^ str)
+{
+	int a = 0;
+	for (int i = 0; i < 39193; i++)
+	{
+		if (lste_adr[i, 1]->StartsWith(str))
+		{
+			a++;
+		}
+	}
+	array<String^>^ city = gcnew array<String^>(a);
+	int b = 0;
+	for (int i = 0; i < 39193; i++)
+	{
+		if (lste_adr[i, 1]->StartsWith(str))
+		{
+			city[b] = lste_adr[i, 1];
+			b++;
+		}
+	}
 	return city;
 }
 

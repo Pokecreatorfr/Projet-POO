@@ -129,7 +129,7 @@ namespace ProjetPOO {
 private: System::Windows::Forms::Panel^ panel10;
 private: System::Windows::Forms::Panel^ panel11;
 private: System::Windows::Forms::Label^ label7;
-private: System::Windows::Forms::TextBox^ textBox1;
+
 private: System::Windows::Forms::Label^ label6;
 private: System::Windows::Forms::Panel^ panel13;
 private: System::Windows::Forms::Label^ label9;
@@ -145,6 +145,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Date_n_c;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ville_c;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ CP_c;
 private: System::Windows::Forms::Panel^ panel14;
+private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
+private: System::Windows::Forms::TextBox^ textBox1;
+private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -169,7 +172,7 @@ private: System::Windows::Forms::Panel^ panel14;
 		/// <summary>
 		/// Variable n�cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -178,6 +181,7 @@ private: System::Windows::Forms::Panel^ panel14;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
@@ -226,6 +230,7 @@ private: System::Windows::Forms::Panel^ panel14;
 			this->Ville_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->CP_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel10->SuspendLayout();
@@ -451,6 +456,7 @@ private: System::Windows::Forms::Panel^ panel14;
 			// 
 			this->textBox1->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::SuggestAppend;
 			this->textBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
+			this->textBox1->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->textBox1->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->textBox1->Location = System::Drawing::Point(0, 36);
 			this->textBox1->Name = L"textBox1";
@@ -499,7 +505,7 @@ private: System::Windows::Forms::Panel^ panel14;
 			this->maskedTextBox1->Location = System::Drawing::Point(0, 29);
 			this->maskedTextBox1->Mask = L"00/00/0000";
 			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(339, 22);
+			this->maskedTextBox1->Size = System::Drawing::Size(273, 22);
 			this->maskedTextBox1->TabIndex = 2;
 			this->maskedTextBox1->ValidatingType = System::DateTime::typeid;
 			// 
@@ -599,7 +605,7 @@ private: System::Windows::Forms::Panel^ panel14;
 			this->Client_Date_mTB->Location = System::Drawing::Point(0, 29);
 			this->Client_Date_mTB->Mask = L"00/00/0000";
 			this->Client_Date_mTB->Name = L"Client_Date_mTB";
-			this->Client_Date_mTB->Size = System::Drawing::Size(339, 22);
+			this->Client_Date_mTB->Size = System::Drawing::Size(273, 22);
 			this->Client_Date_mTB->TabIndex = 2;
 			this->Client_Date_mTB->ValidatingType = System::DateTime::typeid;
 			// 
@@ -637,7 +643,7 @@ private: System::Windows::Forms::Panel^ panel14;
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(102, 28);
 			this->label3->TabIndex = 1;
-			this->label3->Text = L"Pr�nom";
+			this->label3->Text = L"Prénom";
 			// 
 			// PRENOMclient_tb
 			// 
@@ -771,6 +777,12 @@ private: System::Windows::Forms::Panel^ panel14;
 			this->panel14->Name = L"panel14";
 			this->panel14->Size = System::Drawing::Size(608, 510);
 			this->panel14->TabIndex = 6;
+			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// MyForm
 			// 
