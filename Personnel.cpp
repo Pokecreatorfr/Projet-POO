@@ -1,31 +1,8 @@
 #include "Personnel.h"
 
-Personnel::Personnel()
+DataSet^ Personnel::Search(Composants::DatabaseAccess^ bdd , String^ id, String^ nom, String^ prenom, String^ DateNaissance, String^ DateEmbauche)
 {
-    throw gcnew System::NotImplementedException();
+	String^ query = PersonnelDAO::Search(id, nom, prenom, DateNaissance, DateEmbauche);
+	DataSet^ ds = bdd->getRows(query, "tab");
+	return ds;
 }
-
-Personnel::Personnel(String^ Nom, String^ Prenom, DateTime DateNaissance,String^ poste, int ID_ps, DateTime Date_Embauche)
-{
-    throw gcnew System::NotImplementedException();
-    Nom = Nom;
-    Prenom = Prenom;
-    DateNaissance = DateNaissance;
-    ID_ps = ID_ps;
-    Date_Embauche = Date_Embauche;
-    poste = poste;
-
-}
-
-
-int Personnel::get_ID_cl()
-{
-    return ID_ps;
-}
-
-void Personnel::set_ID_cl()
-{
-    throw gcnew System::NotImplementedException();
-    this->ID_ps = ID_ps;
-}
-

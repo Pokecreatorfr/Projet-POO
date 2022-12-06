@@ -3,6 +3,8 @@
 #include "Form_color_change.h"
 #include "Hex_color.h"
 #include "Liste_Adresse.h"
+#include "Personnel.h"
+#include "DatabaseAccess.h"
 
 
 namespace ProjetPOO {
@@ -40,7 +42,8 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	private: int^ var_interface = nullptr;
+	private: Composants::DatabaseAccess^ base_dd = gcnew Composants::DatabaseAccess(System::Configuration::ConfigurationManager::AppSettings["Data Source"], System::Configuration::ConfigurationManager::AppSettings["Initial Catalog"], System::Configuration::ConfigurationManager::AppSettings["User ID"], System::Configuration::ConfigurationManager::AppSettings["Password"]);
+	private: int var_interface = 0;
 	public: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ Setting_button;
 	private: System::Windows::Forms::Button^ commande_button;
@@ -868,12 +871,16 @@ private: System::Void Setting_click(System::Object^ sender, System::EventArgs^ e
 private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^ e) {
-	if (var_interface == 1) {
+	if (var_interface == 1) 
+	{
 		
 	}
-	else if (var_interface == 4) {
-		
+	else if (var_interface == 4) 
+	{
+		Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text);
 	}
+	System::Boolean ^ a = (var_interface == 4); 
+
 }
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = true;

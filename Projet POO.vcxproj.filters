@@ -89,7 +89,9 @@
     <ClInclude Include="DatabaseAccess.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Liste_Adresse.h" />
+    <ClInclude Include="Liste_Adresse.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
