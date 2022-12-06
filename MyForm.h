@@ -43,6 +43,7 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
+	DataSet^ dgv;
 	private: Composants::DatabaseAccess^ base_dd = gcnew Composants::DatabaseAccess(System::Configuration::ConfigurationManager::AppSettings["Data Source"], System::Configuration::ConfigurationManager::AppSettings["Initial Catalog"], System::Configuration::ConfigurationManager::AppSettings["User ID"], System::Configuration::ConfigurationManager::AppSettings["Password"]);
 	private: int var_interface = 0;
 	public: System::Windows::Forms::Panel^ panel1;
@@ -981,9 +982,18 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 	{
 		
 	}
-	else if (var_interface == 4) 
+	else if (var_interface == 4)
 	{
-		Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text);
+		
+		if (checkBox1->Checked)
+		{
+			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text, "NULL", this->textBox4->Text);
+		}
+		else
+		{
+			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text, this->numericUpDown1->ToString(), this->textBox4->Text);
+		}
+		this->dataGridView1->DataSource = dgv;
 	}
 	System::Boolean ^ a = (var_interface == 4); 
 

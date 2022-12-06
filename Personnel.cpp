@@ -1,9 +1,11 @@
 #include "Personnel.h"
 
-DataSet^ Personnel::Search(Composants::DatabaseAccess^ bdd , String^ id, String^ nom, String^ prenom, String^ DateNaissance, String^ DateEmbauche)
+
+DataSet^ Personnel::Search(Composants::DatabaseAccess^ bdd, String^ id, String^ nom, String^ prenom, String^ DateNaissance, String^ DateEmbauche, String^ id_pl_1, String^ poste)
 {
-	String^ query = PersonnelDAO::Search(id, nom, prenom, DateNaissance, DateEmbauche);
-	DataSet^ ds = bdd->getRows(query, "tab");
+	DataSet^ ds = gcnew DataSet();
+	String^ query = PersonnelDAO::Search(id, nom, prenom, DateNaissance, DateEmbauche, id_pl_1, poste);
+	ds = bdd->getRows(query, "tab");
 	return ds;
 }
 

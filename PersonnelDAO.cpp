@@ -7,54 +7,63 @@ String^ PersonnelDAO::Delete(String^ id)
     return query;
 }
 
-String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche)
+String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche, String^ id_pl_1, String^ poste)
 {
-	int i = 0;
+	int a = 0;
 	String^ query = "SELECT * FROM dbo.Personnel FULL JOIN dbo.Personnes ON dbo.Personnel.ID_ps = dbo.Personnes.ID_ps WHERE ";
-    if (id != "")
-    {
-		if (i > 0)
-		{
-			query += " AND ";
-		}
-		query += "ID_pl = " + id;
-		i++;
-    }
 	if (nom != "")
 	{
-		if (i > 0)
+		if (a > 0)
 		{
 			query += " AND ";
 		}
 		query += "Nom_ps = '" + nom + "'";
-		i++;
+		a++;
 	}
 	if (prenom != "")
 	{
-		if (i > 0)
+		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "Prenom_ps = " + prenom;
-		i++;
+		query += "Prenom_ps = '" + prenom + "'";
+		a++;
 	}
 	if (date_naissance != "  /  /")
 	{
-		if (i > 0)
+		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "Date_naissance_ps = " + date_naissance;
-		i++;
+		query += "DateNaissance_ps = '" + date_naissance + "'  ";
+		a++;
 	}
 	if (date_embauche != "  /  /")
 	{
-		if (i > 0)
+		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "DateEmbauche_pl = " + date_embauche;
-		i++;
+		query += "DateEmbauche_pl = '" + date_embauche + "'  ";
+		a++;
+	}
+	if (id_pl_1 != "NULL")
+	{
+		if (a > 0)
+		{
+			query += " AND ";
+		}
+		query += "ID_pl_1 = '" + id_pl_1 + "'  ";
+		a++;
+	}
+	if (poste != "")
+	{
+		if (a > 0)
+		{
+			query += " AND ";
+		}
+		query += "Poste_pl = '" + poste + "'  ";
+		a++;
 	}
 	return query;
 }
