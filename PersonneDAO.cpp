@@ -1,67 +1,77 @@
-#include "Personne.h"
 #include "PersonneDAO.h"
-#include <string>
-using namespace System;
 
- String^ BDD::PersonneDAO::Select(void)
+String^ BDD::PersonneDAO::Delete(String^ id)
 {
-	return "SELECT [ID_ps], [Nom_ps], [Prenom_ps], [DateNaissance_ps] FROM [Personnes].[dbo]";
-}
- String^ BDD::PersonneDAO::Create(void)
-{
-	 return "INSERT INTO Personnes " +
-		 "(Nom_Ps, Prenom_Ps, DateNaissance_ps) " +
-		 // @@identify - Fonction système qui retourne la dernière valeur d'identité insérée.
-		 "VALUES('" + this->getNom_Ps() + "', '" + this->getPrenom_Ps() + "',  '" + this->getDateNaissance_Ps() + "');SELECT @@IDENTITY;";
-}
- String^ BDD::PersonneDAO::Modify(void)
- {
-	 return "UPDATE TB_PERSONNE " +
-		 "SET nom = '" + this->getNom_Ps() + "', prenom = '" + this->getPrenom_Ps() + "', dateNaissance = '" + this->getDateNaissance_Ps() + "'" +
-		 "WHERE(id_personne = " + this->getId_Ps() + ");";
- }
-
-
-void BDD::PersonneDAO::setId_Ps(int Id_ps)
-{
-this->id = Id_ps;
-}
-void BDD::PersonneDAO::setNom_Ps( String^ Nom_Ps)
-{
-	this->nom = Nom_Ps;
-}
-void BDD::PersonneDAO::setPrenom_Ps( String^ Prenom_Ps)
-{
-	this->prenom = Prenom_Ps;
-}
-void BDD::PersonneDAO::setDateNaissance_Ps(DateTime DateNaissance_Ps)
-{
-	this->dateNaissance = DateNaissance_Ps;
+	String^ query = "DELETE FROM dbo.Personnes WHERE id = '" + id+"'";
+	return query;
 }
 
-
-int BDD::PersonneDAO::getId_Ps(void) 
+String^ BDD::PersonneDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche)
 {
-	return this->id; 
+	int a = 0;
+	String^ query = "SELECT * FROM dbo.Personnes WHERE ";
+	if (id != "")
+	{
+		if (a > 0)
+		{
+			query += " AND ";
+		}
+		query += "id = '" + id + "'";
+		a++;
+	}
+	if (nom != "")
+	{
+		if (a > 0)
+		{
+			query += " AND ";
+		}
+		query += "nom = '" + nom + "'";
+		a++;
+	}
+	if (prenom != "")
+	{
+		if (a > 0)
+		{
+			query += " AND ";
+		}
+		query += "prenom = '" + prenom + "'";
+		a++;
+	}
+	if (date_naissance != "")
+	{
+		if (a > 0)
+		{
+			query += " AND ";
+		}
+		query += "date_naissance = '" + date_naissance + "'";
+		a++;
+	}
+	query = query->Substring(0, query->Length - 4);
+	return query;
 }
 
-String^ BDD::PersonneDAO::getNom_Ps(void) 
+String^ BDD::PersonneDAO::Update(String^ id, String^ nom, String^ prenom, String^ date_naissance)
 {
-	return this->nom;
+	String^ query = "UPDATE dbo.Personnes SET ";
+	if (nom != "")
+	{
+		query += "nom = '" + nom + "', ";
+	}
+	if (prenom != "")
+	{
+		query += "prenom = '" + prenom + "', ";
+	}
+	if (date_naissance != "")
+	{
+		query += "date_naissance = '" + date_naissance + "', ";
+	}
+	query = query->Substring(0, query->Length - 2);
+	query += " WHERE id = '" + id + "'";
+	return query;
 }
 
-String^ BDD::PersonneDAO::getPrenom_Ps(void) 
+String^ BDD::PersonneDAO::Insert(String^ nom, String^ prenom, String^ date_naissance)
 {
-	return this->prenom; 
+	String^ query = "INSERT INTO dbo.Personnes (nom, prenom, date_naissance) VALUES ('" + nom + "', '" + prenom + "', '" + date_naissance + "')";
+	return query;
 }
-
-DateTime BDD::PersonneDAO::getDateNaissance_Ps(void) 
-{
-	return this->dateNaissance; 
-}
-
-
-
-
-
-
