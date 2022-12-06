@@ -421,6 +421,7 @@ private: System::Windows::Forms::Panel^ panel14;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(262, 22);
 			this->textBox2->TabIndex = 0;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
 			// 
 			// panel11
 			// 
@@ -448,6 +449,8 @@ private: System::Windows::Forms::Panel^ panel14;
 			// 
 			// textBox1
 			// 
+			this->textBox1->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::SuggestAppend;
+			this->textBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
 			this->textBox1->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->textBox1->Location = System::Drawing::Point(0, 36);
 			this->textBox1->Name = L"textBox1";
@@ -820,6 +823,7 @@ private: System::Windows::Forms::Panel^ panel14;
 		int color_theme = Convert::ToInt32(System::Configuration::ConfigurationManager::AppSettings["color_theme"]);
 		Form_color_change::Change_color_of_Form_hex(this, color_list_theme[color_theme][0]);
 		Form_color_change::Change_color_of_pannel_hex(this->panel1, color_list_theme[color_theme][1]);
+		Liste_Adresse::return_city("86350"); // petit truc pour charger la liste des villes au chargement de l'app
 	}
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -921,6 +925,14 @@ private: System::Void Modifier_Bouton_Click(System::Object^ sender, System::Even
 	}
 	else if (var_interface == 4) {
 
+	}
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (Liste_Adresse::is_postal_code(this->textBox2->Text))
+	{
+		auto source_adresse = gcnew AutoCompleteStringCollection();
+		source_adresse->AddRange(Liste_Adresse::return_city(this->textBox2->Text));
+		this->textBox1->AutoCompleteCustomSource = source_adresse;
 	}
 }
 };

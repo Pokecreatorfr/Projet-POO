@@ -5,6 +5,9 @@ using namespace System;
 ref class Liste_Adresse
 {
 public:
+	static String^ return_postal_code(String^ city);
+	static array<String^>^ return_city(String^ postal_code);
+	static System::Boolean^ is_postal_code(String^ postal_code);
 private:
   const static array<String^, 2>^ lste_adr = gcnew array<String^, 2>(39193, 2)
     {
