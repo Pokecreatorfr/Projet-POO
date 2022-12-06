@@ -132,6 +132,8 @@ namespace ProjetPOO {
 			this->MDP_Tbox->Name = L"MDP_Tbox";
 			this->MDP_Tbox->Size = System::Drawing::Size(100, 22);
 			this->MDP_Tbox->TabIndex = 5;
+			this->MDP_Tbox->UseSystemPasswordChar = true;
+			
 			// 
 			// Save_btn
 			// 
@@ -149,7 +151,7 @@ namespace ProjetPOO {
 			this->BDD_Tbox->Name = L"BDD_Tbox";
 			this->BDD_Tbox->Size = System::Drawing::Size(100, 22);
 			this->BDD_Tbox->TabIndex = 0;
-			this->BDD_Tbox->TextChanged += gcnew System::EventHandler(this, &MyForm1::BDDtBox_TextChanged);
+			
 			// 
 			// ID_tb
 			// 
@@ -206,14 +208,13 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
-		this->BDD_Tbox->Text = System::Configuration::ConfigurationManager::AppSettings["nom_bdd"];
-		this->ID_tb->Text = System::Configuration::ConfigurationManager::AppSettings["id_bdd"];
-		this->MDP_Tbox->Text = System::Configuration::ConfigurationManager::AppSettings["mdp_bdd"];
+		this->BDD_Tbox->Text = System::Configuration::ConfigurationManager::AppSettings["Initial Catalog"];
+		this->ID_tb->Text = System::Configuration::ConfigurationManager::AppSettings["User ID"];
+		this->MDP_Tbox->Text = System::Configuration::ConfigurationManager::AppSettings["Password"];
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void BDDtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
+
 private: System::Void Save_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 	System::Configuration::Configuration^ config = System::Configuration::ConfigurationManager::OpenExeConfiguration(ConfigurationUserLevel::None);
 	config->AppSettings->Settings->Remove("nom_bdd");
