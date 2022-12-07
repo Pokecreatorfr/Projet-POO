@@ -18,3 +18,8 @@ void Commande::Delete(Composants::DatabaseAccess^ bdd, String^ id)
 	String^ query = CommandeDAO::Delete(id);
 	bdd->actionRows(query);
 }
+
+void Commande::Update(Composants::DatabaseAccess^ bdd, String^ date_c, String^ date_l, String^ id_cl, String^ ref, String^ id)
+{
+	throw gcnew System::NotImplementedException();
+}
