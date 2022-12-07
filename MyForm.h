@@ -1255,10 +1255,22 @@ private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void Clear_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (var_interface == 1) {
-		Client::Delete(base_dd, this->IDclient_tb->Text);
+		if (this->IDclient_tb->Text != "")
+		{
+			Client::Delete(base_dd, this->IDclient_tb->Text);
+		}
+	}
+	else if (var_interface == 3) {
+		if (this->IDclient_tb->Text != "")
+		{
+			Commande::Delete(base_dd, this->IDclient_tb->Text);
+		}
 	}
 	else if (var_interface == 4) {
-		Personnel::Delete(base_dd, this->IDclient_tb->Text);
+		if (this->IDclient_tb->Text != "")
+		{
+			Personnel::Delete(base_dd, this->IDclient_tb->Text);
+		}
 	}
 }
 private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs^ e) {

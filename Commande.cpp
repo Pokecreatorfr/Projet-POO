@@ -10,10 +10,11 @@ DataSet^ Commande::Search(Composants::DatabaseAccess^ bdd, String^ id, String^ d
 
 void Commande::Insert(Composants::DatabaseAccess^ bdd, String^ date_c, String^ date_l, String^ id_cl, String^ ref)
 {
-	throw gcnew System::NotImplementedException();
+
 }
 
 void Commande::Delete(Composants::DatabaseAccess^ bdd, String^ id)
 {
-	throw gcnew System::NotImplementedException();
+	String^ query = CommandeDAO::Delete(id);
+	bdd->actionRows(query);
 }
