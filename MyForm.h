@@ -1042,7 +1042,7 @@ private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void Clear_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (var_interface == 1) {
-
+		Client::Delete(base_dd, this->IDclient_tb->Text);
 	}
 	else if (var_interface == 4) {
 		Personnel::Delete(base_dd, this->IDclient_tb->Text);
@@ -1050,6 +1050,7 @@ private: System::Void Clear_button_Click(System::Object^ sender, System::EventAr
 }
 private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (var_interface == 1) {
+		Client::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text));
 
 	}
 	else if (var_interface == 4) {

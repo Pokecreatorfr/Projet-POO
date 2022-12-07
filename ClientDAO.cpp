@@ -3,7 +3,7 @@
 
 String^ ClientDAO::Delete(String^ id)
 {
-    String^ query = "DELETE FROM dbo.Clients";
+    String^ query = "DELETE FROM dbo.Clients ";
     query += "WHERE ID_cl = " + id ;
     return query;
 }
@@ -37,7 +37,7 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 		{
 			query += " AND ";
 		}
-		query += "Prenom_ps = " + prenom;
+		query += "Prenom_ps = '" + prenom + "' ";
 		i++;
 	}
 	if (date_naissance != "  /  /")
@@ -46,7 +46,7 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 		{
 			query += " AND ";
 		}
-		query += "Date_naissance_ps = " + date_naissance;
+		query += "DateNaissance_ps = '" + date_naissance + "'";
 		i++;
 	}
 	return query;

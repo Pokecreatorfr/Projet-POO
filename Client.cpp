@@ -19,3 +19,9 @@ void Client::Insert(Composants::DatabaseAccess^ bdd, String^ id, String^ nom, St
 	String^ query = ClientDAO::Insert(ds->Tables["tab"]->Rows[0]["ID_ps"]->ToString());
 	bdd->actionRows(query);
 }
+
+void Client::Delete(Composants::DatabaseAccess^ bdd, String^ id)
+{
+	String^ query = ClientDAO::Delete(id);
+	bdd->actionRows(query);
+}
