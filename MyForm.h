@@ -181,6 +181,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 
 
 
+
 private: System::ComponentModel::IContainer^ components;
 
 
@@ -986,7 +987,7 @@ private: System::ComponentModel::IContainer^ components;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::ColumnHeader;
 			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -997,20 +998,18 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->dataGridView1->Size = System::Drawing::Size(608, 1055);
+			this->dataGridView1->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
+			this->dataGridView1->Size = System::Drawing::Size(483, 1055);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
 			// panel14
 			// 
-			this->panel14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel14->Controls->Add(this->dataGridView1);
-			this->panel14->Location = System::Drawing::Point(1316, 0);
+			this->panel14->Dock = System::Windows::Forms::DockStyle::Right;
+			this->panel14->Location = System::Drawing::Point(1441, 0);
 			this->panel14->Name = L"panel14";
-			this->panel14->Size = System::Drawing::Size(608, 1055);
+			this->panel14->Size = System::Drawing::Size(483, 1055);
 			this->panel14->TabIndex = 6;
 			// 
 			// contextMenuStrip1
@@ -1114,6 +1113,10 @@ private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^
 	this->panel18->Visible = false;
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
+	this->panel14->Width = 900;
+	this->dataGridView1->ScrollBars = ScrollBars::Horizontal;
+	this->dataGridView1->HorizontalScrollingOffset = 0;
+	this->dataGridView1->Refresh();
 	var_interface = 1;
 }
 private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
