@@ -79,3 +79,9 @@ String^ ProduitDAO::Update(String^ id, String^ Ref_pr, String^ Designation_pr, S
 	String^ query = "UPDATE dbo.Produit SET Ref_pr = '" + Ref_pr + "', Designation_pr = " + Designation_pr + ", Prix_HT_actuel_pr = " + Prix_HT_actuel_pr + ", TVA_actuelle_pr = '" + TVA_actuelle_pr + "'qte_pr = '" + qte_pr + " 'SRea_pr ='" + SRea_pr + " WHERE ID_pl = " + id + "";
 	return query;
 }
+
+String^ ProduitDAO::Select_Designation_pr()
+{
+	return "SELECT Designation_pr FROM dbo.Produit;";
+}
+

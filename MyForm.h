@@ -8,6 +8,7 @@
 #include "Dateformat.h"
 #include "Client.h"
 #include "Commande.h"
+#include "Produit.h"
 
 
 namespace ProjetPOO {
@@ -1383,6 +1384,9 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 	this->panel20->Visible = true;
 	this->panel21->Visible = true;
 	this->panel14->Width = 600;
+	auto source_produit = gcnew AutoCompleteStringCollection();
+	source_produit->AddRange(Produit::Select_design(base_dd));
+	this->textBox7->AutoCompleteCustomSource = source_produit;
 	if (var_interface == 1)
 	{
 		this->textBox6->Text = this->IDclient_tb->Text;
