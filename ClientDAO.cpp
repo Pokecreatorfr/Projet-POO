@@ -12,7 +12,7 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 {
 
 	int i = 0;
-	String^ query = "SELECT * FROM dbo.Clients FULL JOIN dbo.Personnes ON dbo.Clients.ID_ps = dbo.Personnes.ID_ps WHERE ";
+	String^ query = "SELECT dbo.Personnes.ID_ps , Nom_ps , Prenom_ps , DateNaissance_ps FROM dbo.Clients FULL JOIN dbo.Personnes ON dbo.Clients.ID_ps = dbo.Personnes.ID_ps WHERE ";
 	if (id != "")
 	{
 		if (i > 0)
