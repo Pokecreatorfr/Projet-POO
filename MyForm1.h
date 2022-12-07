@@ -217,12 +217,12 @@ namespace ProjetPOO {
 
 private: System::Void Save_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 	System::Configuration::Configuration^ config = System::Configuration::ConfigurationManager::OpenExeConfiguration(ConfigurationUserLevel::None);
-	config->AppSettings->Settings->Remove("nom_bdd");
-	config->AppSettings->Settings->Add("nom_bdd", BDD_Tbox->Text);
-	config->AppSettings->Settings->Remove("id_bdd");
-	config->AppSettings->Settings->Add("id_bdd", ID_tb->Text);
-	config->AppSettings->Settings->Remove("mdp_bdd");
-	config->AppSettings->Settings->Add("mdp_bdd", MDP_Tbox->Text);
+	config->AppSettings->Settings->Remove("Initial Catalog");
+	config->AppSettings->Settings->Add("Initial Catalog", BDD_Tbox->Text);
+	config->AppSettings->Settings->Remove("User ID");
+	config->AppSettings->Settings->Add("User ID", ID_tb->Text);
+	config->AppSettings->Settings->Remove("Password");
+	config->AppSettings->Settings->Add("Password", MDP_Tbox->Text);
 	config->Save(ConfigurationSaveMode::Modified);
 	if (comboBox1->Text == "Violet Dark")
 	{
