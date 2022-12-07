@@ -7,6 +7,7 @@
 #include "DatabaseAccess.h"
 #include "Dateformat.h"
 #include "Client.h"
+#include "Commande.h"
 
 
 namespace ProjetPOO {
@@ -45,6 +46,7 @@ namespace ProjetPOO {
 			}
 		}
 	DataSet^ dgv;
+	private: int error = 0;
 	private: Composants::DatabaseAccess^ base_dd = gcnew Composants::DatabaseAccess(System::Configuration::ConfigurationManager::AppSettings["Data Source"], System::Configuration::ConfigurationManager::AppSettings["Initial Catalog"], System::Configuration::ConfigurationManager::AppSettings["User ID"], System::Configuration::ConfigurationManager::AppSettings["Password"]);
 	private: int var_interface = 0;
 	public: System::Windows::Forms::Panel^ panel1;
@@ -161,6 +163,18 @@ private: System::Windows::Forms::Panel^ panel16;
 private: System::Windows::Forms::Label^ label11;
 private: System::Windows::Forms::TextBox^ textBox4;
 private: System::Windows::Forms::CheckBox^ checkBox1;
+private: System::Windows::Forms::Panel^ panel20;
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::TextBox^ textBox6;
+private: System::Windows::Forms::Panel^ panel19;
+private: System::Windows::Forms::MaskedTextBox^ maskedTextBox3;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Panel^ panel18;
+private: System::Windows::Forms::MaskedTextBox^ maskedTextBox2;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::Panel^ panel17;
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::TextBox^ textBox5;
 
 
 
@@ -223,6 +237,18 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->panel20 = (gcnew System::Windows::Forms::Panel());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->panel19 = (gcnew System::Windows::Forms::Panel());
+			this->maskedTextBox3 = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->panel18 = (gcnew System::Windows::Forms::Panel());
+			this->maskedTextBox2 = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->panel17 = (gcnew System::Windows::Forms::Panel());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->panel16 = (gcnew System::Windows::Forms::Panel());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
@@ -260,6 +286,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel12->SuspendLayout();
 			this->panel11->SuspendLayout();
 			this->panel3->SuspendLayout();
+			this->panel20->SuspendLayout();
+			this->panel19->SuspendLayout();
+			this->panel18->SuspendLayout();
+			this->panel17->SuspendLayout();
 			this->panel16->SuspendLayout();
 			this->panel15->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
@@ -287,7 +317,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->MinimumSize = System::Drawing::Size(96, 386);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(96, 510);
+			this->panel1->Size = System::Drawing::Size(96, 1055);
 			this->panel1->TabIndex = 0;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint_1);
 			// 
@@ -298,7 +328,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Setting_button->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->Setting_button->FlatAppearance->BorderSize = 0;
 			this->Setting_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Setting_button->Location = System::Drawing::Point(0, 444);
+			this->Setting_button->Location = System::Drawing::Point(0, 989);
 			this->Setting_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Setting_button->Name = L"Setting_button";
 			this->Setting_button->Size = System::Drawing::Size(96, 66);
@@ -374,7 +404,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel2->Location = System::Drawing::Point(96, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(679, 510);
+			this->panel2->Size = System::Drawing::Size(679, 1055);
 			this->panel2->TabIndex = 1;
 			this->panel2->Visible = false;
 			// 
@@ -387,7 +417,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel10->Location = System::Drawing::Point(349, 0);
 			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(262, 510);
+			this->panel10->Size = System::Drawing::Size(262, 1055);
 			this->panel10->TabIndex = 1;
 			// 
 			// panel13
@@ -503,6 +533,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel3
 			// 
+			this->panel3->Controls->Add(this->panel20);
+			this->panel3->Controls->Add(this->panel19);
+			this->panel3->Controls->Add(this->panel18);
+			this->panel3->Controls->Add(this->panel17);
 			this->panel3->Controls->Add(this->panel16);
 			this->panel3->Controls->Add(this->panel15);
 			this->panel3->Controls->Add(this->panel9);
@@ -514,8 +548,134 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel3->Location = System::Drawing::Point(0, 0);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(349, 510);
+			this->panel3->Size = System::Drawing::Size(349, 1055);
 			this->panel3->TabIndex = 0;
+			// 
+			// panel20
+			// 
+			this->panel20->Controls->Add(this->label15);
+			this->panel20->Controls->Add(this->textBox6);
+			this->panel20->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel20->Location = System::Drawing::Point(0, 560);
+			this->panel20->Name = L"panel20";
+			this->panel20->Size = System::Drawing::Size(349, 58);
+			this->panel20->TabIndex = 10;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label15->Location = System::Drawing::Point(0, 0);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(118, 28);
+			this->label15->TabIndex = 1;
+			this->label15->Text = L"ID Client";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->textBox6->Location = System::Drawing::Point(0, 36);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(349, 22);
+			this->textBox6->TabIndex = 0;
+			// 
+			// panel19
+			// 
+			this->panel19->Controls->Add(this->maskedTextBox3);
+			this->panel19->Controls->Add(this->label14);
+			this->panel19->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel19->Location = System::Drawing::Point(0, 506);
+			this->panel19->Name = L"panel19";
+			this->panel19->Size = System::Drawing::Size(349, 54);
+			this->panel19->TabIndex = 9;
+			// 
+			// maskedTextBox3
+			// 
+			this->maskedTextBox3->Location = System::Drawing::Point(0, 29);
+			this->maskedTextBox3->Mask = L"00/00/0000";
+			this->maskedTextBox3->Name = L"maskedTextBox3";
+			this->maskedTextBox3->Size = System::Drawing::Size(346, 22);
+			this->maskedTextBox3->TabIndex = 2;
+			this->maskedTextBox3->ValidatingType = System::DateTime::typeid;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label14->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label14->Location = System::Drawing::Point(0, 0);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(185, 28);
+			this->label14->TabIndex = 1;
+			this->label14->Text = L"Date Livraison";
+			// 
+			// panel18
+			// 
+			this->panel18->Controls->Add(this->maskedTextBox2);
+			this->panel18->Controls->Add(this->label13);
+			this->panel18->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel18->Location = System::Drawing::Point(0, 452);
+			this->panel18->Name = L"panel18";
+			this->panel18->Size = System::Drawing::Size(349, 54);
+			this->panel18->TabIndex = 8;
+			// 
+			// maskedTextBox2
+			// 
+			this->maskedTextBox2->Location = System::Drawing::Point(0, 29);
+			this->maskedTextBox2->Mask = L"00/00/0000";
+			this->maskedTextBox2->Name = L"maskedTextBox2";
+			this->maskedTextBox2->Size = System::Drawing::Size(346, 22);
+			this->maskedTextBox2->TabIndex = 2;
+			this->maskedTextBox2->ValidatingType = System::DateTime::typeid;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label13->Location = System::Drawing::Point(0, 0);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(210, 28);
+			this->label13->TabIndex = 1;
+			this->label13->Text = L"Date Commande";
+			// 
+			// panel17
+			// 
+			this->panel17->Controls->Add(this->label12);
+			this->panel17->Controls->Add(this->textBox5);
+			this->panel17->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel17->Location = System::Drawing::Point(0, 394);
+			this->panel17->Name = L"panel17";
+			this->panel17->Size = System::Drawing::Size(349, 58);
+			this->panel17->TabIndex = 7;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label12->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label12->Location = System::Drawing::Point(0, 0);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(131, 28);
+			this->label12->TabIndex = 1;
+			this->label12->Text = L"Reference";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->textBox5->Location = System::Drawing::Point(0, 36);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(349, 22);
+			this->textBox5->TabIndex = 0;
 			// 
 			// panel16
 			// 
@@ -633,7 +793,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel8->Controls->Add(this->Clear_button);
 			this->panel8->Controls->Add(this->Chercher_button);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel8->Location = System::Drawing::Point(0, 434);
+			this->panel8->Location = System::Drawing::Point(0, 979);
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(349, 76);
 			this->panel8->TabIndex = 4;
@@ -645,9 +805,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->Modifier_Bouton->Dock = System::Windows::Forms::DockStyle::Left;
 			this->Modifier_Bouton->FlatAppearance->BorderSize = 0;
 			this->Modifier_Bouton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Modifier_Bouton->Location = System::Drawing::Point(197, 0);
+			this->Modifier_Bouton->Location = System::Drawing::Point(241, 0);
 			this->Modifier_Bouton->Name = L"Modifier_Bouton";
-			this->Modifier_Bouton->Size = System::Drawing::Size(68, 76);
+			this->Modifier_Bouton->Size = System::Drawing::Size(105, 76);
 			this->Modifier_Bouton->TabIndex = 5;
 			this->Modifier_Bouton->UseVisualStyleBackColor = true;
 			this->Modifier_Bouton->Click += gcnew System::EventHandler(this, &MyForm::Modifier_Bouton_Click_1);
@@ -659,9 +819,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->Add_button->Dock = System::Windows::Forms::DockStyle::Left;
 			this->Add_button->FlatAppearance->BorderSize = 0;
 			this->Add_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Add_button->Location = System::Drawing::Point(127, 0);
+			this->Add_button->Location = System::Drawing::Point(160, 0);
 			this->Add_button->Name = L"Add_button";
-			this->Add_button->Size = System::Drawing::Size(70, 76);
+			this->Add_button->Size = System::Drawing::Size(81, 76);
 			this->Add_button->TabIndex = 2;
 			this->Add_button->UseVisualStyleBackColor = true;
 			this->Add_button->Click += gcnew System::EventHandler(this, &MyForm::Add_button_Click);
@@ -673,9 +833,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->Clear_button->Dock = System::Windows::Forms::DockStyle::Left;
 			this->Clear_button->FlatAppearance->BorderSize = 0;
 			this->Clear_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Clear_button->Location = System::Drawing::Point(67, 0);
+			this->Clear_button->Location = System::Drawing::Point(78, 0);
 			this->Clear_button->Name = L"Clear_button";
-			this->Clear_button->Size = System::Drawing::Size(60, 76);
+			this->Clear_button->Size = System::Drawing::Size(82, 76);
 			this->Clear_button->TabIndex = 1;
 			this->Clear_button->UseVisualStyleBackColor = true;
 			this->Clear_button->Click += gcnew System::EventHandler(this, &MyForm::Clear_button_Click);
@@ -689,7 +849,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Chercher_button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->Chercher_button->Location = System::Drawing::Point(0, 0);
 			this->Chercher_button->Name = L"Chercher_button";
-			this->Chercher_button->Size = System::Drawing::Size(67, 76);
+			this->Chercher_button->Size = System::Drawing::Size(78, 76);
 			this->Chercher_button->TabIndex = 0;
 			this->Chercher_button->UseVisualStyleBackColor = true;
 			this->Chercher_button->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_4);
@@ -838,7 +998,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->dataGridView1->Size = System::Drawing::Size(608, 510);
+			this->dataGridView1->Size = System::Drawing::Size(608, 1055);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
@@ -850,7 +1010,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel14->Controls->Add(this->dataGridView1);
 			this->panel14->Location = System::Drawing::Point(1316, 0);
 			this->panel14->Name = L"panel14";
-			this->panel14->Size = System::Drawing::Size(608, 510);
+			this->panel14->Size = System::Drawing::Size(608, 1055);
 			this->panel14->TabIndex = 6;
 			// 
 			// contextMenuStrip1
@@ -866,7 +1026,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->ClientSize = System::Drawing::Size(1924, 510);
+			this->ClientSize = System::Drawing::Size(1924, 1055);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel14);
@@ -887,6 +1047,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel11->ResumeLayout(false);
 			this->panel11->PerformLayout();
 			this->panel3->ResumeLayout(false);
+			this->panel20->ResumeLayout(false);
+			this->panel20->PerformLayout();
+			this->panel19->ResumeLayout(false);
+			this->panel19->PerformLayout();
+			this->panel18->ResumeLayout(false);
+			this->panel18->PerformLayout();
+			this->panel17->ResumeLayout(false);
+			this->panel17->PerformLayout();
 			this->panel16->ResumeLayout(false);
 			this->panel16->PerformLayout();
 			this->panel15->ResumeLayout(false);
@@ -934,11 +1102,18 @@ private: System::Void button1_Click_2(System::Object^ sender, System::EventArgs^
 }
 private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible=true;
+	this->panel5->Visible = true;
+	this->panel6->Visible = true;
+	this->panel7->Visible = true;
 	this->panel9->Visible = false;
 	this->panel10->Visible = true;
 	this->panel14->Visible = true;
 	this->panel15->Visible = false;
 	this->panel16->Visible = false;
+	this->panel17->Visible = false;
+	this->panel18->Visible = false;
+	this->panel19->Visible = false;
+	this->panel20->Visible = false;
 	var_interface = 1;
 }
 private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -953,6 +1128,14 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 	if (var_interface == 1) 
 	{
 		dgv = Client::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text));
+		this->dataGridView1->DataSource = dgv;
+		this->dataGridView1->DataMember = "tab";
+		this->dataGridView1->AutoResizeColumns();
+		this->dataGridView1->Refresh();
+	}
+	else if (var_interface == 3)
+	{
+		dgv = Commande::Search(base_dd, this->IDclient_tb->Text, Dateformat::StringDatetoSQL(this->maskedTextBox2->Text), Dateformat::StringDatetoSQL(this->maskedTextBox3->Text) , this->textBox6->Text , this->textBox5->Text);
 		this->dataGridView1->DataSource = dgv;
 		this->dataGridView1->DataMember = "tab";
 		this->dataGridView1->AutoResizeColumns();
@@ -979,11 +1162,18 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 }
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = true;
+	this->panel5->Visible = true;
+	this->panel6->Visible = true;
+	this->panel7->Visible = true;
 	this->panel9->Visible = true;
 	this->panel10->Visible = true;
 	this->panel14->Visible = true;
 	this->panel15->Visible = true;
 	this->panel16->Visible = true;
+	this->panel17->Visible = false;
+	this->panel18->Visible = false;
+	this->panel19->Visible = false;
+	this->panel20->Visible = false;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1002,13 +1192,33 @@ private: System::Void stats_button_Click(System::Object^ sender, System::EventAr
 	this->panel9->Visible = false;
 	this->panel10->Visible = false;
 	this->panel14->Visible = false;
+	this->panel15->Visible = false;
+	this->panel16->Visible = false;
+	this->panel17->Visible = false;
+	this->panel18->Visible = false;
+	this->panel19->Visible = false;
+	this->panel20->Visible = false;
 	var_interface = 2;
 }
 private: System::Void commande_button_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->panel2->Visible = false;
+	this->panel2->Visible = true;
+	this->panel5->Visible = false;
+	this->panel6->Visible = false;
+	this->panel7->Visible = false;
 	this->panel9->Visible = false;
-	this->panel10->Visible = false;
-	this->panel14->Visible = false;
+	this->panel10->Visible = true;
+	this->panel14->Visible = true;
+	this->panel15->Visible = false;
+	this->panel16->Visible = false;
+	this->panel17->Visible = true;
+	this->panel18->Visible = true;
+	this->panel19->Visible = true;
+	this->panel20->Visible = true;
+	if (var_interface == 1)
+	{
+		this->textBox6->Text = this->IDclient_tb->Text;
+		this->IDclient_tb->Text = "";
+	}
 	var_interface = 3;
 }
 private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1017,10 +1227,13 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 	int a = e->RowIndex;
 	if (var_interface == 1)
 	{
-		this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
-		this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
-		this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[4]->Value->ToString();
-		this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[5]->Value->ToString();
+		if (a >= 0)
+		{
+			this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
+			this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
+			this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[4]->Value->ToString();
+			this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[5]->Value->ToString();
+		}
 	}
 	if (var_interface == 4)
 	{
