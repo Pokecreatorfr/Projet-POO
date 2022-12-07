@@ -143,12 +143,12 @@ private: System::Windows::Forms::Panel^ panel12;
 private: System::Windows::Forms::Label^ label8;
 private: System::Windows::Forms::TextBox^ textBox2;
 private: System::Windows::Forms::Button^ Modifier_Bouton;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ ID_c;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Prenom_c;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Nom_c;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Date_n_c;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ville_c;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ CP_c;
+
+
+
+
+
+
 private: System::Windows::Forms::Panel^ panel14;
 private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
 private: System::Windows::Forms::TextBox^ textBox1;
@@ -160,6 +160,9 @@ private: System::Windows::Forms::Panel^ panel16;
 private: System::Windows::Forms::Label^ label11;
 private: System::Windows::Forms::TextBox^ textBox4;
 private: System::Windows::Forms::CheckBox^ checkBox1;
+
+
+
 
 
 
@@ -199,6 +202,7 @@ private: System::ComponentModel::IContainer^ components;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
 			this->Personnel_button = (gcnew System::Windows::Forms::Button());
@@ -246,12 +250,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->IDclient_tb = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->ID_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Prenom_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Nom_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Date_n_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Ville_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->CP_c = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->panel1->SuspendLayout();
@@ -822,62 +820,33 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
+			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
-				this->ID_c, this->Prenom_c,
-					this->Nom_c, this->Date_n_c, this->Ville_c, this->CP_c
-			});
-			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->dataGridView1->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->dataGridView1->Location = System::Drawing::Point(0, 0);
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(608, 256);
+			this->dataGridView1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->dataGridView1->Size = System::Drawing::Size(608, 510);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
-			// ID_c
-			// 
-			this->ID_c->HeaderText = L"ID";
-			this->ID_c->MinimumWidth = 6;
-			this->ID_c->Name = L"ID_c";
-			// 
-			// Prenom_c
-			// 
-			this->Prenom_c->HeaderText = L"Prenom";
-			this->Prenom_c->MinimumWidth = 6;
-			this->Prenom_c->Name = L"Prenom_c";
-			// 
-			// Nom_c
-			// 
-			this->Nom_c->HeaderText = L"Nom";
-			this->Nom_c->MinimumWidth = 6;
-			this->Nom_c->Name = L"Nom_c";
-			// 
-			// Date_n_c
-			// 
-			this->Date_n_c->HeaderText = L"Date Naissance";
-			this->Date_n_c->MinimumWidth = 6;
-			this->Date_n_c->Name = L"Date_n_c";
-			// 
-			// Ville_c
-			// 
-			this->Ville_c->HeaderText = L"Ville";
-			this->Ville_c->MinimumWidth = 6;
-			this->Ville_c->Name = L"Ville_c";
-			// 
-			// CP_c
-			// 
-			this->CP_c->HeaderText = L"Code Postal";
-			this->CP_c->MinimumWidth = 6;
-			this->CP_c->Name = L"CP_c";
-			// 
 			// panel14
 			// 
+			this->panel14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel14->Controls->Add(this->dataGridView1);
-			this->panel14->Dock = System::Windows::Forms::DockStyle::Right;
 			this->panel14->Location = System::Drawing::Point(1316, 0);
 			this->panel14->Name = L"panel14";
 			this->panel14->Size = System::Drawing::Size(608, 510);
@@ -994,9 +963,12 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text, this->numericUpDown1->ToString(), this->textBox4->Text);
 		}
 		this->dataGridView1->DataSource = dgv;
+		this->dataGridView1->DataMember = "tab";
+		this->dataGridView1->AutoResizeColumns();
+		this->dataGridView1->Refresh();
+		
 	}
 	System::Boolean ^ a = (var_interface == 4); 
-
 }
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = true;
@@ -1033,6 +1005,17 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	int a = e->RowIndex;
+	if (a >= 0)
+	{
+		this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
+		this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[6]->Value->ToString();
+		this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[7]->Value->ToString();
+		this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[8]->Value->ToString();
+		this->maskedTextBox1->Text = this->dataGridView1->Rows[a]->Cells[1]->Value->ToString();
+		this->numericUpDown1->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
+		this->textBox4->Text = this->dataGridView1->Rows[a]->Cells[2]->Value->ToString();
+	}
 }
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
