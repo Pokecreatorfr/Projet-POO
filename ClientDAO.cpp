@@ -1,13 +1,14 @@
 #include "ClientDAO.h"
 
+
 String^ ClientDAO::Delete(String^ id)
 {
     String^ query = "DELETE FROM dbo.Clients";
-    query += "WHERE ID_cl = '" + id + "'";
+    query += "WHERE ID_cl = " + id ;
     return query;
 }
 
-String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date)
+String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance)
 {
 
 	int i = 0;
@@ -48,26 +49,17 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 		query += "Date_naissance_ps = " + date_naissance;
 		i++;
 	}
-	if (date != "  /  /")
-	{
-		if (i > 0)
-		{
-			query += " AND ";
-		}
-		query += "date = " + date;
-		i++;
-	}
 	return query;
 }
 
-String^ ClientDAO::Update(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date)
+String^ ClientDAO::Update(String^ id, String^ nom, String^ prenom, String^ date_naissance)
 {
 	String^ query = "UPDATE Clients SET ";
 	return query;
 }
 
-String^ ClientDAO::Insert(String^ date, String^ id_ps)
+String^ ClientDAO::Insert(String^ id_ps)
 {
-	String^ query = "INSERT INTO dbo.Clients (Date, ID_ps) VALUES ('" + date + "', " + id_ps + ")";
+	String^ query = "INSERT INTO dbo.Clients (ID_ps) VALUES (" + id_ps + ")";
 	return query;
 }

@@ -6,6 +6,7 @@
 #include "Personnel.h"
 #include "DatabaseAccess.h"
 #include "Dateformat.h"
+#include "Client.h"
 
 
 namespace ProjetPOO {
@@ -936,6 +937,8 @@ private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^
 	this->panel9->Visible = false;
 	this->panel10->Visible = true;
 	this->panel14->Visible = true;
+	this->panel15->Visible = false;
+	this->panel16->Visible = false;
 	var_interface = 1;
 }
 private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -949,18 +952,23 @@ private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Win
 private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^ e) {
 	if (var_interface == 1) 
 	{
-		
+		dgv = Client::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text));
+		this->dataGridView1->DataSource = dgv;
+		this->dataGridView1->DataMember = "tab";
+		this->dataGridView1->AutoResizeColumns();
+		this->dataGridView1->Refresh();
 	}
 	else if (var_interface == 4)
 	{
 		
 		if (checkBox1->Checked)
 		{
-			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text, "NULL", this->textBox4->Text);
+			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), "NULL", this->textBox4->Text);
+
 		}
 		else
 		{
-			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, this->Client_Date_mTB->Text, this->maskedTextBox1->Text, this->numericUpDown1->ToString(), this->textBox4->Text);
+			dgv = Personnel::Search(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), this->numericUpDown1->ToString(), this->textBox4->Text);
 		}
 		this->dataGridView1->DataSource = dgv;
 		this->dataGridView1->DataMember = "tab";
@@ -968,13 +976,14 @@ private: System::Void button1_Click_4(System::Object^ sender, System::EventArgs^
 		this->dataGridView1->Refresh();
 		
 	}
-	System::Boolean ^ a = (var_interface == 4); 
 }
 private: System::Void Personnel_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = true;
 	this->panel9->Visible = true;
 	this->panel10->Visible = true;
 	this->panel14->Visible = true;
+	this->panel15->Visible = true;
+	this->panel16->Visible = true;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1006,15 +1015,25 @@ private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	int a = e->RowIndex;
-	if (a >= 0)
+	if (var_interface == 1)
 	{
 		this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
-		this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[6]->Value->ToString();
-		this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[7]->Value->ToString();
-		this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[8]->Value->ToString();
-		this->maskedTextBox1->Text = this->dataGridView1->Rows[a]->Cells[1]->Value->ToString();
-		this->numericUpDown1->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
-		this->textBox4->Text = this->dataGridView1->Rows[a]->Cells[2]->Value->ToString();
+		this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
+		this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[4]->Value->ToString();
+		this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[5]->Value->ToString();
+	}
+	if (var_interface == 4)
+	{
+		if (a >= 0)
+		{
+			this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
+			this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[6]->Value->ToString();
+			this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[7]->Value->ToString();
+			this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[8]->Value->ToString();
+			this->maskedTextBox1->Text = this->dataGridView1->Rows[a]->Cells[1]->Value->ToString();
+			this->numericUpDown1->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
+			this->textBox4->Text = this->dataGridView1->Rows[a]->Cells[2]->Value->ToString();
+		}
 	}
 }
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
