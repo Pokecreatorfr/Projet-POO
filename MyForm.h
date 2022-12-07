@@ -175,6 +175,7 @@ private: System::Windows::Forms::Label^ label13;
 private: System::Windows::Forms::Panel^ panel17;
 private: System::Windows::Forms::Label^ label12;
 private: System::Windows::Forms::TextBox^ textBox5;
+private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -217,8 +218,8 @@ private: System::ComponentModel::IContainer^ components;
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
 			this->Personnel_button = (gcnew System::Windows::Forms::Button());
@@ -280,6 +281,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel10->SuspendLayout();
@@ -308,6 +310,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(113)));
+			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->Setting_button);
 			this->panel1->Controls->Add(this->Personnel_button);
 			this->panel1->Controls->Add(this->commande_button);
@@ -1018,6 +1021,22 @@ private: System::ComponentModel::IContainer^ components;
 			this->contextMenuStrip1->Name = L"contextMenuStrip1";
 			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
+			// button1
+			// 
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Location = System::Drawing::Point(0, 264);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Name = L"button1";
+			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->button1->Size = System::Drawing::Size(96, 66);
+			this->button1->TabIndex = 2;
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_5);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1333,6 +1352,19 @@ private: System::Void Modifier_Bouton_Click_1(System::Object^ sender, System::Ev
 			Personnel::Update(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString(), textBox4->Text);
 		}
 	}
+}
+private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^ e) {
+	this->panel2->Visible = false;
+	this->panel9->Visible = false;
+	this->panel10->Visible = false;
+	this->panel14->Visible = false;
+	this->panel15->Visible = false;
+	this->panel16->Visible = false;
+	this->panel17->Visible = false;
+	this->panel18->Visible = false;
+	this->panel19->Visible = false;
+	this->panel20->Visible = false;
+	var_interface = 5;
 }
 };
 }
