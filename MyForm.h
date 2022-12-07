@@ -187,6 +187,9 @@ private: System::Windows::Forms::Panel^ panel23;
 private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
 private: System::Windows::Forms::Label^ label18;
 private: System::Windows::Forms::Label^ label19;
+private: System::Windows::Forms::Button^ button3;
+private: System::Windows::Forms::Panel^ panel24;
+private: System::Windows::Forms::DataGridView^ dataGridView2;
 
 
 
@@ -231,6 +234,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
@@ -240,6 +244,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->client_button = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel21 = (gcnew System::Windows::Forms::Panel());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->panel23 = (gcnew System::Windows::Forms::Panel());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -303,6 +308,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->panel24 = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel21->SuspendLayout();
@@ -329,6 +336,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel14->SuspendLayout();
+			this->panel24->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -456,6 +465,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel21
 			// 
+			this->panel21->Controls->Add(this->button3);
 			this->panel21->Controls->Add(this->panel23);
 			this->panel21->Controls->Add(this->button2);
 			this->panel21->Controls->Add(this->panel22);
@@ -464,6 +474,19 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel21->Name = L"panel21";
 			this->panel21->Size = System::Drawing::Size(207, 1055);
 			this->panel21->TabIndex = 2;
+			// 
+			// button3
+			// 
+			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
+			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button3->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Location = System::Drawing::Point(0, 903);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(207, 76);
+			this->button3->TabIndex = 5;
+			this->button3->UseVisualStyleBackColor = true;
 			// 
 			// panel23
 			// 
@@ -521,6 +544,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button2->Size = System::Drawing::Size(207, 76);
 			this->button2->TabIndex = 3;
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click_1);
 			// 
 			// panel22
 			// 
@@ -1159,7 +1183,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
-			this->dataGridView1->Size = System::Drawing::Size(483, 1055);
+			this->dataGridView1->Size = System::Drawing::Size(99, 1055);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
@@ -1167,9 +1191,9 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->panel14->Controls->Add(this->dataGridView1);
 			this->panel14->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel14->Location = System::Drawing::Point(1441, 0);
+			this->panel14->Location = System::Drawing::Point(1825, 0);
 			this->panel14->Name = L"panel14";
-			this->panel14->Size = System::Drawing::Size(483, 1055);
+			this->panel14->Size = System::Drawing::Size(99, 1055);
 			this->panel14->TabIndex = 6;
 			// 
 			// contextMenuStrip1
@@ -1177,6 +1201,37 @@ private: System::ComponentModel::IContainer^ components;
 			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->contextMenuStrip1->Name = L"contextMenuStrip1";
 			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
+			// 
+			// panel24
+			// 
+			this->panel24->Controls->Add(this->dataGridView2);
+			this->panel24->Dock = System::Windows::Forms::DockStyle::Right;
+			this->panel24->Location = System::Drawing::Point(1726, 0);
+			this->panel24->Name = L"panel24";
+			this->panel24->Size = System::Drawing::Size(99, 1055);
+			this->panel24->TabIndex = 7;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->AllowUserToAddRows = false;
+			this->dataGridView2->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+			this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::ColumnHeader;
+			this->dataGridView2->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
+			this->dataGridView2->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->dataGridView2->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->dataGridView2->Location = System::Drawing::Point(0, 0);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->ReadOnly = true;
+			this->dataGridView2->RowHeadersWidth = 51;
+			this->dataGridView2->RowTemplate->Height = 24;
+			this->dataGridView2->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
+			this->dataGridView2->Size = System::Drawing::Size(99, 1055);
+			this->dataGridView2->TabIndex = 5;
 			// 
 			// MyForm
 			// 
@@ -1186,6 +1241,7 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(1924, 1055);
+			this->Controls->Add(this->panel24);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel14);
@@ -1238,6 +1294,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panel14->ResumeLayout(false);
+			this->panel24->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1280,6 +1338,7 @@ private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
 	this->panel21->Visible = false;
+	this->panel24->Visible = false;
 	this->panel14->Width = 800;
 	this->dataGridView1->Refresh();
 	var_interface = 1;
@@ -1342,6 +1401,7 @@ private: System::Void Personnel_button_Click(System::Object^ sender, System::Eve
 	this->panel18->Visible = false;
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
+	this->panel24->Visible = false;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1366,6 +1426,7 @@ private: System::Void stats_button_Click(System::Object^ sender, System::EventAr
 	this->panel18->Visible = false;
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
+	this->panel24->Visible = false;
 	var_interface = 2;
 }
 private: System::Void commande_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1383,7 +1444,9 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 	this->panel19->Visible = true;
 	this->panel20->Visible = true;
 	this->panel21->Visible = true;
-	this->panel14->Width = 600;
+	this->panel24->Visible = true;
+	this->panel24->Width = 400;
+	this->panel14->Width = 400;
 	auto source_produit = gcnew AutoCompleteStringCollection();
 	source_produit->AddRange(Produit::Select_design(base_dd));
 	this->textBox7->AutoCompleteCustomSource = source_produit;
@@ -1515,7 +1578,11 @@ private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^
 	this->panel18->Visible = false;
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
+	this->panel24->Visible = false;
 	var_interface = 5;
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
 }
 };
 }
