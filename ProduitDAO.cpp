@@ -38,7 +38,7 @@ String^ ProduitDAO::Search(String^ id, String^ Ref_pr, String^ Designation_pr, S
 		query += "Prix_HT_actuel_pr = " + Prix_HT_actuel_pr;
 		a++;
 	}
-	if (TVA_actuelle_pr != "20")
+	if (TVA_actuelle_pr != "0")
 	{
 		if (a > 0)
 		{

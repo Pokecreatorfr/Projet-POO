@@ -18,3 +18,20 @@ DataSet^ Produit::Search(Composants::DatabaseAccess^ bdd, String^ id, String^ Re
 	DataSet^ ds = bdd->getRows(query, "tab");
 	return ds;
 }
+
+void Produit::Delete(Composants::DatabaseAccess^ bdd, String^ id)
+{
+	String^ query = ProduitDAO::Delete(id);
+	bdd->actionRows(query);
+}
+
+void Produit::Insert(Composants::DatabaseAccess^ bdd, String^ id, String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
+{
+	
+}
+
+void Produit::Update(Composants::DatabaseAccess^ bdd, String^ id, String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
+{
+	String^ query = ProduitDAO::Update(id, Ref_pr, Designation_pr, Prix_HT_actuel_pr, TVA_actuelle_pr, qte_pr, SRea_pr);
+	bdd->actionRows(query);
+}
