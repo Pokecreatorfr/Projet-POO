@@ -56,9 +56,9 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 	return query;
 }
 
-String^ ClientDAO::Update(String^ id, String^ nom, String^ prenom, String^ date_naissance)
+String^ ClientDAO::Update(String^ id_p , String^ id_c)
 {
-	String^ query = "UPDATE Clients SET ";
+	String^ query = "UPDATE Clients SET ID_ps = " + id_p + " WHERE ID_cl = " + id_c + "";
 	return query;
 }
 

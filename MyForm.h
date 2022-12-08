@@ -1658,6 +1658,11 @@ private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^
 	this->panel20->Visible = false;
 	this->panel21->Visible = false;
 	this->panel24->Visible = false;
+	this->panel25->Visible = false;
+	this->panel26->Visible = false;
+	this->panel27->Visible = false;
+	this->panel28->Visible = false;
+	this->panel29->Visible = false;
 	this->panel14->Width = 800;
 	this->dataGridView1->Refresh();
 	var_interface = 1;
@@ -1742,6 +1747,11 @@ private: System::Void Personnel_button_Click(System::Object^ sender, System::Eve
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
 	this->panel24->Visible = false;
+	this->panel25->Visible = false;
+	this->panel26->Visible = false;
+	this->panel27->Visible = false;
+	this->panel28->Visible = false;
+	this->panel29->Visible = false;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1767,6 +1777,7 @@ private: System::Void stats_button_Click(System::Object^ sender, System::EventAr
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
 	this->panel24->Visible = false;
+	this->panel25->Visible = false;
 	var_interface = 2;
 }
 private: System::Void commande_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1945,6 +1956,7 @@ private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::E
 }
 private: System::Void Modifier_Bouton_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	if (var_interface == 1) {
+		Client::Update(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text));
 
 	}
 	else if (var_interface == 4) {
