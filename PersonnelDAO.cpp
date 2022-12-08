@@ -62,7 +62,7 @@ String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ da
 		{
 			query += " AND ";
 		}
-		query += "Poste_pl = '" + poste + "'  ";
+		query += "Role_pl = '" + poste + "'  ";
 		a++;
 	}
 	if (a == 0)

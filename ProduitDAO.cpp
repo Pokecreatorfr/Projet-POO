@@ -29,41 +29,45 @@ String^ ProduitDAO::Search(String^ id, String^ Ref_pr, String^ Designation_pr, S
 		query += "Designation_pr = '" + Designation_pr + "'";
 		a++;
 	}
-	if (Prix_HT_actuel_pr != "  /  /")
+	if (Prix_HT_actuel_pr != "0")
 	{
 		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "Prix_HT_actuel_pr = '" + Prix_HT_actuel_pr + "'  ";
+		query += "Prix_HT_actuel_pr = " + Prix_HT_actuel_pr;
 		a++;
 	}
-	if (TVA_actuelle_pr != "  /  /")
+	if (TVA_actuelle_pr != "20")
 	{
 		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "TVA_actuelle_pr = '" + TVA_actuelle_pr + "'  ";
+		query += "TVA_actuelle_pr = " + TVA_actuelle_pr ;
 		a++;
 	}
-	if (qte_pr != "NULL")
+	if (qte_pr != "0")
 	{
 		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "qte_pr = '" + qte_pr + "'  ";
+		query += "qte_pr = " + qte_pr;
 		a++;
 	}
-	if (SRea_pr != "")
+	if (SRea_pr != "0")
 	{
 		if (a > 0)
 		{
 			query += " AND ";
 		}
-		query += "SRea_pr = '" + SRea_pr + "'  ";
+		query += "SRea_pr = " + SRea_pr;
 		a++;
+	}
+	if (a == 0)
+	{
+		query = "Select * from dbo.Produit";
 	}
 	return query;
 }
