@@ -1871,6 +1871,23 @@ private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs
 			Personnel::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString(), textBox4->Text);
 		}
 	}
+	else if (var_interface == 5)
+	{
+		String^ tva;
+		if (this->numericUpDown6->Text == "1")
+		{
+			tva = "5";
+		}
+		else if (this->numericUpDown6->Text == "2")
+		{
+			tva = "10";
+		}
+		else if (this->numericUpDown6->Text == "3")
+		{
+			tva = "20";
+		}
+		Produit::Insert(base_dd, this->IDclient_tb->Text, this->textBox5->Text, this->textBox8->Text, this->numericUpDown5->Text, "20", this->numericUpDown3->Text, this->numericUpDown4->Text);
+	}
 }
 private: System::Void Modifier_Bouton_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (var_interface == 1) {

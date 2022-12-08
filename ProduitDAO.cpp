@@ -72,9 +72,9 @@ String^ ProduitDAO::Search(String^ id, String^ Ref_pr, String^ Designation_pr, S
 	return query;
 }
 
-String^ ProduitDAO::Insert(String^ id, String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
+String^ ProduitDAO::Insert(String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
 {
-	String^ query = "INSERT INTO dbo.Produit (Ref_pr, Designation_pr , Prix_HT_actuel_pr , TVA_actuelle_pr , qte_pr , SREA_pr) VALUES ('" + Ref_pr + "', " + Designation_pr + ", " + Prix_HT_actuel_pr + " , '" + TVA_actuelle_pr + "', " + qte_pr + ", " + SRea_pr + ")";
+	String^ query = "INSERT INTO dbo.Produit (Ref_pr, Designation_pr , Prix_HT_actuel_pr , TVA_actuelle_pr , qte_pr , SREA_pr) VALUES ('" + Ref_pr + "', '" + Designation_pr + "', " + Prix_HT_actuel_pr + " , " + TVA_actuelle_pr + ", " + qte_pr + ", " + SRea_pr + ")";
 	return query;
 }
 

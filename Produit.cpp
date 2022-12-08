@@ -27,7 +27,8 @@ void Produit::Delete(Composants::DatabaseAccess^ bdd, String^ id)
 
 void Produit::Insert(Composants::DatabaseAccess^ bdd, String^ id, String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
 {
-	
+	String^ query = ProduitDAO::Insert(Ref_pr, Designation_pr, Prix_HT_actuel_pr, TVA_actuelle_pr, qte_pr, SRea_pr);
+	bdd->actionRows(query);
 }
 
 void Produit::Update(Composants::DatabaseAccess^ bdd, String^ id, String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
