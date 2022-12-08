@@ -1824,6 +1824,33 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 			this->textBox4->Text = this->dataGridView1->Rows[a]->Cells[2]->Value->ToString();
 		}
 	}
+	if (var_interface == 5)
+	{
+		if (a >= 0)
+		{
+			this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
+			this->textBox5->Text = this->dataGridView1->Rows[a]->Cells[1]->Value->ToString();
+			this->textBox8->Text = this->dataGridView1->Rows[a]->Cells[2]->Value->ToString();
+			this->numericUpDown5->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
+			if (this->dataGridView1->Rows[a]->Cells[4]->Value->ToString() == "5")
+			{
+				this->numericUpDown6->Text = "1";
+			}
+			if (this->dataGridView1->Rows[a]->Cells[4]->Value->ToString() == "10")
+			{
+				this->numericUpDown6->Text = "2";
+			}
+			if (this->dataGridView1->Rows[a]->Cells[4]->Value->ToString() == "20")
+			{
+				this->numericUpDown6->Text = "3";
+			}
+			else
+			{
+			}
+			this->numericUpDown3->Text = this->dataGridView1->Rows[a]->Cells[5]->Value->ToString();
+			this->numericUpDown4->Text = this->dataGridView1->Rows[a]->Cells[6]->Value->ToString();
+		}
+	}
 }
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1929,6 +1956,23 @@ private: System::Void Modifier_Bouton_Click_1(System::Object^ sender, System::Ev
 		{
 			Personnel::Update(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text), Dateformat::StringDatetoSQL(this->maskedTextBox1->Text), numericUpDown1->Value.ToString(), textBox4->Text);
 		}
+	}
+	if (var_interface == 5)
+	{
+		String^ tva;
+		if (this->numericUpDown6->Text == "1")
+		{
+			tva = "5";
+		}
+		else if (this->numericUpDown6->Text == "2")
+		{
+			tva = "10";
+		}
+		else if (this->numericUpDown6->Text == "3")
+		{
+			tva = "20";
+		}
+		Produit::Update(base_dd, this->IDclient_tb->Text, this->textBox5->Text, this->textBox8->Text, this->numericUpDown5->Text, "20", this->numericUpDown3->Text,this->numericUpDown4->Text);
 	}
 }
 private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^ e) {

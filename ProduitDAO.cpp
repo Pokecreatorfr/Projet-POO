@@ -80,7 +80,7 @@ String^ ProduitDAO::Insert(String^ Ref_pr, String^ Designation_pr, String^ Prix_
 
 String^ ProduitDAO::Update(String^ id, String^ Ref_pr, String^ Designation_pr, String^ Prix_HT_actuel_pr, String^ TVA_actuelle_pr, String^ qte_pr, String^ SRea_pr)
 {
-	String^ query = "UPDATE dbo.Produit SET Ref_pr = '" + Ref_pr + "', Designation_pr = " + Designation_pr + ", Prix_HT_actuel_pr = " + Prix_HT_actuel_pr + ", TVA_actuelle_pr = '" + TVA_actuelle_pr + "'qte_pr = '" + qte_pr + " 'SRea_pr ='" + SRea_pr + " WHERE ID_pl = " + id + "";
+	String^ query = "UPDATE dbo.Produit SET Ref_pr = '" + Ref_pr + "', Designation_pr = '" + Designation_pr + "', Prix_HT_actuel_pr = " + Prix_HT_actuel_pr + ", TVA_actuelle_pr = " + TVA_actuelle_pr + ", qte_pr = " + qte_pr + " , SRea_pr =" + SRea_pr + " WHERE ID_pr = " + id + "";
 	return query;
 }
 
