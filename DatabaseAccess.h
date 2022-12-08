@@ -46,5 +46,7 @@ namespace Composants
 
         // Affecte la requete SQL
         void setSQL(String^ request);
+        
+       char DatabaseAccessi(String^ Data_Source, String^ Initial_Catalog, String^ User_ID, String^ Password);
     };
 }
