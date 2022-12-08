@@ -205,6 +205,10 @@ private: System::Windows::Forms::Panel^ panel25;
 private: System::Windows::Forms::Label^ label20;
 private: System::Windows::Forms::TextBox^ textBox8;
 private: System::Windows::Forms::NumericUpDown^ numericUpDown5;
+private: System::Windows::Forms::Panel^ panel29;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown6;
+private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::Label^ label27;
 
 
 
@@ -248,8 +252,8 @@ private: System::ComponentModel::IContainer^ components;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->Setting_button = (gcnew System::Windows::Forms::Button());
@@ -290,6 +294,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->panel26 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->panel25 = (gcnew System::Windows::Forms::Panel());
 			this->label20 = (gcnew System::Windows::Forms::Label());
@@ -338,7 +343,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->panel24 = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->panel29 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown6 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel21->SuspendLayout();
@@ -355,6 +363,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel27->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
 			this->panel26->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
 			this->panel25->SuspendLayout();
 			this->panel20->SuspendLayout();
 			this->panel19->SuspendLayout();
@@ -373,7 +382,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel14->SuspendLayout();
 			this->panel24->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
+			this->panel29->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -777,6 +787,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel3
 			// 
+			this->panel3->Controls->Add(this->panel29);
 			this->panel3->Controls->Add(this->panel28);
 			this->panel3->Controls->Add(this->panel27);
 			this->panel3->Controls->Add(this->panel26);
@@ -906,6 +917,15 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel26->Name = L"panel26";
 			this->panel26->Size = System::Drawing::Size(306, 44);
 			this->panel26->TabIndex = 12;
+			// 
+			// numericUpDown5
+			// 
+			this->numericUpDown5->Location = System::Drawing::Point(2, 24);
+			this->numericUpDown5->Margin = System::Windows::Forms::Padding(2);
+			this->numericUpDown5->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
+			this->numericUpDown5->Name = L"numericUpDown5";
+			this->numericUpDown5->Size = System::Drawing::Size(155, 20);
+			this->numericUpDown5->TabIndex = 4;
 			// 
 			// label21
 			// 
@@ -1426,9 +1446,9 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->dataGridView1->AllowUserToAddRows = false;
 			this->dataGridView1->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::ColumnHeader;
 			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
@@ -1476,9 +1496,9 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->dataGridView2->AllowUserToAddRows = false;
 			this->dataGridView2->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView2->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::TopLeft;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
 			this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::ColumnHeader;
 			this->dataGridView2->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->dataGridView2->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Sunken;
@@ -1495,14 +1515,55 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView2->Size = System::Drawing::Size(62, 958);
 			this->dataGridView2->TabIndex = 5;
 			// 
-			// numericUpDown5
+			// panel29
 			// 
-			this->numericUpDown5->Location = System::Drawing::Point(2, 24);
-			this->numericUpDown5->Margin = System::Windows::Forms::Padding(2);
-			this->numericUpDown5->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
-			this->numericUpDown5->Name = L"numericUpDown5";
-			this->numericUpDown5->Size = System::Drawing::Size(155, 20);
-			this->numericUpDown5->TabIndex = 4;
+			this->panel29->Controls->Add(this->numericUpDown6);
+			this->panel29->Controls->Add(this->label26);
+			this->panel29->Controls->Add(this->label27);
+			this->panel29->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel29->Location = System::Drawing::Point(0, 687);
+			this->panel29->Margin = System::Windows::Forms::Padding(2);
+			this->panel29->Name = L"panel29";
+			this->panel29->Size = System::Drawing::Size(306, 47);
+			this->panel29->TabIndex = 15;
+			// 
+			// numericUpDown6
+			// 
+			this->numericUpDown6->Location = System::Drawing::Point(5, 30);
+			this->numericUpDown6->Margin = System::Windows::Forms::Padding(2);
+			this->numericUpDown6->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 3, 0, 0, 0 });
+			this->numericUpDown6->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown6->Name = L"numericUpDown6";
+			this->numericUpDown6->Size = System::Drawing::Size(155, 20);
+			this->numericUpDown6->TabIndex = 3;
+			this->numericUpDown6->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label26->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label26->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label26->Location = System::Drawing::Point(0, 0);
+			this->label26->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(61, 28);
+			this->label26->TabIndex = 2;
+			this->label26->Text = L"TVA";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label27->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label27->Location = System::Drawing::Point(0, 0);
+			this->label27->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(0, 28);
+			this->label27->TabIndex = 1;
 			// 
 			// MyForm
 			// 
@@ -1547,6 +1608,7 @@ private: System::ComponentModel::IContainer^ components;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
 			this->panel26->ResumeLayout(false);
 			this->panel26->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
 			this->panel25->ResumeLayout(false);
 			this->panel25->PerformLayout();
 			this->panel20->ResumeLayout(false);
@@ -1577,7 +1639,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel14->ResumeLayout(false);
 			this->panel24->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
+			this->panel29->ResumeLayout(false);
+			this->panel29->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->EndInit();
 			this->ResumeLayout(false);
 
 		}
