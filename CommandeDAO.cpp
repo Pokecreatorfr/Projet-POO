@@ -110,3 +110,9 @@ String^ CommandeDAO::Update(String^ date_c, String^ date_l, String^ id_cl, Strin
 	query += " WHERE ID_cmd = " + id + ";";
 	return query;
 }
+
+String^ CommandeDAO::Insert_Comporte(String^ id_cmd, String^ id_pr, String^ qte, String^ tva, String^ prix)
+{
+	String^ query = "INSERT INTO dbo.Comporte (ID_cmd, ID_pr, Qte, TVA, prix_Un_HT) VALUES (" + id_cmd + ", " + id_pr + ", " + qte + ", " + tva + ", " + prix + ");";
+	return query;
+}

@@ -56,7 +56,7 @@ String^ ProduitDAO::Search(String^ id, String^ Ref_pr, String^ Designation_pr, S
 		query += "qte_pr = " + qte_pr;
 		a++;
 	}
-	if (SRea_pr != "0")
+	if (SRea_pr != "0" )
 	{
 		if (a > 0)
 		{

@@ -46,7 +46,9 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	DataSet^ dgv;
+	private: System::Collections::Generic::List<String^>^ liste_qte_produits = gcnew System::Collections::Generic::List<String ^ >();
+	private: System::Collections::Generic::List<String ^> ^ liste_produits = gcnew System::Collections::Generic::List<String^ >();
+	private : DataSet^ dgv;
 	private: int error = 0;
 	private: Composants::DatabaseAccess^ base_dd = gcnew Composants::DatabaseAccess(System::Configuration::ConfigurationManager::AppSettings["Data Source"], System::Configuration::ConfigurationManager::AppSettings["Initial Catalog"], System::Configuration::ConfigurationManager::AppSettings["User ID"], System::Configuration::ConfigurationManager::AppSettings["Password"]);
 	private: int var_interface = 0;
@@ -209,6 +211,7 @@ private: System::Windows::Forms::Panel^ panel29;
 private: System::Windows::Forms::NumericUpDown^ numericUpDown6;
 private: System::Windows::Forms::Label^ label26;
 private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Panel^ panel30;
 
 
 
@@ -347,6 +350,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->panel24 = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->panel30 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel21->SuspendLayout();
@@ -506,7 +510,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel2->Location = System::Drawing::Point(96, 0);
 			this->panel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(824, 1055);
+			this->panel2->Size = System::Drawing::Size(812, 1055);
 			this->panel2->TabIndex = 1;
 			this->panel2->Visible = false;
 			// 
@@ -517,7 +521,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel21->Controls->Add(this->button2);
 			this->panel21->Controls->Add(this->panel22);
 			this->panel21->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel21->Location = System::Drawing::Point(669, 0);
+			this->panel21->Location = System::Drawing::Point(605, 0);
 			this->panel21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel21->Name = L"panel21";
 			this->panel21->Size = System::Drawing::Size(204, 1055);
@@ -639,7 +643,6 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox7->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::SuggestAppend;
 			this->textBox7->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
-			this->textBox7->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
 			this->textBox7->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->textBox7->Location = System::Drawing::Point(0, 36);
 			this->textBox7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -654,7 +657,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel10->Controls->Add(this->panel11);
 			this->panel10->Controls->Add(this->label6);
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel10->Location = System::Drawing::Point(408, 0);
+			this->panel10->Location = System::Drawing::Point(344, 0);
 			this->panel10->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(261, 1055);
@@ -800,7 +803,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel3->Location = System::Drawing::Point(0, 0);
 			this->panel3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(408, 1055);
+			this->panel3->Size = System::Drawing::Size(344, 1055);
 			this->panel3->TabIndex = 0;
 			// 
 			// panel29
@@ -812,7 +815,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel29->Location = System::Drawing::Point(0, 846);
 			this->panel29->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel29->Name = L"panel29";
-			this->panel29->Size = System::Drawing::Size(408, 58);
+			this->panel29->Size = System::Drawing::Size(344, 58);
 			this->panel29->TabIndex = 15;
 			// 
 			// numericUpDown6
@@ -860,7 +863,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel28->Location = System::Drawing::Point(0, 788);
 			this->panel28->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel28->Name = L"panel28";
-			this->panel28->Size = System::Drawing::Size(408, 58);
+			this->panel28->Size = System::Drawing::Size(344, 58);
 			this->panel28->TabIndex = 14;
 			// 
 			// numericUpDown4
@@ -906,7 +909,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel27->Location = System::Drawing::Point(0, 730);
 			this->panel27->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel27->Name = L"panel27";
-			this->panel27->Size = System::Drawing::Size(408, 58);
+			this->panel27->Size = System::Drawing::Size(344, 58);
 			this->panel27->TabIndex = 13;
 			// 
 			// numericUpDown3
@@ -951,7 +954,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel26->Location = System::Drawing::Point(0, 676);
 			this->panel26->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel26->Name = L"panel26";
-			this->panel26->Size = System::Drawing::Size(408, 54);
+			this->panel26->Size = System::Drawing::Size(344, 54);
 			this->panel26->TabIndex = 12;
 			// 
 			// numericUpDown5
@@ -984,7 +987,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel25->Location = System::Drawing::Point(0, 618);
 			this->panel25->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel25->Name = L"panel25";
-			this->panel25->Size = System::Drawing::Size(408, 58);
+			this->panel25->Size = System::Drawing::Size(344, 58);
 			this->panel25->TabIndex = 11;
 			// 
 			// label20
@@ -1006,7 +1009,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox8->Location = System::Drawing::Point(0, 36);
 			this->textBox8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(408, 22);
+			this->textBox8->Size = System::Drawing::Size(344, 22);
 			this->textBox8->TabIndex = 0;
 			// 
 			// panel20
@@ -1017,7 +1020,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel20->Location = System::Drawing::Point(0, 560);
 			this->panel20->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel20->Name = L"panel20";
-			this->panel20->Size = System::Drawing::Size(408, 58);
+			this->panel20->Size = System::Drawing::Size(344, 58);
 			this->panel20->TabIndex = 10;
 			// 
 			// label15
@@ -1039,7 +1042,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox6->Location = System::Drawing::Point(0, 36);
 			this->textBox6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(408, 22);
+			this->textBox6->Size = System::Drawing::Size(344, 22);
 			this->textBox6->TabIndex = 0;
 			// 
 			// panel19
@@ -1050,7 +1053,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel19->Location = System::Drawing::Point(0, 506);
 			this->panel19->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel19->Name = L"panel19";
-			this->panel19->Size = System::Drawing::Size(408, 54);
+			this->panel19->Size = System::Drawing::Size(344, 54);
 			this->panel19->TabIndex = 9;
 			// 
 			// maskedTextBox3
@@ -1084,7 +1087,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel18->Location = System::Drawing::Point(0, 452);
 			this->panel18->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel18->Name = L"panel18";
-			this->panel18->Size = System::Drawing::Size(408, 54);
+			this->panel18->Size = System::Drawing::Size(344, 54);
 			this->panel18->TabIndex = 8;
 			// 
 			// maskedTextBox2
@@ -1118,7 +1121,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel17->Location = System::Drawing::Point(0, 394);
 			this->panel17->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel17->Name = L"panel17";
-			this->panel17->Size = System::Drawing::Size(408, 58);
+			this->panel17->Size = System::Drawing::Size(344, 58);
 			this->panel17->TabIndex = 7;
 			// 
 			// label12
@@ -1140,7 +1143,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox5->Location = System::Drawing::Point(0, 36);
 			this->textBox5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(408, 22);
+			this->textBox5->Size = System::Drawing::Size(344, 22);
 			this->textBox5->TabIndex = 0;
 			// 
 			// panel16
@@ -1151,7 +1154,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel16->Location = System::Drawing::Point(0, 336);
 			this->panel16->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel16->Name = L"panel16";
-			this->panel16->Size = System::Drawing::Size(408, 58);
+			this->panel16->Size = System::Drawing::Size(344, 58);
 			this->panel16->TabIndex = 6;
 			// 
 			// label11
@@ -1173,7 +1176,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox4->Location = System::Drawing::Point(0, 36);
 			this->textBox4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(408, 22);
+			this->textBox4->Size = System::Drawing::Size(344, 22);
 			this->textBox4->TabIndex = 0;
 			// 
 			// panel15
@@ -1185,7 +1188,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel15->Location = System::Drawing::Point(0, 282);
 			this->panel15->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(408, 54);
+			this->panel15->Size = System::Drawing::Size(344, 54);
 			this->panel15->TabIndex = 5;
 			// 
 			// checkBox1
@@ -1232,7 +1235,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel9->Location = System::Drawing::Point(0, 228);
 			this->panel9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(408, 54);
+			this->panel9->Size = System::Drawing::Size(344, 54);
 			this->panel9->TabIndex = 4;
 			// 
 			// maskedTextBox1
@@ -1269,7 +1272,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel8->Location = System::Drawing::Point(0, 979);
 			this->panel8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(408, 76);
+			this->panel8->Size = System::Drawing::Size(344, 76);
 			this->panel8->TabIndex = 4;
 			// 
 			// Modifier_Bouton
@@ -1282,7 +1285,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Modifier_Bouton->Location = System::Drawing::Point(241, 0);
 			this->Modifier_Bouton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Modifier_Bouton->Name = L"Modifier_Bouton";
-			this->Modifier_Bouton->Size = System::Drawing::Size(105, 76);
+			this->Modifier_Bouton->Size = System::Drawing::Size(102, 76);
 			this->Modifier_Bouton->TabIndex = 5;
 			this->Modifier_Bouton->UseVisualStyleBackColor = true;
 			this->Modifier_Bouton->Click += gcnew System::EventHandler(this, &MyForm::Modifier_Bouton_Click_1);
@@ -1340,7 +1343,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel7->Location = System::Drawing::Point(0, 174);
 			this->panel7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(408, 54);
+			this->panel7->Size = System::Drawing::Size(344, 54);
 			this->panel7->TabIndex = 3;
 			// 
 			// Client_Date_mTB
@@ -1374,7 +1377,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel6->Location = System::Drawing::Point(0, 116);
 			this->panel6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(408, 58);
+			this->panel6->Size = System::Drawing::Size(344, 58);
 			this->panel6->TabIndex = 2;
 			// 
 			// label3
@@ -1396,7 +1399,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->PRENOMclient_tb->Location = System::Drawing::Point(0, 36);
 			this->PRENOMclient_tb->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PRENOMclient_tb->Name = L"PRENOMclient_tb";
-			this->PRENOMclient_tb->Size = System::Drawing::Size(408, 22);
+			this->PRENOMclient_tb->Size = System::Drawing::Size(344, 22);
 			this->PRENOMclient_tb->TabIndex = 0;
 			// 
 			// panel5
@@ -1407,7 +1410,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel5->Location = System::Drawing::Point(0, 58);
 			this->panel5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(408, 58);
+			this->panel5->Size = System::Drawing::Size(344, 58);
 			this->panel5->TabIndex = 1;
 			// 
 			// label2
@@ -1429,7 +1432,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->NOMclient_Tb->Location = System::Drawing::Point(0, 36);
 			this->NOMclient_Tb->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->NOMclient_Tb->Name = L"NOMclient_Tb";
-			this->NOMclient_Tb->Size = System::Drawing::Size(408, 22);
+			this->NOMclient_Tb->Size = System::Drawing::Size(344, 22);
 			this->NOMclient_Tb->TabIndex = 0;
 			// 
 			// panel4
@@ -1440,7 +1443,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel4->Location = System::Drawing::Point(0, 0);
 			this->panel4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(408, 58);
+			this->panel4->Size = System::Drawing::Size(344, 58);
 			this->panel4->TabIndex = 0;
 			// 
 			// label1
@@ -1462,7 +1465,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->IDclient_tb->Location = System::Drawing::Point(0, 36);
 			this->IDclient_tb->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->IDclient_tb->Name = L"IDclient_tb";
-			this->IDclient_tb->Size = System::Drawing::Size(408, 22);
+			this->IDclient_tb->Size = System::Drawing::Size(344, 22);
 			this->IDclient_tb->TabIndex = 0;
 			// 
 			// dataGridView1
@@ -1538,6 +1541,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView2->Size = System::Drawing::Size(83, 1055);
 			this->dataGridView2->TabIndex = 5;
 			// 
+			// panel30
+			// 
+			this->panel30->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel30->Location = System::Drawing::Point(908, 0);
+			this->panel30->Name = L"panel30";
+			this->panel30->Size = System::Drawing::Size(258, 1055);
+			this->panel30->TabIndex = 8;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1546,6 +1557,7 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(1924, 1055);
+			this->Controls->Add(this->panel30);
 			this->Controls->Add(this->panel24);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -1786,7 +1798,7 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 	this->panel6->Visible = false;
 	this->panel7->Visible = false;
 	this->panel9->Visible = false;
-	this->panel10->Visible = true;
+	this->panel10->Visible = false;
 	this->panel14->Visible = true;
 	this->panel15->Visible = false;
 	this->panel16->Visible = false;
@@ -1796,6 +1808,11 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 	this->panel20->Visible = true;
 	this->panel21->Visible = true;
 	this->panel24->Visible = true;
+	this->panel25->Visible = false;
+	this->panel26->Visible = false;
+	this->panel27->Visible = false;
+	this->panel28->Visible = false;
+	this->panel29->Visible = false;
 	this->panel24->Width = 400;
 	this->panel14->Width = 400;
 	auto source_produit = gcnew AutoCompleteStringCollection();
@@ -1806,6 +1823,8 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 		this->textBox6->Text = this->IDclient_tb->Text;
 		this->IDclient_tb->Text = "";
 	}
+	liste_produits->Clear();
+	liste_qte_produits->Clear();
 	var_interface = 3;
 }
 private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1898,6 +1917,10 @@ private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs
 	if (var_interface == 1) {
 		Client::Insert(base_dd, this->IDclient_tb->Text, this->NOMclient_Tb->Text, this->PRENOMclient_tb->Text, Dateformat::StringDatetoSQL(this->Client_Date_mTB->Text));
 
+	}
+	else if (var_interface == 3)
+	{
+		Commande::Insert(base_dd, this->textBox6->Text, Dateformat::StringDatetoSQL(maskedTextBox3->Text) , Dateformat::StringDatetoSQL(maskedTextBox2->Text), this->textBox5->Text, liste_produits, liste_qte_produits);
 	}
 	else if (var_interface == 4) {
 		if (this->checkBox1->Checked)
@@ -2009,11 +2032,14 @@ private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^
 	this->panel25->Visible = true;
 	this->panel26->Visible = true;
 	this->panel27->Visible = true;
+	this->panel28->Visible = true;
+	this->panel29->Visible = true;
 	this->panel14->Width = 500;
 	var_interface = 5;
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-
+	liste_produits->Add(this->textBox7->Text);
+	liste_qte_produits->Add(this->numericUpDown2->Text);
 }
 };
 }
