@@ -10,7 +10,7 @@ String^ PersonnelDAO::Delete(String^ id)
 String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_naissance, String^ date_embauche, String^ id_pl_1, String^ poste)
 {
 	int a = 0;
-	String^ query = "SELECT * FROM dbo.Personnel FULL JOIN dbo.Personnes ON dbo.Personnel.ID_ps = dbo.Personnes.ID_ps WHERE ";
+	String^ query = "SELECT * FROM dbo.Personnel LEFT JOIN dbo.Personnes ON dbo.Personnel.ID_ps = dbo.Personnes.ID_ps LEFT JOIN dbo.Posseder ON dbo.Personnes.ID_ps = dbo.Posseder.ID_ps LEFT JOIN dbo.Adresse ON  dbo.Posseder.ID_ad = dbo.Adresse.ID_ad WHERE ";
 	if (nom != "")
 	{
 		if (a > 0)
@@ -64,6 +64,10 @@ String^ PersonnelDAO::Search(String^ id, String^ nom, String^ prenom, String^ da
 		}
 		query += "Poste_pl = '" + poste + "'  ";
 		a++;
+	}
+	if (a == 0)
+	{
+		query = "SELECT * FROM dbo.Personnel LEFT JOIN dbo.Personnes ON dbo.Personnel.ID_ps = dbo.Personnes.ID_ps LEFT JOIN dbo.Posseder ON dbo.Personnes.ID_ps = dbo.Posseder.ID_ps LEFT JOIN dbo.Adresse ON  dbo.Posseder.ID_ad = dbo.Adresse.ID_ad";
 	}
 	return query;
 }

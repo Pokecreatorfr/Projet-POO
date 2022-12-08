@@ -54,6 +54,10 @@ String^ CommandeDAO::Search(String^ id, String^ date_c, String^ date_l, String^ 
 		query += "Ref_cmd = '" + ref + "'";
 		i++;
 	}
+	if (i == 0)
+	{
+		query = "SELECT * FROM dbo.Commandes";
+	}
 	return query;
 }
 

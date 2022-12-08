@@ -1466,9 +1466,9 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 		if (a >= 0)
 		{
 			this->IDclient_tb->Text = this->dataGridView1->Rows[a]->Cells[0]->Value->ToString();
-			this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
-			this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[4]->Value->ToString();
-			this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[5]->Value->ToString();
+			this->NOMclient_Tb->Text = this->dataGridView1->Rows[a]->Cells[1]->Value->ToString();
+			this->PRENOMclient_tb->Text = this->dataGridView1->Rows[a]->Cells[2]->Value->ToString();
+			this->Client_Date_mTB->Text = this->dataGridView1->Rows[a]->Cells[3]->Value->ToString();
 		}
 	}
 	if (var_interface == 4)

@@ -12,7 +12,7 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 {
 
 	int i = 0;
-	String^ query = "SELECT dbo.Personnes.ID_ps , Nom_ps , Prenom_ps , DateNaissance_ps FROM dbo.Clients FULL JOIN dbo.Personnes ON dbo.Clients.ID_ps = dbo.Personnes.ID_ps WHERE ";
+	String^ query = "SELECT dbo.Personnes.ID_ps , Nom_ps , Prenom_ps , DateNaissance_ps , CP_ad , Ville_ad FROM dbo.Clients LEFT JOIN dbo.Personnes ON dbo.Clients.ID_ps = dbo.Personnes.ID_ps LEFT JOIN dbo.Posseder ON dbo.Personnes.ID_ps = dbo.Posseder.ID_ps LEFT JOIN dbo.Adresse ON  dbo.Posseder.ID_ad = dbo.Adresse.ID_ad WHERE ";
 	if (id != "")
 	{
 		if (i > 0)
@@ -48,6 +48,10 @@ String^ ClientDAO::Search(String^ id, String^ nom, String^ prenom, String^ date_
 		}
 		query += "DateNaissance_ps = '" + date_naissance + "'";
 		i++;
+	}
+	if (i == 0)
+	{
+		query = "SELECT dbo.Personnes.ID_ps , Nom_ps , Prenom_ps , DateNaissance_ps , CP_ad , Ville_ad FROM dbo.Clients LEFT JOIN dbo.Personnes ON dbo.Clients.ID_ps = dbo.Personnes.ID_ps LEFT JOIN dbo.Posseder ON dbo.Personnes.ID_ps = dbo.Posseder.ID_ps LEFT JOIN dbo.Adresse ON  dbo.Posseder.ID_ad = dbo.Adresse.ID_ad";
 	}
 	return query;
 }
