@@ -9,6 +9,7 @@
 #include "Client.h"
 #include "Commande.h"
 #include "Produit.h"
+#include "Stats.h"
 
 
 namespace ProjetPOO {
@@ -215,6 +216,43 @@ private: System::Windows::Forms::Panel^ panel30;
 private: System::Windows::Forms::Button^ button4;
 private: System::Windows::Forms::Button^ button6;
 private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::Button^ button7;
+private: System::Windows::Forms::Panel^ panel32;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown7;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Panel^ panel37;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown12;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::Panel^ panel36;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown11;
+private: System::Windows::Forms::Label^ label38;
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::Panel^ panel35;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown10;
+private: System::Windows::Forms::Label^ label36;
+private: System::Windows::Forms::Label^ label37;
+private: System::Windows::Forms::Panel^ panel34;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown9;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Panel^ panel33;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown8;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Button^ button8;
+private: System::Windows::Forms::Panel^ panel31;
+private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::TextBox^ textBox9;
+private: System::Windows::Forms::Panel^ panel38;
+private: System::Windows::Forms::NumericUpDown^ numericUpDown13;
+private: System::Windows::Forms::Label^ label42;
+private: System::Windows::Forms::Label^ label43;
+
+
+
 
 
 
@@ -292,6 +330,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->panel38 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown13 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->label43 = (gcnew System::Windows::Forms::Label());
 			this->panel29 = (gcnew System::Windows::Forms::Panel());
 			this->numericUpDown6 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label26 = (gcnew System::Windows::Forms::Label());
@@ -355,6 +397,36 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel24 = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel30 = (gcnew System::Windows::Forms::Panel());
+			this->panel32 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown7 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->panel37 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown12 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->panel36 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->panel35 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->panel34 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown9 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->panel33 = (gcnew System::Windows::Forms::Panel());
+			this->numericUpDown8 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->panel31 = (gcnew System::Windows::Forms::Panel());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
@@ -368,6 +440,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel12->SuspendLayout();
 			this->panel11->SuspendLayout();
 			this->panel3->SuspendLayout();
+			this->panel38->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown13))->BeginInit();
 			this->panel29->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->BeginInit();
 			this->panel28->SuspendLayout();
@@ -395,6 +469,19 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel24->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panel30->SuspendLayout();
+			this->panel32->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->BeginInit();
+			this->panel37->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown12))->BeginInit();
+			this->panel36->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->BeginInit();
+			this->panel35->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->BeginInit();
+			this->panel34->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->BeginInit();
+			this->panel33->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->BeginInit();
+			this->panel31->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -805,6 +892,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel3
 			// 
+			this->panel3->Controls->Add(this->panel38);
 			this->panel3->Controls->Add(this->panel29);
 			this->panel3->Controls->Add(this->panel28);
 			this->panel3->Controls->Add(this->panel27);
@@ -828,6 +916,53 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(344, 1055);
 			this->panel3->TabIndex = 0;
+			// 
+			// panel38
+			// 
+			this->panel38->Controls->Add(this->numericUpDown13);
+			this->panel38->Controls->Add(this->label42);
+			this->panel38->Controls->Add(this->label43);
+			this->panel38->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel38->Location = System::Drawing::Point(0, 904);
+			this->panel38->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel38->Name = L"panel38";
+			this->panel38->Size = System::Drawing::Size(344, 58);
+			this->panel38->TabIndex = 19;
+			// 
+			// numericUpDown13
+			// 
+			this->numericUpDown13->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown13->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown13->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown13->Name = L"numericUpDown13";
+			this->numericUpDown13->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown13->TabIndex = 3;
+			this->numericUpDown13->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label42->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label42->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label42->Location = System::Drawing::Point(0, 0);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(86, 28);
+			this->label42->TabIndex = 2;
+			this->label42->Text = L"Marge";
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label43->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label43->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label43->Location = System::Drawing::Point(0, 0);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(0, 28);
+			this->label43->TabIndex = 1;
 			// 
 			// panel29
 			// 
@@ -1566,6 +1701,15 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel30
 			// 
+			this->panel30->Controls->Add(this->panel32);
+			this->panel30->Controls->Add(this->panel37);
+			this->panel30->Controls->Add(this->panel36);
+			this->panel30->Controls->Add(this->panel35);
+			this->panel30->Controls->Add(this->panel34);
+			this->panel30->Controls->Add(this->panel33);
+			this->panel30->Controls->Add(this->button8);
+			this->panel30->Controls->Add(this->panel31);
+			this->panel30->Controls->Add(this->button7);
 			this->panel30->Controls->Add(this->button6);
 			this->panel30->Controls->Add(this->button5);
 			this->panel30->Dock = System::Windows::Forms::DockStyle::Left;
@@ -1573,6 +1717,366 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel30->Name = L"panel30";
 			this->panel30->Size = System::Drawing::Size(366, 1055);
 			this->panel30->TabIndex = 8;
+			// 
+			// panel32
+			// 
+			this->panel32->Controls->Add(this->numericUpDown7);
+			this->panel32->Controls->Add(this->label30);
+			this->panel32->Controls->Add(this->label31);
+			this->panel32->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel32->Location = System::Drawing::Point(0, 583);
+			this->panel32->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel32->Name = L"panel32";
+			this->panel32->Size = System::Drawing::Size(366, 58);
+			this->panel32->TabIndex = 22;
+			// 
+			// numericUpDown7
+			// 
+			this->numericUpDown7->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown7->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown7->Name = L"numericUpDown7";
+			this->numericUpDown7->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown7->TabIndex = 3;
+			this->numericUpDown7->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label30->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label30->Location = System::Drawing::Point(0, 0);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(85, 28);
+			this->label30->TabIndex = 2;
+			this->label30->Text = L"TVA 1";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label31->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label31->Location = System::Drawing::Point(0, 0);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(0, 28);
+			this->label31->TabIndex = 1;
+			// 
+			// panel37
+			// 
+			this->panel37->Controls->Add(this->numericUpDown12);
+			this->panel37->Controls->Add(this->label40);
+			this->panel37->Controls->Add(this->label41);
+			this->panel37->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel37->Location = System::Drawing::Point(0, 641);
+			this->panel37->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel37->Name = L"panel37";
+			this->panel37->Size = System::Drawing::Size(366, 58);
+			this->panel37->TabIndex = 21;
+			// 
+			// numericUpDown12
+			// 
+			this->numericUpDown12->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown12->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown12->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown12->Name = L"numericUpDown12";
+			this->numericUpDown12->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown12->TabIndex = 3;
+			this->numericUpDown12->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label40->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label40->Location = System::Drawing::Point(0, 0);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(85, 28);
+			this->label40->TabIndex = 2;
+			this->label40->Text = L"TVA 2";
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label41->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label41->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label41->Location = System::Drawing::Point(0, 0);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(0, 28);
+			this->label41->TabIndex = 1;
+			// 
+			// panel36
+			// 
+			this->panel36->Controls->Add(this->numericUpDown11);
+			this->panel36->Controls->Add(this->label38);
+			this->panel36->Controls->Add(this->label39);
+			this->panel36->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel36->Location = System::Drawing::Point(0, 699);
+			this->panel36->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel36->Name = L"panel36";
+			this->panel36->Size = System::Drawing::Size(366, 58);
+			this->panel36->TabIndex = 20;
+			// 
+			// numericUpDown11
+			// 
+			this->numericUpDown11->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown11->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown11->Name = L"numericUpDown11";
+			this->numericUpDown11->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown11->TabIndex = 3;
+			this->numericUpDown11->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label38->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label38->Location = System::Drawing::Point(0, 0);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(85, 28);
+			this->label38->TabIndex = 2;
+			this->label38->Text = L"TVA 3";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label39->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label39->Location = System::Drawing::Point(0, 0);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(0, 28);
+			this->label39->TabIndex = 1;
+			// 
+			// panel35
+			// 
+			this->panel35->Controls->Add(this->numericUpDown10);
+			this->panel35->Controls->Add(this->label36);
+			this->panel35->Controls->Add(this->label37);
+			this->panel35->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel35->Location = System::Drawing::Point(0, 757);
+			this->panel35->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel35->Name = L"panel35";
+			this->panel35->Size = System::Drawing::Size(366, 58);
+			this->panel35->TabIndex = 19;
+			// 
+			// numericUpDown10
+			// 
+			this->numericUpDown10->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown10->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown10->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown10->Name = L"numericUpDown10";
+			this->numericUpDown10->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown10->TabIndex = 3;
+			this->numericUpDown10->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label36->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label36->Location = System::Drawing::Point(0, 0);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(252, 28);
+			this->label36->TabIndex = 2;
+			this->label36->Text = L"Demarque Inconnue";
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label37->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label37->Location = System::Drawing::Point(0, 0);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(0, 28);
+			this->label37->TabIndex = 1;
+			// 
+			// panel34
+			// 
+			this->panel34->Controls->Add(this->numericUpDown9);
+			this->panel34->Controls->Add(this->label34);
+			this->panel34->Controls->Add(this->label35);
+			this->panel34->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel34->Location = System::Drawing::Point(0, 815);
+			this->panel34->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel34->Name = L"panel34";
+			this->panel34->Size = System::Drawing::Size(366, 58);
+			this->panel34->TabIndex = 18;
+			// 
+			// numericUpDown9
+			// 
+			this->numericUpDown9->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown9->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown9->Name = L"numericUpDown9";
+			this->numericUpDown9->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown9->TabIndex = 3;
+			this->numericUpDown9->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label34->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label34->Location = System::Drawing::Point(0, 0);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(86, 28);
+			this->label34->TabIndex = 2;
+			this->label34->Text = L"Marge";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label35->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label35->Location = System::Drawing::Point(0, 0);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(0, 28);
+			this->label35->TabIndex = 1;
+			// 
+			// panel33
+			// 
+			this->panel33->Controls->Add(this->numericUpDown8);
+			this->panel33->Controls->Add(this->label32);
+			this->panel33->Controls->Add(this->label33);
+			this->panel33->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel33->Location = System::Drawing::Point(0, 873);
+			this->panel33->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel33->Name = L"panel33";
+			this->panel33->Size = System::Drawing::Size(366, 58);
+			this->panel33->TabIndex = 17;
+			// 
+			// numericUpDown8
+			// 
+			this->numericUpDown8->Location = System::Drawing::Point(7, 37);
+			this->numericUpDown8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->numericUpDown8->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown8->Name = L"numericUpDown8";
+			this->numericUpDown8->Size = System::Drawing::Size(207, 22);
+			this->numericUpDown8->TabIndex = 3;
+			this->numericUpDown8->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label32->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label32->Location = System::Drawing::Point(0, 0);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(262, 28);
+			this->label32->TabIndex = 2;
+			this->label32->Text = L"Remine commerciale";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label33->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label33->Location = System::Drawing::Point(0, 0);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(0, 28);
+			this->label33->TabIndex = 1;
+			// 
+			// button8
+			// 
+			this->button8->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button8->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button8->Location = System::Drawing::Point(0, 931);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(366, 66);
+			this->button8->TabIndex = 4;
+			this->button8->Text = L"Calculer";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			// 
+			// panel31
+			// 
+			this->panel31->Controls->Add(this->label28);
+			this->panel31->Controls->Add(this->label29);
+			this->panel31->Controls->Add(this->textBox9);
+			this->panel31->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->panel31->Location = System::Drawing::Point(0, 997);
+			this->panel31->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel31->Name = L"panel31";
+			this->panel31->Size = System::Drawing::Size(366, 58);
+			this->panel31->TabIndex = 3;
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label28->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label28->Location = System::Drawing::Point(0, 0);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(168, 28);
+			this->label28->TabIndex = 2;
+			this->label28->Text = L"Valeur totale";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Dock = System::Windows::Forms::DockStyle::Left;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label29->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label29->Location = System::Drawing::Point(0, 0);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(0, 28);
+			this->label29->TabIndex = 1;
+			// 
+			// textBox9
+			// 
+			this->textBox9->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::SuggestAppend;
+			this->textBox9->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
+			this->textBox9->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->textBox9->Location = System::Drawing::Point(0, 36);
+			this->textBox9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(366, 22);
+			this->textBox9->TabIndex = 0;
+			// 
+			// button7
+			// 
+			this->button7->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button7->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button7->Location = System::Drawing::Point(0, 132);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(366, 66);
+			this->button7->TabIndex = 2;
+			this->button7->Text = L"Produits sous le seil de réap";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// button6
 			// 
@@ -1640,6 +2144,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel11->ResumeLayout(false);
 			this->panel11->PerformLayout();
 			this->panel3->ResumeLayout(false);
+			this->panel38->ResumeLayout(false);
+			this->panel38->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown13))->EndInit();
 			this->panel29->ResumeLayout(false);
 			this->panel29->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->EndInit();
@@ -1683,6 +2190,26 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel24->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->panel30->ResumeLayout(false);
+			this->panel32->ResumeLayout(false);
+			this->panel32->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->EndInit();
+			this->panel37->ResumeLayout(false);
+			this->panel37->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown12))->EndInit();
+			this->panel36->ResumeLayout(false);
+			this->panel36->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->EndInit();
+			this->panel35->ResumeLayout(false);
+			this->panel35->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->EndInit();
+			this->panel34->ResumeLayout(false);
+			this->panel34->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->EndInit();
+			this->panel33->ResumeLayout(false);
+			this->panel33->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->EndInit();
+			this->panel31->ResumeLayout(false);
+			this->panel31->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -1733,6 +2260,7 @@ private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^
 	this->panel28->Visible = false;
 	this->panel29->Visible = false;
 	this->panel30->Visible = false;
+	this->panel38->Visible = false;
 	this->panel14->Width = 800;
 	this->dataGridView1->Refresh();
 	var_interface = 1;
@@ -1823,6 +2351,7 @@ private: System::Void Personnel_button_Click(System::Object^ sender, System::Eve
 	this->panel28->Visible = false;
 	this->panel29->Visible = false;
 	this->panel30->Visible = false;
+	this->panel38->Visible = false;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1850,8 +2379,10 @@ private: System::Void stats_button_Click(System::Object^ sender, System::EventAr
 	this->panel24->Visible = true;
 	this->panel25->Visible = false;
 	this->panel30->Visible = true;
+	this->panel38->Visible = false;
 	panel24->Width = 600;
 	var_interface = 2;
+	this->textBox9->Text = Stats::Calc_var(base_dd, "5", "10", "20", this->numericUpDown10->Text, this->numericUpDown9->Text, this->numericUpDown8->Text);
 }
 private: System::Void commande_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->panel2->Visible = true;
@@ -1875,6 +2406,7 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 	this->panel28->Visible = false;
 	this->panel29->Visible = false;
 	this->panel30->Visible = false;
+	this->panel38->Visible = false;
 	this->panel24->Width = 500;
 	this->panel14->Width = 400;
 	auto source_produit = gcnew AutoCompleteStringCollection();
@@ -2009,7 +2541,7 @@ private: System::Void Add_button_Click(System::Object^ sender, System::EventArgs
 		{
 			tva = "20";
 		}
-		Produit::Insert(base_dd, this->IDclient_tb->Text, this->textBox5->Text, this->textBox8->Text, this->numericUpDown5->Text, "20", this->numericUpDown3->Text, this->numericUpDown4->Text);
+		Produit::Insert(base_dd, this->IDclient_tb->Text, this->textBox5->Text, this->textBox8->Text, this->numericUpDown5->Text, "20", this->numericUpDown3->Text, this->numericUpDown4->Text , this->numericUpDown13->Text);
 	}
 }
 private: System::Void Modifier_Bouton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2069,7 +2601,7 @@ private: System::Void Modifier_Bouton_Click_1(System::Object^ sender, System::Ev
 		{
 			tva = "20";
 		}
-		Produit::Update(base_dd, this->IDclient_tb->Text, this->textBox5->Text, this->textBox8->Text, this->numericUpDown5->Text, "20", this->numericUpDown3->Text,this->numericUpDown4->Text);
+		Produit::Update(base_dd, this->IDclient_tb->Text, this->textBox5->Text, this->textBox8->Text, this->numericUpDown5->Text, "20", this->numericUpDown3->Text,this->numericUpDown4->Text, this->numericUpDown13->Text);
 	}
 }
 private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^ e) {
@@ -2097,6 +2629,7 @@ private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^
 	this->panel28->Visible = true;
 	this->panel29->Visible = true;
 	this->panel30->Visible = false;
+	this->panel38->Visible = true;
 	this->panel14->Width = 500;
 	var_interface = 5;
 }
@@ -2125,6 +2658,16 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	this->dataGridView2->DataMember = "tab";
 	this->dataGridView2->AutoResizeColumns();
 	this->dataGridView2->Refresh();
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	dgv = base_dd->getRows("SELECT (Designation_pr) FROM dbo.Produit WHERE qte_pr < SRea_pr; ", "tab");
+	this->dataGridView2->DataSource = dgv;
+	this->dataGridView2->DataMember = "tab";
+	this->dataGridView2->AutoResizeColumns();
+	this->dataGridView2->Refresh();
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->textBox9->Text = Stats::Calc_var(base_dd, this->numericUpDown7->Text, this->numericUpDown12->Text ,this->numericUpDown11->Text, this->numericUpDown10->Text , this->numericUpDown9->Text , this->numericUpDown8->Text);
 }
 };
 }

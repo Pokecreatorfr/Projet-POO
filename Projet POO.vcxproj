@@ -170,6 +170,7 @@
     <ClInclude Include="PersonneService.h" />
     <ClInclude Include="Produit.h" />
     <ClInclude Include="ProduitDAO.h" />
+    <ClInclude Include="Stats.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Adresse.cpp" />
@@ -191,6 +192,7 @@
     <ClCompile Include="PersonnelDAO.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="ProduitDAO.cpp" />
+    <ClCompile Include="Stats.cpp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
