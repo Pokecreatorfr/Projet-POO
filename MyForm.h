@@ -212,6 +212,9 @@ private: System::Windows::Forms::NumericUpDown^ numericUpDown6;
 private: System::Windows::Forms::Label^ label26;
 private: System::Windows::Forms::Label^ label27;
 private: System::Windows::Forms::Panel^ panel30;
+private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::Button^ button6;
+private: System::Windows::Forms::Button^ button5;
 
 
 
@@ -266,6 +269,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->client_button = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel21 = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->panel23 = (gcnew System::Windows::Forms::Panel());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -351,6 +355,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel24 = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel30 = (gcnew System::Windows::Forms::Panel());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel21->SuspendLayout();
@@ -388,6 +394,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel14->SuspendLayout();
 			this->panel24->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			this->panel30->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -516,6 +523,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// panel21
 			// 
+			this->panel21->Controls->Add(this->button4);
 			this->panel21->Controls->Add(this->button3);
 			this->panel21->Controls->Add(this->panel23);
 			this->panel21->Controls->Add(this->button2);
@@ -526,6 +534,21 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel21->Name = L"panel21";
 			this->panel21->Size = System::Drawing::Size(204, 1055);
 			this->panel21->TabIndex = 2;
+			// 
+			// button4
+			// 
+			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
+			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button4->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Location = System::Drawing::Point(0, 827);
+			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(204, 76);
+			this->button4->TabIndex = 6;
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// button3
 			// 
@@ -1512,10 +1535,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->panel24->Controls->Add(this->dataGridView2);
 			this->panel24->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel24->Location = System::Drawing::Point(1758, 0);
+			this->panel24->Location = System::Drawing::Point(1379, 0);
 			this->panel24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel24->Name = L"panel24";
-			this->panel24->Size = System::Drawing::Size(83, 1055);
+			this->panel24->Size = System::Drawing::Size(462, 1055);
 			this->panel24->TabIndex = 7;
 			// 
 			// dataGridView2
@@ -1538,16 +1561,48 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
 			this->dataGridView2->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
-			this->dataGridView2->Size = System::Drawing::Size(83, 1055);
+			this->dataGridView2->Size = System::Drawing::Size(462, 1055);
 			this->dataGridView2->TabIndex = 5;
 			// 
 			// panel30
 			// 
+			this->panel30->Controls->Add(this->button6);
+			this->panel30->Controls->Add(this->button5);
 			this->panel30->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel30->Location = System::Drawing::Point(908, 0);
 			this->panel30->Name = L"panel30";
-			this->panel30->Size = System::Drawing::Size(258, 1055);
+			this->panel30->Size = System::Drawing::Size(366, 1055);
 			this->panel30->TabIndex = 8;
+			// 
+			// button6
+			// 
+			this->button6->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button6->Location = System::Drawing::Point(0, 66);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(366, 66);
+			this->button6->TabIndex = 1;
+			this->button6->Text = L"Produits moins vendus";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// button5
+			// 
+			this->button5->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button5->Location = System::Drawing::Point(0, 0);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(366, 66);
+			this->button5->TabIndex = 0;
+			this->button5->Text = L"Produits plus vendus";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// MyForm
 			// 
@@ -1627,6 +1682,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel14->ResumeLayout(false);
 			this->panel24->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			this->panel30->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -1635,6 +1691,7 @@ private: System::ComponentModel::IContainer^ components;
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		int color_theme = Convert::ToInt32(System::Configuration::ConfigurationManager::AppSettings["color_theme"]);
+		this->panel30->Visible = false;
 		Form_color_change::Change_color_of_Form_hex(this, color_list_theme[color_theme][0]);
 		Form_color_change::Change_color_of_pannel_hex(this->panel1, color_list_theme[color_theme][1]);
 		Liste_Adresse::return_city("86350"); // petit truc pour charger la liste des villes au chargement de l'app
@@ -1675,6 +1732,7 @@ private: System::Void button1_Click_3(System::Object^ sender, System::EventArgs^
 	this->panel27->Visible = false;
 	this->panel28->Visible = false;
 	this->panel29->Visible = false;
+	this->panel30->Visible = false;
 	this->panel14->Width = 800;
 	this->dataGridView1->Refresh();
 	var_interface = 1;
@@ -1764,6 +1822,7 @@ private: System::Void Personnel_button_Click(System::Object^ sender, System::Eve
 	this->panel27->Visible = false;
 	this->panel28->Visible = false;
 	this->panel29->Visible = false;
+	this->panel30->Visible = false;
 	var_interface = 4;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1788,8 +1847,10 @@ private: System::Void stats_button_Click(System::Object^ sender, System::EventAr
 	this->panel18->Visible = false;
 	this->panel19->Visible = false;
 	this->panel20->Visible = false;
-	this->panel24->Visible = false;
+	this->panel24->Visible = true;
 	this->panel25->Visible = false;
+	this->panel30->Visible = true;
+	panel24->Width = 600;
 	var_interface = 2;
 }
 private: System::Void commande_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1813,7 +1874,8 @@ private: System::Void commande_button_Click(System::Object^ sender, System::Even
 	this->panel27->Visible = false;
 	this->panel28->Visible = false;
 	this->panel29->Visible = false;
-	this->panel24->Width = 400;
+	this->panel30->Visible = false;
+	this->panel24->Width = 500;
 	this->panel14->Width = 400;
 	auto source_produit = gcnew AutoCompleteStringCollection();
 	source_produit->AddRange(Produit::Select_design(base_dd));
@@ -2034,12 +2096,35 @@ private: System::Void button1_Click_5(System::Object^ sender, System::EventArgs^
 	this->panel27->Visible = true;
 	this->panel28->Visible = true;
 	this->panel29->Visible = true;
+	this->panel30->Visible = false;
 	this->panel14->Width = 500;
 	var_interface = 5;
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	liste_produits->Add(this->textBox7->Text);
 	liste_qte_produits->Add(this->numericUpDown2->Text);
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	dgv = Commande::Search_Comporte_from_id(base_dd, this->IDclient_tb->Text);
+	this->dataGridView2->DataSource = dgv;
+	this->dataGridView2->DataMember = "tab";
+	this->dataGridView2->AutoResizeColumns();
+	this->dataGridView2->Refresh();
+	
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	dgv = base_dd->getRows("Select TOP 10 ID_pr , SUM(Qte) AS Ventes FROM dbo.Comporte Group BY id_pr ORDER BY Ventes DESC; ", "tab");
+	this->dataGridView2->DataSource = dgv;
+	this->dataGridView2->DataMember = "tab";
+	this->dataGridView2->AutoResizeColumns();
+	this->dataGridView2->Refresh();
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	dgv = base_dd->getRows("Select TOP 10 ID_pr , SUM(Qte) AS Ventes FROM dbo.Comporte Group BY id_pr ORDER BY Ventes ASC; ", "tab");
+	this->dataGridView2->DataSource = dgv;
+	this->dataGridView2->DataMember = "tab";
+	this->dataGridView2->AutoResizeColumns();
+	this->dataGridView2->Refresh();
 }
 };
 }

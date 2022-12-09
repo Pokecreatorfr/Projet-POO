@@ -39,3 +39,10 @@ void Commande::Insert_Comporte(Composants::DatabaseAccess^ bdd, String^ id_cmd, 
 	String^ query = CommandeDAO::Insert_Comporte(id_cmd, id_pr, qte, tva, prix);
 	bdd->actionRows(query);
 }
+
+DataSet^ Commande::Search_Comporte_from_id(Composants::DatabaseAccess^ bdd, String^ id_cmd)
+{
+	String^ query = CommandeDAO::Search_Comporte_from_id(id_cmd);
+	DataSet^ ds = bdd->getRows(query, "tab");
+	return ds;
+}

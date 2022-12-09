@@ -13,4 +13,5 @@ public:
 	static void Delete(Composants::DatabaseAccess^ bdd, String^ id);
 	static void Update(Composants::DatabaseAccess^ bdd, String^ date_c, String^ date_l, String^ id_cl, String^ ref, String^ id);
 	static void Insert_Comporte(Composants::DatabaseAccess^ bdd, String^ id_cmd, String^ id_pr, String^ qte, String^ tva, String^ prix);
+	static DataSet^ Search_Comporte_from_id(Composants::DatabaseAccess^ bdd, String^ id_cmd);
 };
